@@ -1,0 +1,33 @@
+{
+  "variantId": "ba_mil_lightspeed_intercept",
+  "hullId": "ba_mil_lightspeed",
+  "displayName": "Interceptor",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 6,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedoptics",
+    "auxiliarythrusters",
+    "blast_doors"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyburst",
+        "WS0002": "heavyburst",
+        "WS0003": "heavyburst",
+        "WS0004": "heavyburst",
+        "WS0005": "lightdualmg",
+        "WS0006": "lightdualmg",
+        "WS0007": "lightdualmg",
+        "WS0008": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

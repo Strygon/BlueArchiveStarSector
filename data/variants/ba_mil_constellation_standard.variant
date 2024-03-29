@@ -2,7 +2,7 @@
   "variantId": "ba_mil_constellation_standard",
   "hullId": "ba_mil_constellation",
   "displayName": "Assault",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 26,
   "fluxVents": 26,
   "quality": 1,

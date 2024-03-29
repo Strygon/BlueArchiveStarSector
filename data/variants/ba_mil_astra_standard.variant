@@ -2,7 +2,7 @@
   "variantId": "ba_mil_astra_standard",
   "hullId": "ba_mil_astra",
   "displayName": "Standard",
-  "goalVariant": false,
+  "goalVariant": true,
   "fluxCapacitors": 8,
   "fluxVents": 8,
   "quality": 1,

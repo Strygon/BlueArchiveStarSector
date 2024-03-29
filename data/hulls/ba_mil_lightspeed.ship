@@ -1,0 +1,130 @@
+{
+  "hullName": "Lightspeed",
+  "hullId": "ba_mil_lightspeed",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/lightspeed.png",
+  "style": "HIGH_TECH",
+  "height": 206,
+  "width": 96,
+  "center": [48, 103],
+  "collisionRadius": 126.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 119,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 331,
+      "angle": 0,
+      "locations": [50, 22.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 331,
+      "angle": -0,
+      "locations": [50, -22.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 331,
+      "angle": 0,
+      "locations": [-15, 21.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 331,
+      "angle": -0,
+      "locations": [-15, -21.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 137,
+      "locations": [-85, 20]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -137,
+      "locations": [-85, -20]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -97,
+      "locations": [-45.5, -41.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 97,
+      "locations": [-45.5, 41.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-101.5, 16.5],
+      "length": 40,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-101.5, -16.5],
+      "length": 40,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-70.5, -4.5],
+      "length": 40,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-70.5, 4.5],
+      "length": 40,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    104, 27.5,
+    -44.5, 49,
+    -103.5, 17,
+    -103.5, -17,
+    -44.5, -49,
+    104, -27.5
+  ]
+}
