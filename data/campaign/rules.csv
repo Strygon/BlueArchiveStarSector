@@ -1,0 +1,177 @@
+id,trigger,conditions,script,text,options,notes
+# default entity interaction,,,,,,
+"# CONVERSATIONS
+# note: during a conversation,
+# the person and not the entity
+# memory is used by default
+# entity memory is accessible
+# by using the entity. prefix",,,,,,
+convDefault,OpenCDE,,"AddText ""Establishing connection..."" buttonText
+FireBest PickGreeting",You transmit the comms ID and wait for the system to establish a connection.,,
+convDefaultGreeting,PickGreeting,!$contact_printedFirstReturnGreeting,"$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Hello. What do you want?""",,
+defaultGreetingIgnore,PickGreeting,$temporarilyIgnoreYou score:10,,"After a short wait, your connection request is denied.",0:cutCommLink:Cut the comm link,
+convDefaultGreetingSoldier,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == soldier","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Comms open, state your request.""
+OR
+The comms resolve to show $Post $personLastName sitting stiffly. 
+
+""Channel clear, go ahead."",",,
+convDefaultGreetingFaithful,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == faithful","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Blessings be upon you. How may I assist?""
+OR
+The comms resolve to show $personName, who brings $hisOrHer hands together in greeting.
+
+""Providence provides. What may I offer you this day?""",,
+convDefaultGreetingPather,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == pather","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Bless this day, for it brings us one closer to Armageddon.""
+OR
+The comms resolve to show $personName, who brings $hisOrHer hands together in greeting.
+
+""Blessed be our Path, and righteous our hatred of sin,"" $heOrShe says, then looks up.
+OR
+The connection cycles, glitches, and finally resolves through whatever aging equipment the $post is using.
+
+$HeOrShe looks up, ""With hammer and fiery sword, I greet you.""
+OR
+After a short wait, your connection request is accepted despite a series of protocol mismatch warnings.
+
+""Praise these end-times, with hammer in hand!"" the $post says in greeting.",,
+convDefaultGreetingSpacer,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == spacer","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Aye, what's your business?""
+OR
+The comms visuals resolve after several attempts, though with occasional flickers. $PersonName seems to be using an old or rad-damaged comms unit.
+
+""Bright stars and long burns. How can I be helping?""",,
+convDefaultGreetingAristo,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == aristo","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Salutations dear captain. What brings you to me?""
+OR
+After a short wait, your connection request is accepted.
+
+""Why hello, aren't you just a character."" $HeOrShe looks at you expectantly. ""Did I hire you for something or other?""
+OR
+The comms resolve to $personName's face - distracted by something off-display. ""Oh you've interrupted- well, fine, fine. The damage is done.""
+
+""You!"" This, said to someone off-display, ""You can finish up later, I must take this.""
+
+$PersonName turns to you finally, ""-Well go on, what could be so important?""",,
+convDefaultGreetingOfficial,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == official","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""This is $Post $personName. How may I be of service?""",,
+convDefaultGreetingBusiness,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == business","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Welcome, welcome! What business do you have with me today?""",,
+convDefaultGreetingScientist,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == scientist","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Greetings. I'm very busy, so just tell me what you want.""",,
+convDefaultGreetingVillain,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == villain","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Why, what a delicious little $shipOrFleet you have there captain. What brings you to my humble orbit?""",,
+convDefaultGreeting2,PickGreeting,$contact_printedFirstReturnGreeting,"ShowPersonVisual
+FireAll PopulateOptions","""Anything else I can do for you?""",,"# this will fire when talking to same person again without leaving the station, but that seems fine"
+convDefaultGreeting2aristo,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == aristo","ShowPersonVisual
+FireAll PopulateOptions","""Yes? I expect there's something more you need, isn't there.""",,
+convDefaultGreeting2official,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == official","ShowPersonVisual
+FireAll PopulateOptions","""$PlayerSirOrMadam, yes."" $HeOrShe gives you a glance. ""What else do you require?""",,
+convDefaultGreeting2business,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == business","ShowPersonVisual
+FireAll PopulateOptions","""Yes, what is it? I should be charging by the minute.""",,
+convDefaultGreeting2villain,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == villain","ShowPersonVisual
+FireAll PopulateOptions","""Oh, you've returned? And so soon; I dare not ask.""",,
+convDefaultGreeting2soldier,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == soldier","ShowPersonVisual
+FireAll PopulateOptions","""Acknowledged. This is $personLastName,"" $heOrShe barks. ""Go ahead.""",,
+convDefaultGreeting2faithful,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == faithful","ShowPersonVisual
+FireAll PopulateOptions","""Good day, again,"" $heOrShe says. ""Pray tell your purpose.""",,
+convDefaultGreeting2pather,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == pather","ShowPersonVisual
+FireAll PopulateOptions","""Your path returns,"" $heOrShe says. ""Pray tell your purpose.""",,
+convDefaultGreeting2spacer,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == spacer","ShowPersonVisual
+FireAll PopulateOptions","""Hail again, $personLastName. What's your need?""",,
+convDefaultGreeting2scientist,PickGreeting,"$contact_printedFirstReturnGreeting
+$voice == scientist","ShowPersonVisual
+FireAll PopulateOptions","""You again?"" $HeOrShe gives you a quick glance. ""Yes, yes, I'm here. What is it now?""",,
+convDefaultGreetingYuuka,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == yuuka","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Greetings, Captain. This is Treasurer Yuuka of Seminar speaking.""
+(Please don't be another one asking for a commission, if we take on more privateers we'll go bankrupt...)
+
+OR
+The comms resolve to show $Post $personLastName tapping something into a calculator. 
+
+""Sorry, Sensei, but there isn't much interaction with us right now. Come back at a later update and maybe I have something for you."",",,
+convDefaultGreetingNoa,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == noa","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Good morning, Captain. I recall seeing your ship's registration code upon entering the system~""
+
+You stare blankly. How did she find that out AND remember it so well?
+
+""Is there any business you seek with Seminar at the moment or are you merely coming to visit?""
+
+OR
+The comms resolve to show $Post $personLastName writing something down into her notebook. It looks like a poem of some sort. 
+
+""Ah, my due apologies Sensei, but this area isn't finished yet. Perhaps we can have more fun together once development has progressed a bit!"",",,
+convDefaultGreetingHimari,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == himari","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is accepted.
+
+""Have you come to visit the Beautiful Genius Sickly Omniscient Hacker in her personal domain within this station?~""
+
+""Or perhaps you have come to engage in some mysterious misdeeds within the dark underbelly of this very station?""
+
+""My, this tarot card I have drawn represents that you come with cloudy and unknown intentions. Such a mysterious individual! Perhaps if I, Himari, the Great Genius Hacker of Veritas and...""
+
+You let this weird woman ramble on about a variety of topics.
+
+OR
+The comms resolve to show $Post $personLastName. She is cracking open a YOKAI MAX Energy Drink.
+
+""Programming is quite the artform, and like all art, it takes immense time and effort to undertake. As such, I ask that you understand that there isn't much to do here right now. Perhaps you can engage in some fun activities with this Beautiful Sickly Genius in the near future?"",",,

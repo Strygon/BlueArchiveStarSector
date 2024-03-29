@@ -1,0 +1,76 @@
+{
+  "hullName": "Apalis",
+  "hullId": "ba_mil_apalis",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/apalis.png",
+  "style": "HIGH_TECH",
+  "height": 33,
+  "width": 29,
+  "center": [14.5, 16.5],
+  "collisionRadius": 21,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 19.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [6, 7]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": -0,
+      "locations": [6, -7]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-7.5, -7],
+      "length": 16,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-7.5, 7],
+      "length": 16,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13.5, -1],
+      "length": 16,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13.5, 1],
+      "length": 16,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    18.5, -0.5,
+    -2.5, -16.5,
+    -16.5, -6.5,
+    -16.5, 6.5,
+    -2.5, 16.5,
+    18.5, 0.5
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "id":"lnsage_bluearchive", # For the convenience of troubleshooters, include your name and the mod name, not just an acronym.
+	"name":"Blue Archive Mod", # Displayed to the player
+	"author":"Lunar Sage",
+    "utility":"false",
+	"version":"0.1.4-prerelease",
+	"description":"A mod to add the schools of Blue Archive to the game, with some new ships to go along with them.",
+    "gameVersion": "0.97a-RC6",
+  	"jars":["jars/bluearchive.jar"],
+  	"modPlugin":"lnsage.bluearchivemod.BlueArchivePlugin",
+	  	"dependencies": [
+        #{
+        #    "id": "lw_lazylib",
+        #    "name": "LazyLib",
+        #    #"version": "2.7b"
+        #},
+        #{
+        #    "id": "MagicLib",
+        #    "name": "MagicLib",
+        #    #"version": "0.34"
+        #},
+        #{
+        #    "id": "shaderLib",
+        #    "name": "GraphicsLib",
+        #    #"version": "1.5.1"
+        #}
+    ],
+}

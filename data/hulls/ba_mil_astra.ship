@@ -1,0 +1,143 @@
+{
+  "hullName": "Astra",
+  "hullId": "ba_mil_astra",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/astra.png",
+  "style": "HIGH_TECH",
+  "height": 202,
+  "width": 62,
+  "center": [30.5, 91],
+  "collisionRadius": 117.5,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 113,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 149,
+      "locations": [-43.5, 15.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -149,
+      "locations": [-43.5, -15.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 89.5,
+      "locations": [-12.5, 21]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -89.5,
+      "locations": [-12.5, -21]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [108, -0.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 47,
+      "locations": [58.5, 11.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": -47,
+      "locations": [58.5, -11.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -8, -0,
+        0.5, 0.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-88, -0.5],
+      "length": 40,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 50,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-87.5, 6],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-87.5, -6],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-34.5, 24.5],
+      "length": 70,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-34.5, -24.5],
+      "length": 70,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 128,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    112.5, -3.5,
+    84.5, -17.5,
+    -34.5, -28.5,
+    -90.5, -29.5,
+    -90.5, 29.5,
+    -34.5, 28.5,
+    84.5, 17.5,
+    112.5, 3.5
+  ]
+}

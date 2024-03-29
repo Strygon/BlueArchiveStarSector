@@ -1,0 +1,55 @@
+{
+	"portraits":{
+		"standard_male":[
+		
+           "graphics/portraits/portrait_hegemony01.png",
+
+           "graphics/portraits/portrait_hegemony02.png",
+
+           "graphics/portraits/portrait_robot1.png",
+
+           "graphics/portraits/portrait_robot2.png",
+
+           "graphics/portraits/portrait_animal1.png",
+
+           "graphics/portraits/portrait_animal2.png",
+
+           "graphics/portraits/portrait_animal3.png",
+
+           "graphics/portraits/portrait_animal4.png",
+
+           "graphics/portraits/portrait_animal5.png",
+		   
+		   "graphics/portraits/portrait_sensei.png",
+		],
+		"standard_female":[
+		
+           "graphics/portraits/portrait_noa.png",
+
+           "graphics/portraits/portrait_yuuka.png",
+
+           "graphics/portraits/portrait_akane.png",
+
+           "graphics/portraits/portrait_chihiro.png",
+
+           "graphics/portraits/portrait_kotama.png",
+		   
+		   "graphics/portraits/portrait_karin.png",
+		   
+		   "graphics/portraits/portrait_maki.png",
+		   
+		   "graphics/portraits/portrait_sumire.png",
+		   
+		   "graphics/portraits/portrait_toki.png",
+
+		   "graphics/portraits/portrait_worker1.png",
+
+		   "graphics/portraits/portrait_helmetgang1.png",
+
+		   "graphics/portraits/portrait_millenniummob1.png",
+
+		   "graphics/portraits/portrait_millenniummob2.png",
+
+		],
+	},
+},				

@@ -1,0 +1,747 @@
+{ 
+
+   id:"trinity",
+
+   "color":[230,171,53,255],
+
+   "displayName":"Trinity General School",
+
+   "displayNameWithArticle":"Trinity",
+   
+   "displayNameLongWithArticle":"the Trinity General School",
+
+   "logo":"graphics/factions/trinity.png",
+
+   "crest":"graphics/factions/crest_trinity.png",
+
+   "shipNamePrefix":"TCN",
+
+   "shipNameSources":{
+
+       "JAPANESE":4,
+
+       "GREEK":2,
+
+       "SPACE":4,
+
+       "GENERAL":1,
+
+   },
+
+   	"knownShips":{
+   		"tags":["heg_aux_bp", "XIV_bp", "hegemony"],
+   		"hulls":[
+   			"cerberus",
+   			"crig",
+   			"ox",
+   			"dram",
+   			"phaeton",
+   			"prometheus",
+   			"shepherd",
+   			"mule",
+   			"venture",
+   			"atlas",
+   			"hermes",
+   			"mudskipper",
+   			"nebula",
+   			"valkyrie",
+   			"starliner",
+   			"tarsus",
+   			"colossus",
+   			"buffalo_hegemony",
+
+   			"hound_hegemony",
+   			"kite_hegemony",
+   			"wolf_hegemony",
+   			"lasher",
+   			"ba_mil_astra",
+   			"centurion",
+   			"gremlin",
+   			#"vanguard", ? - no, LC
+
+   			"condor",
+   			"enforcer",
+   			"enforcer_xiv",
+   			#"manticore", ? - no, LC
+
+   			"eagle",
+   			"dominator",
+   			"dominator_xiv",
+   			"eagle_xiv",
+   			"falcon_xiv",
+   			"mora",
+   			"grendel", # 0 phase doctrine, but added to combatLarge elsewhere in this file
+
+   			"legion",
+   			"onslaught",
+   			"onslaught_xiv",
+   			"ba_mil_constellation",
+   		],
+   	},
+
+   "names":{
+       "modern":1,
+
+       "world":1,
+
+       "future":1,
+
+       "myth":1,
+
+   },
+
+   "hullMods":[
+
+       "frontshield",
+
+       "turretgyros",
+
+       "armoredweapons",
+
+       "autorepair",
+
+       "auxiliarythrusters",
+
+       "blast_doors",
+
+       "dedicated_targeting_core",
+
+       "magazines",
+
+       "missleracks",
+
+       "hardened_subsystems",
+
+       "heavyarmor",
+
+       "insulatedengine",
+
+       "reinforcedhull",
+
+       "fluxbreakers",
+
+       "expanded_deck_crew",
+
+       "recovery_shuttles",
+
+       "operations_center",
+
+   ],
+
+   "illegalCommodities":[
+
+       "drugs",
+
+       "organs",
+
+   ],
+
+   "music":{
+
+       "theme":"music_millenium_market_neutral",
+
+       "market_neutral":"music_millenium_market_neutral",
+
+       "market_hostile":"music_millenium_market_hostile",
+
+       "market_friendly":"music_millenium_market_friendly",
+
+       "encounter_neutral":"music_millenium_encounter_neutral",
+
+       "encounter_hostile":"music_millenium_encounter_hostile",
+
+       "encounter_friendly":"music_millenium_encounter_friendly",
+
+   },    
+
+   "internalComms":"hegemony_internal",
+
+   "tariffFraction":0.4,
+
+   "tollFraction":0.1,
+
+   "fineFraction":0.25,
+
+   "portraits":{
+
+       "standard_male":[
+
+           "graphics/portraits/portrait_hegemony01.png",
+
+           "graphics/portraits/portrait_hegemony02.png",
+
+           "graphics/portraits/portrait_robot1.png",
+
+           "graphics/portraits/portrait_robot2.png",
+
+           "graphics/portraits/portrait_animal1.png",
+
+           "graphics/portraits/portrait_animal2.png",
+
+           "graphics/portraits/portrait_animal3.png",
+
+           "graphics/portraits/portrait_animal4.png",
+
+           "graphics/portraits/portrait_animal5.png",
+
+       ],
+
+       "standard_female":[
+
+           "graphics/portraits/portrait_noa.png",
+
+           "graphics/portraits/portrait_yuuka.png",
+
+           "graphics/portraits/portrait_akane.png",
+
+           "graphics/portraits/portrait_chihiro.png",
+
+           "graphics/portraits/portrait_kotama.png",
+		   
+		   "graphics/portraits/portrait_karin.png",
+		   
+		   "graphics/portraits/portrait_maki.png",
+		   
+		   "graphics/portraits/portrait_sumire.png",
+		   
+		   "graphics/portraits/portrait_toki.png",
+
+		   "graphics/portraits/portrait_worker1.png",
+
+		   "graphics/portraits/portrait_helmetgang1.png",
+
+		   "graphics/portraits/portrait_millenniummob1.png",
+
+		   "graphics/portraits/portrait_millenniummob2.png",
+
+       ],
+
+   },
+
+   "ranks":{
+
+       "ranks":{
+
+           "spaceCommander":{"name":"President"},
+
+       },
+
+       "posts":{
+
+           "patrolCommander":{"name":"Patrol President"},
+
+           "fleetCommander":{"name":"Fleet President"},
+
+           "baseCommander":{"name":"Base President"},
+
+       },
+
+   },
+
+   "custom":{
+
+       "offersCommissions":true,
+
+       "engagesInHostilities":true,
+
+       "buysAICores":true,
+
+       "AICoreValueMult":2,
+
+       "AICoreRepMult":3,
+
+       "buysSurveyData":true,
+
+   },    
+
+   "shipRoles":{
+
+       "fastAttack":{
+
+           "lasher_Standard":5,
+
+           "lasher_Strike":5,
+
+           "hound_hegemony_Standard":10,
+
+           "ba_mil_astra_standard":2,
+
+           "fallback":{"combatSmall":1},
+
+       },
+
+   
+
+       "escortSmall":{
+
+           "lasher_CS":3,
+
+           "lasher_PD":10,
+
+           "ba_mil_astra_standard":20,
+
+           "monitor_Escort":2,
+
+           "vigilance_FS":10,
+
+           "fallback":{"combatSmall":1},
+
+       },
+
+       "escortMedium":{
+
+           "enforcer_Escort":10,
+
+           "enforcer_Balanced":10,
+
+           "enforcer_Outdated":10,
+
+           "enforcer_CS":10,
+
+           "hammerhead_Balanced":10,
+
+           "enforcer_Elite":10,
+
+           "enforcer_XIV_Elite":4,
+
+           "hammerhead_Elite":10,
+
+           "fallback":{"combatMedium":1},
+
+       },
+
+       
+
+       "combatSmall":{
+
+           "ba_mil_astra_standard":10,
+
+           "lasher_Strike":5,
+
+           "lasher_CS":5,
+
+           "vigilance_Standard":10,
+
+           "vigilance_FS":10,
+
+           "vigilance_Strike":10,
+
+           "brawler_Assault":10,
+
+           "centurion_Assault":10,
+
+           "fallback":{"escortSmall":1},
+
+       },
+
+       "combatMedium":{
+
+           "ba_mil_astra_standard":10,
+
+           "enforcer_Balanced":10,
+
+           "enforcer_Outdated":10,
+
+           "enforcer_CS":10,
+
+           "enforcer_XIV_Elite":8,
+
+           "hammerhead_Balanced":10,
+
+           "sunder_CS":10,
+
+           "hammerhead_Elite":10,
+
+           "enforcer_Elite":10,
+
+           "sunder_Assault":10,
+
+           "fallback":{"combatSmall":2},
+
+       },
+
+       "combatLarge":{
+
+           "falcon_Attack":10,
+
+           "falcon_CS":10,
+
+           "falcon_xiv_Elite":3,
+
+           "falcon_xiv_Escort":4,
+
+           
+
+           "eagle_Assault":10,
+
+           "eagle_Balanced":10,
+
+           "eagle_xiv_Elite":5,
+
+           
+
+           "dominator_Support":6,
+
+           "dominator_Assault":6,
+
+           "dominator_AntiCV":6,
+
+           "dominator_Outdated":6,
+
+           "dominator_XIV_Elite":5,
+
+           
+
+           "gryphon_Standard":10,
+
+           "gryphon_FS":5,
+
+           
+
+           "fallback":{"combatMedium":2},
+
+       },
+
+       "combatCapital":{
+
+           "onslaught_Standard":10,
+
+           "onslaught_Outdated":10,
+
+           "onslaught_Elite":10,
+
+           "onslaught_xiv_Elite":3,
+
+           "fallback":{"combatLarge":2},
+
+       },
+
+       
+
+       
+
+
+
+       "combatFreighterSmall":{
+
+           "hound_hegemony_Standard":10,
+
+           "shepherd_Frontier":10,
+
+           "cerberus_Standard":4,
+
+           "cerberus_Hardened":4,
+
+           "cerberus_Shielded":4,
+
+           "wayfarer_Standard":10,
+
+           "fallback":{"freighterSmall":1},
+
+       },
+
+       "combatFreighterMedium":{
+
+           "mule_d_Standard":10,
+
+           "mule_Standard":10,
+
+           "fallback":{"combatFreighterSmall":2},
+
+       },
+
+       "combatFreighterLarge":{
+
+           "venture_Balanced":10,
+
+           "fallback":{"combatFreighterMedium":2},
+
+       },
+
+       
+
+       "civilianRandom":{
+
+           "mercury_d_Standard":10,
+
+           "hermes_d_Standard":10,
+
+           "mercury_Standard":8,
+
+           "mercury_FS":3,
+
+           "hermes_Standard":10,
+
+           "starliner_Standard":10,
+
+           "nebula_Standard":10,
+
+           "mudskipper_Standard":10,
+
+           "kite_Standard":5,
+
+           "colossus_Standard":1,
+
+           "fallback":{"freighterSmall":1},
+
+       },
+
+
+       "carrierSmall":{
+
+           "gemini_Standard":5,
+
+           "drover_Strike":10,
+
+           "fallback":{"carrierMedium":0.5},
+
+       },
+
+       "carrierMedium":{
+
+           "heron_Strike":2,
+
+           "heron_Attack":2,
+
+           "mora_Assault":7,
+
+           "mora_Support":4,
+
+           "mora_Strike":7,
+
+           "fallback":{"carrierSmall":2},
+
+       },
+
+       "carrierLarge":{
+
+           "ba_mil_constellation_standard":4,
+
+           "legion_Strike":2,
+
+           "legion_FS":2,
+
+           "fallback":{"carrierMedium":1},
+
+       },
+
+   
+
+
+       "freighterSmall":{
+
+           "hermes_d_Standard":10,
+
+           "hermes_Standard":10,
+
+           "fallback":{"freighterMedium":0.5},
+
+       },
+
+       "freighterMedium":{
+
+           "tarsus_d_Standard":5,
+
+           "buffalo_d_Standard":5,
+
+           "buffalo_Standard":10,
+
+           "tarsus_Standard":10,
+
+           "buffalo_hegemony_Standard":10,
+
+           "colossus_Standard":2,
+
+           "fallback":{"freighterSmall":2},
+
+       },
+
+       "freighterLarge":{
+
+           "colossus_Standard":5,
+
+           "atlas_Standard":10,
+
+           "fallback":{"freighterMedium":2},
+
+       },
+
+       
+
+       "tankerSmall":{
+
+           "dram_Light":10,
+
+           "fallback":{"tankerMedium":0.5},
+
+       },
+
+       "tankerMedium":{
+
+           "phaeton_Standard":10,
+
+           "fallback":{"tankerSmall":2},
+
+       },
+
+       "tankerLarge":{
+
+           "prometheus_Super":10,
+
+           "fallback":{"tankerMedium":2},
+
+       },
+
+       
+
+       "personnelSmall":{
+
+           "mercury_d_Standard":10,
+
+           "mercury_Standard":10,
+
+           "mudskipper_Standard":2,
+
+           "fallback":{"personnelMedium":0.5},
+
+       },
+
+       "personnelMedium":{
+
+           "valkyrie_Elite":10,
+
+           "nebula_Standard":1,
+
+           "fallback":{"personnelSmall":2},
+
+       },
+
+       "personnelLarge":{
+
+           "fallback":{"personnelMedium":3},
+
+       },
+
+       
+
+
+
+       "tug":{
+
+           "ox_Standard":10,
+
+           "fallback":{"utility":1},
+
+       },
+
+       "crig":{
+
+           "crig_Standard":10,
+
+           "fallback":{"utility":1},
+
+       },
+
+       "utility":{
+
+           "crig_Standard":10,
+
+           "ox_Standard":10,
+
+       },
+
+   },
+
+   "doctrine":{
+
+
+
+       "small":6,
+
+       "fast":4,
+
+       "medium":8,
+
+       "large":8,
+
+       "capital":4,
+
+       
+
+
+
+       "escortSmallFraction":1,
+
+       "escortMediumFraction":1,
+
+       
+
+       "combatFreighterProbability":0.1,
+
+       
+
+       "minPointsForCombatCapital":10,
+
+       "minPointsForLargeCarrier":30,
+
+       
+
+       "smallCarrierProbability":0.2,
+
+       "mediumCarrierProbability":0.25,
+
+       "largeCarrierProbability":0.3,
+
+       
+
+
+
+       "officersPerPoint":0.35,
+
+       "officerLevelPerPoint":0.35,
+
+       "officerLevelBase":5,
+
+       "officerLevelVariance":0.25,
+
+       
+
+       "commanderSkillsPerLevel":0.2,
+
+       "commanderSkillChance":0.55,
+
+       "commanderSkillLevelPerLevel":0.3,
+
+       "commanderSkills":{
+
+           "officer_management":10,
+
+           "coordinated_maneuvers":10,
+
+           "fighter_doctrine":5,
+
+           "electronic_warfare":2,
+
+       },
+
+   },    
+
+   "traits":{
+
+       "captain":{
+
+           "timid":1,
+
+           "cautious":5,
+
+           "steady":10,
+
+           "aggressive":10,
+
+           "reckless":5,
+
+       },
+
+   },
+
+}, 

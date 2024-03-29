@@ -1,0 +1,44 @@
+{
+  "variantId": "ba_mil_constellation_standard",
+  "hullId": "ba_mil_constellation",
+  "displayName": "Assault",
+  "goalVariant": false,
+  "fluxCapacitors": 26,
+  "fluxVents": 26,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedoptics",
+    "auxiliarythrusters",
+    "nav_relay"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyblaster",
+        "WS0002": "gravitonbeam",
+        "WS0003": "gravitonbeam",
+        "WS0004": "heavyblaster",
+        "WS0005": "heavyblaster",
+        "WS0006": "heavyblaster",
+        "WS0007": "lightmg",
+        "WS0008": "lightmg",
+        "WS0009": "lightmg",
+        "WS0010": "lightmg",
+        "WS0011": "amsrm",
+        "WS0012": "amsrm"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "trident_wing",
+    "trident_wing",
+    "ba_mil_apalis_fighter_wing",
+    "ba_mil_apalis_fighter_wing",
+    "piranha_wing",
+    "piranha_wing"
+  ]
+}

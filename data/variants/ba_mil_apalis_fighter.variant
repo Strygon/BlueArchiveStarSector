@@ -1,0 +1,23 @@
+{
+  "variantId": "ba_mil_apalis_fighter",
+  "hullId": "ba_mil_apalis",
+  "displayName": "Fighter",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "pdburst",
+        "WS0002": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

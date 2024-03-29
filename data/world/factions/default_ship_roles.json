@@ -1,0 +1,14 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+
+	"combatSmall":{
+	
+		"ba_mil_astra_standard":3,
+
+	},
+	"carrierLarge":{
+		"ba_mil_constellation_standard":4,
+	},
+	
+}

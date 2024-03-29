@@ -1,0 +1,32 @@
+{
+  "variantId": "ba_mil_astra_standard",
+  "hullId": "ba_mil_astra",
+  "displayName": "Standard",
+  "goalVariant": false,
+  "fluxCapacitors": 8,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "auxiliarythrusters",
+    "augmentedengines",
+    "assault_package"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightdualmg",
+        "WS0002": "lightdualmg",
+        "WS0003": "irpulse",
+        "WS0004": "irpulse",
+        "WS0005": "irpulse",
+        "WS0006": "irpulse",
+        "WS0007": "gravitonbeam"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

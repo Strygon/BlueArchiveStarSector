@@ -1,0 +1,22 @@
+{
+	"ranks":{
+		"treasurer":{"name":"Seminar Treasurer"},
+		"sem_secretary":{"name":"Seminar Secretary"},
+		"ver_president":{"name":"Veritas President"},
+
+	},
+	
+	"posts":{
+		"treasurer":{"name":"Seminar Treasurer"},
+		"sem_secretary":{"name":"Seminar Secretary"},
+		"ver_president":{"name":"Veritas President"},
+		}
+
+}
+
+
+
+
+
+
+
