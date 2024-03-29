@@ -1,0 +1,114 @@
+{
+  "hullName": "Northhampton",
+  "hullId": "ba_mil_northhampton",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/northhampton.png",
+  "style": "HIGH_TECH",
+  "height": 108,
+  "width": 59,
+  "center": [29.5, 54],
+  "collisionRadius": 62,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 58,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 106,
+      "angle": -41.5,
+      "locations": [22.5, -8.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 106,
+      "angle": 41.5,
+      "locations": [22.5, 8.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 112,
+      "angle": -23.5,
+      "locations": [-13.5, -15]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 112,
+      "angle": 23.5,
+      "locations": [-13.5, 15]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 112,
+      "angle": -132.5,
+      "locations": [-36.5, -6.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 112,
+      "angle": 132.5,
+      "locations": [-36.5, 6.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 15,
+      "angle": 0,
+      "locations": [5, -12]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 15,
+      "angle": -0,
+      "locations": [5, 12]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-22, -13.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-22, 13.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    56, 2.5,
+    -18.5, 33.5,
+    -55, 2,
+    -55, -2,
+    -18.5, -33.5,
+    56, -2.5
+  ]
+}

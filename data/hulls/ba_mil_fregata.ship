@@ -1,0 +1,163 @@
+{
+  "hullName": "Fregata",
+  "hullId": "ba_mil_fregata",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fregata.png",
+  "style": "HIGH_TECH",
+  "height": 197,
+  "width": 107,
+  "center": [53.5, 98.5],
+  "collisionRadius": 125.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 117.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 254,
+      "angle": 0,
+      "locations": [63, -43]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 254,
+      "angle": -0,
+      "locations": [63, 43]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 254,
+      "angle": -91.5,
+      "locations": [-5.5, -21.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 254,
+      "angle": 91.5,
+      "locations": [-5.5, 21.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 289,
+      "angle": -131,
+      "locations": [-67, -44]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 289,
+      "angle": 131,
+      "locations": [-67, 44]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 289,
+      "angle": 46.5,
+      "locations": [-46.5, 11]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 289,
+      "angle": -46.5,
+      "locations": [-46.5, -11]
+    },
+    {
+      "id": "WS0009",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 16,
+      "angle": 0,
+      "locations": [77.5, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -19.5, 1,
+        -9.5, 1.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-97.5, -42],
+      "length": 60,
+      "width": 25,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-97.5, 42],
+      "length": 60,
+      "width": 25,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [15.5, 44],
+      "length": 60,
+      "width": 25,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [15.5, -44],
+      "length": 60,
+      "width": 25,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    99, 4.5,
+    73, 55,
+    13.5, 53.5,
+    12.5, 33.5,
+    -37, 34,
+    -39.5, 50,
+    -98.5, 54,
+    -97.5, 31.5,
+    -79, 9,
+    -79, -9,
+    -97.5, -31.5,
+    -98.5, -54,
+    -39.5, -50,
+    -37, -34,
+    12.5, -33.5,
+    13.5, -53.5,
+    73, -55,
+    99, -4.5
+  ]
+}

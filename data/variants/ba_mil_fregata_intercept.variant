@@ -1,0 +1,48 @@
+{
+  "variantId": "ba_mil_fregata_intercept",
+  "hullId": "ba_mil_fregata",
+  "displayName": "Interceptor",
+  "goalVariant": true,
+  "fluxCapacitors": 2,
+  "fluxVents": 2,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyblaster",
+        "WS0002": "heavyblaster"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0009": "harpoonpod"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "minipulser",
+        "WS0004": "minipulser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "lightdualmg",
+        "WS0006": "lightdualmg",
+        "WS0007": "lightneedler",
+        "WS0008": "lightneedler"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
