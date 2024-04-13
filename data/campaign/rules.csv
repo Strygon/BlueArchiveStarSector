@@ -175,3 +175,60 @@ OR
 The comms resolve to show $Post $personLastName. She is cracking open a YOKAI MAX Energy Drink.
 
 ""Programming is quite the artform, and like all art, it takes immense time and effort to undertake. As such, I ask that you understand that there isn't much to do here right now. Perhaps you can engage in some fun activities with this Beautiful Sickly Genius in the near future?"",",,
+convDefaultGreetingNagisa,PickGreeting,"!$contact_printedFirstReturnGreeting
+$voice == nagisa","$contact_printedFirstReturnGreeting = true 0
+ShowPersonVisual
+FireAll PopulateOptions","After a short wait, your connection request is rejected. A notification pops up on your viewscreen.
+
+""Thank you for filing your request to speak to the Tea Party Representative Kirifuji Nagisa. Unfortunately due to our rather overburdened schedule, we cannot immediately accept your request at this time. You have been put in the queue to await communications with Kirifuji-sama.""
+
+After a while, another line pops up with a timer.
+
+""Estimated Waiting Time: 14 hours, 21 minutes, 36 seconds. Please hold until the line is open for you.""
+
+Deciding that you have better things to do than to wait to speak to politicians, you cut the connection instead.",,
+relLevelCooperativeMil,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
+You have also been granted access to the largest and most powerful of Millennium's ships and weapons, being seen as a trustworthy and reliable enough partner to entrust with such equipment.",,
+relLevelFriendlyMil,RelationshipLevelDesc,"$faction.rel == FRIENDLY
+$faction.id == millenium",FireAll RelLevelMoreDescription,"You have become a household name within Millennium's military and exploration circles. Whenever you dock at a station, many of the younger students crowd around your crew wondering what it is you have discovered or experimented with this time.
+Millennium officials also see you as an important figure and generally look past some minor indiscretions for the sake of your continued cooperation.",,
+relLevelWelcomingMil,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Thanks to your contributions to Millennium, you're seen as a good captain to have around when a problem needs solving. As such, you are often also the first choice for more high priority expeditions and correspondingly, are granted access to more high tech equipment built directly by the Engineering Department.",,
+relLevelFavorableMil,RelationshipLevelDesc,"$faction.rel == FAVORABLE
+$faction.id == millenium",FireAll RelLevelMoreDescription,"You have proven yourself to be a reliable entity to Millennium and generally notice your wait times for new machines or docking requests are a bit shorter than usual. You have also received an invitation to one of Kotori's academic lectures, but unless you are keenly interested in the exact workings of how a hyperspace drive operates, you're better off declining it.",,
+relLevelNeutralMil,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == millenium",FireAll RelLevelMoreDescription,"As one of the thousands of captains Seminar deals with on a daily basis, you generally do not stand out to Millennium for better or for worse. Although you do not benefit from any extra privileges, you are also not subject to additional scans, searches or harrassment. Do watch out for Kotama's listening devices though.",,
+relLevelSuspiciousMil,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Although it doesn't seem like much has changed, you're pretty sure someone is always keeping watch on you, and some files on your ships' computers have mysteriously shifted around. While Millennium denies having anything to do with this, you can't help but shake the feeling that your suspiciousness has drawn the watchful eyes of Veritas.",,
+relLevelInhospitableMil,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Your actions in Millennium territory have reflected quite poorly on you and as a result, Millennium officials only begrudgingly grant you port access. Many of the students seem to draw a wide berth around you within the stations and your fleet is subjected to rather pointlessly long and drawn out inspections. Furthermore, a security drone seems to always be shadowing you wherever you go within Millennium premises.",,
+relLevelHostileMil,RelationshipLevelDesc,"$faction.rel == HOSTILE
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Millennium has withdrawn your port access privileges and instead replaced them with ""test target for our newest line of overpowered starship weapons"" privileges. Your fleet along with a photo of your face (which someone seems to keep tampering with to make you look less and less attractive) are on public bulletins and security advisories. Some of the rowdier elements of Millennium have formed hunting parties to collect the bounty that has been put on your head by various other captains in the school.",,
+relLevelVengefulMil,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == millenium",FireAll RelLevelMoreDescription,"The school's policy of hostility has shifted from a passive to an open one. Your position in Millennium space is broadcast to all military and independent fleets due to Veritas' constant intrusions, a Cleaning&Clearing unit has been dispatched to counter any ground movement you may attempt, and Treasurer Hayase has put aside a fund specifically to reward the club that can capture or destroy you.
+
+Also, you have been made the final boss in the next game by the Game Development Department.",,
+relLevelCooperativeAri,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
+$faction.id == arius",FireAll RelLevelMoreDescription,"Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
+You have also been granted access to the largest and most powerful of Millennium's ships and weapons, being seen as a trustworthy and reliable enough partner to entrust with such equipment.",,
+relLevelFriendlyAri,RelationshipLevelDesc,"$faction.rel == FRIENDLY
+$faction.id == arius",FireAll RelLevelMoreDescription,"You have become a household name within Millennium's military and exploration circles. Whenever you dock at a station, many of the younger students crowd around your crew wondering what it is you have discovered or experimented with this time.
+Millennium officials also see you as an important figure and generally look past some minor indiscretions for the sake of your continued cooperation.",,
+relLevelWelcomingAri,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == arius",FireAll RelLevelMoreDescription,"Thanks to your contributions to Millennium, you're seen as a good captain to have around when a problem needs solving. As such, you are often also the first choice for more high priority expeditions and correspondingly, are granted access to more high tech equipment built directly by the Engineering Department.",,
+relLevelFavorableAri,RelationshipLevelDesc,"$faction.rel == FAVORABLE
+$faction.id == arius",FireAll RelLevelMoreDescription,"You have proven yourself to be a reliable entity to Millennium and generally notice your wait times for new machines or docking requests are a bit shorter than usual. You have also received an invitation to one of Kotori's academic lectures, but unless you are keenly interested in the exact workings of how a hyperspace drive operates, you're better off declining it.",,
+relLevelNeutralAri,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == arius",FireAll RelLevelMoreDescription,"Arius isn't really sure what to make of you at this point. The attacks have all but stopped, but they still refuse that the world is anything but something to be burnt down. Perhaps continued attempts at improving relations could yield some kind of way to end their madness?",,
+relLevelSuspiciousAri,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
+$faction.id == arius",FireAll RelLevelMoreDescription,"It seems that the Arius fleets at this point would rather avoid you than try to kill you. Though you are still nothing but another enemy to be cleansed, perhaps their proclaimed hatred of the world isn't as unbreakable and infinite as they may claim?
+Of course, you are still not seen as an ally, and a particularly fanatic member may still try to go for your head when your guard is down.",,
+relLevelInhospitableAri,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
+$faction.id == arius",FireAll RelLevelMoreDescription,"Although you are still an active target for the Arius school, there is noticeable hesitation behind every attack and pursuit. You are seen as less of a target than some others in the sector, but that doesn't mean you're not a target at all.",,
+relLevelHostileAri,RelationshipLevelDesc,"$faction.rel == HOSTILE
+$faction.id == arius",FireAll RelLevelMoreDescription,You are seen as just another target for Arius that needs to be destroyed and cleansed. Arius Hunter-Killer Squads will hunt you down as they encounter you but will otherwise make no additional effort to see to your destruction.,,
+relLevelVengefulAri,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == arius",FireAll RelLevelMoreDescription,"You have become the prime enemy of Arius. The school sees you as the biggest obstacle next to Trinity to their final goal of cleansing the Sector. It is only a matter of time until a sleeper agent in another school or faction makes their move to assassinate you personally, if not sending an entire fleet to wipe yours out.
+
+Vanitas vanitatum, et omnia vanitas.",,

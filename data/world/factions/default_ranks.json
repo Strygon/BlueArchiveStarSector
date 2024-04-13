@@ -3,6 +3,9 @@
 		"treasurer":{"name":"Seminar Treasurer"},
 		"sem_secretary":{"name":"Seminar Secretary"},
 		"ver_president":{"name":"Veritas President"},
+		"tea_party_leader":{"name":"Tea Party President"},
+		"sisterhood_member":{"name":"Sister"},
+		"sisterhood_leader":{"name":"Head Sister"},
 
 	},
 	
@@ -10,6 +13,9 @@
 		"treasurer":{"name":"Seminar Treasurer"},
 		"sem_secretary":{"name":"Seminar Secretary"},
 		"ver_president":{"name":"Veritas President"},
+		"tea_party_leader":{"name":"Tea Party President"},
+		"sisterhood_member":{"name":"Sister"},
+		"sisterhood_leader":{"name":"Head Sister"},
 		}
 
 }

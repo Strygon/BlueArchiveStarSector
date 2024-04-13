@@ -14,6 +14,7 @@ public class Voices {
 	public static String YUUKA_VOICE = "yuuka";
 	public static String NOA_VOICE = "noa";
 	public static String HIMARI_VOICE = "himari";
+	public static String NAGISA_VOICE = "nagisa";
 	
 
 

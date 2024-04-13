@@ -14,7 +14,7 @@ import static lnsage.bluearchivemod.BlueArchivePlugin.*;
 import static lnsage.bluearchivemod.campaign.ids.People.*;
 
 import exerelin.campaign.alliances.Alliance;
-import lnsage.bluearchivemod.world.systems.ba_landon;
+import lnsage.bluearchivemod.world.systems.*;
 
 import java.util.ArrayList;
 
@@ -82,15 +82,24 @@ public class ba_gen implements SectorGeneratorPlugin {
         FactionAPI mil = sector.getFaction("millenium");
         FactionAPI tri = sector.getFaction("trinity");
         FactionAPI geh = sector.getFaction("gehenna");
+        FactionAPI ari = sector.getFaction("arius");
 
         //Generate your system
         new ba_landon().generate(sector);
+        new ba_camulodunum().generate(sector);
+        new ba_victoria().generate(sector);
+        new ba_apollinaris().generate(sector);
 
         addYuuka();
         addNoa();
         addHimari();
+        addNagisa();
+        addMari();
+        addSakurako();
 
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("millenium");
+        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("trinity");
+        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("arius");
 
         //vanilla factions
         mil.setRelationship(Factions.LUDDIC_CHURCH, -0.1f);
@@ -119,6 +128,20 @@ public class ba_gen implements SectorGeneratorPlugin {
         tri.setRelationship("millenium", 0.1f);
         tri.setRelationship("trinity", 1f);
         tri.setRelationship("gehenna", -0.9f);
+
+        ari.setRelationship(Factions.LUDDIC_CHURCH, -0.9f);
+        ari.setRelationship(Factions.LUDDIC_PATH, 0.4f);
+        ari.setRelationship(Factions.TRITACHYON, -0.9f);
+        ari.setRelationship(Factions.PERSEAN, -0.7f);
+        ari.setRelationship(Factions.PIRATES, -0.5f);
+        ari.setRelationship(Factions.INDEPENDENT, -0.7f);
+        ari.setRelationship(Factions.DIKTAT, -0.8f);
+        ari.setRelationship(Factions.HEGEMONY, -0.9f);
+        ari.setRelationship(Factions.REMNANTS, 0.6f);
+        ari.setRelationship("millenium", -0.9f);
+        ari.setRelationship("trinity", -1f);
+        ari.setRelationship("gehenna", -0.9f);
+        ari.setRelationship(Factions.PLAYER, -0.5f);
 
         geh.setRelationship(Factions.LUDDIC_PATH, -0.4f);
         geh.setRelationship(Factions.TRITACHYON, -0.2f);

@@ -29,6 +29,8 @@ public class Factions {
 	public static final String POOR = "poor";
 
 	public static final String MILLENNIUM = "millenium";
+
+	public static final String TRINITY = "trinity";
 	
 	
 	

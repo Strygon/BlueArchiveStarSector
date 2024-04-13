@@ -6,6 +6,9 @@
 		####################################
 		# "source" can also be a directory #
 		####################################
+		
+		
+		# Millennium
 
 		"music_millenium_market_neutral":[
 			{
@@ -65,11 +68,145 @@
 				"files":[
 					"music_millenium_encounter_friendly.ogg",
 				],
-				"randomStart":true, 
+				"randomStart":true,
 			},
 		],
 		
 		
+		#Trinity
+		
+		
+		"music_trinity_market_neutral":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_trinity_market_neutral.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_trinity_market_hostile":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_trinity_market_hostile.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_trinity_market_friendly":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_trinity_market_friendly.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+
+		"music_trinity_encounter_neutral":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_trinity_encounter_neutral.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_trinity_encounter_hostile":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_trinity_encounter_hostile.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_trinity_encounter_friendly":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_trinity_encounter_friendly.ogg",
+				],
+				"randomStart":true,
+			},
+		],
+		
+		
+		#Arius
+		
+		
+		"music_arius_market_neutral":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_arius_market_neutral.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_arius_market_hostile":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_arius_market_hostile.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_arius_market_friendly":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_arius_market_friendly.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+
+		"music_arius_encounter_neutral":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_arius_encounter_neutral.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_arius_encounter_hostile":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_arius_encounter_hostile.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_arius_encounter_friendly":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_arius_encounter_friendly.ogg",
+				],
+				"randomStart":true,
+			},
+		],
+
+
+
+
 }
 
 

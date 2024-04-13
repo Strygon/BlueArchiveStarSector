@@ -1,20 +1,20 @@
 { 
 
-   id:"trinity",
+   id:"arius",
 
-   "color":[230,171,53,255],
+   "color":[91,91,140,255],
 
-   "displayName":"Trinity General School",
+   "displayName":"Arius Branch School",
 
-   "displayNameWithArticle":"Trinity",
+   "displayNameWithArticle":"Arius",
    
-   "displayNameLongWithArticle":"the Trinity General School",
+   "displayNameLongWithArticle":"the Arius Branch School",
 
-   "logo":"graphics/factions/trinity.png",
+   "logo":"graphics/factions/arius.png",
 
-   "crest":"graphics/factions/crest_trinity.png",
+   "crest":"graphics/factions/crest_arius.png",
 
-   "shipNamePrefix":"TCN",
+   "shipNamePrefix":"AVNF",
 
    "shipNameSources":{
 
@@ -138,19 +138,19 @@
 
    "music":{
 
-       "theme":"music_trinity_market_neutral",
+       "theme":"music_arius_market_neutral",
 
-       "market_neutral":"music_trinity_market_neutral",
+       "market_neutral":"music_arius_market_neutral",
 
-       "market_hostile":"music_trinity_market_hostile",
+       "market_hostile":"music_arius_market_hostile",
 
-       "market_friendly":"music_trinity_market_friendly",
+       "market_friendly":"music_arius_market_friendly",
 
-       "encounter_neutral":"music_trinity_encounter_neutral",
+       "encounter_neutral":"music_arius_encounter_neutral",
 
-       "encounter_hostile":"music_trinity_encounter_hostile",
+       "encounter_hostile":"music_arius_encounter_hostile",
 
-       "encounter_friendly":"music_trinity_encounter_friendly",
+       "encounter_friendly":"music_arius_encounter_friendly",
 
    },    
 

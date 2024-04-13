@@ -126,6 +126,9 @@ public class Ranks {
 	public static String TREASURER = "treasurer";
 	public static String SEM_SECRETARY = "sem_secretary";
 	public static String VER_PRESIDENT = "ver_president";
+	public static String TEA_PARTY_LEADER = "tea_party_leader";
+	public static String SISTERHOOD_MEMBER = "sisterhood_member";
+	public static String SISTERHOOD_LEADER = "sisterhood_leader";
 	
 	//public static String POST_ = "";
 	
