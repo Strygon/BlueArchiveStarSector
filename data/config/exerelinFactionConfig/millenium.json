@@ -1,0 +1,77 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+    
+    "rebelFleetSuffix":"Delinquents",
+    
+    "marketSpawnWeight":2,
+
+    "startRelationships":{ "tritachyon": -0.2, "hegemony": -0.3, "persean":-0.6 },
+    "maxRelationships":{ "remnant":-0.51 },
+    "diplomacyPositiveChance":{ "persean":0.8 },
+    "diplomacyNegativeChance":{ "persean":1.2 },
+    "dispositions":{
+        "persean": -10,
+        "sindrian_diktat": -10,
+    },
+    
+    "alignments":{
+        "technocratic":0.9,
+        "hierarchical":0.4,
+        "militarist":0.8,
+        "diplomatic":0.1,
+        "ideological":-0.8,
+    },
+    "diplomacyTraits":["pacifist", "stalwart", "likes_ai"],
+    
+    # chance of the faction being picked to send a colony expedition. Default 0 (disabled)
+    "colonyExpeditionChance":1,	# baseline expansion behaviour
+    "colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
+    
+    "groundBattleSettings":{
+        "moraleDamageTakenMult":0.9,
+    },
+    
+    "specialForcesNamerClass":"exerelin.campaign.intel.specialforces.namer.PlanetNamer",
+    #"specialForcesFlagshipVariants":{ "paragon_Elite":1, "astral_Strike":0.5 },
+    
+    "startShipsSolo":[
+	  ["swp_alastor_xiv_eli"],
+	  ["lasher_Starting"]
+	],
+    "startShipsCombatSmall":[
+      ["swp_caliber_sta", "swp_brawler_hegemony_ass", "swp_lasher_xiv_eli"],
+      ["enforcer_Balanced", "lasher_CS", "wolf_hegemony_CS"]
+    ],
+    "startShipsTradeSmall":[["mule_Starting", "hound_hegemony_Standard", "kite_hegemony_Interceptor"]],
+    "startShipsCombatLarge":[
+      ["swp_punisher_sta", "swp_caliber_cs", "wolf_hegemony_CS"],
+      ["dominator_Assault", "enforcer_Escort", "kite_hegemony_Interceptor"]
+    ],
+    "startShipsTradeLarge":[["colossus_Standard", "mule_Standard", "kite_Starting"]],
+    "startShipsExplorerLarge":[["venture_Balanced", "buffalo_hegemony_Standard", "shepherd_Frontier"]],
+    "startShipsCarrierSmall":[["condor_Attack", "lasher_Standard", "hound_hegemony_Standard"]],
+    "startShipsCarrierLarge":[["mora_Assault", "enforcer_Escort", "lasher_Strike"]],
+    #"startShipsGrandFleet":[["onslaught_xiv_Elite"]],
+    
+    "startSpecialItems":[
+        [["low_tech_package", ""]],
+    ],
+    
+    "defenceStations":[
+        {"ids":["orbitalstation", "battlestation", "starfortress"]},
+        {"ids":["orbitalstation_mid", "battlestation_mid", "starfortress_mid"], "weight":0.5},
+    ],
+    
+    "industrySeeds":[
+        {"id":"orbitalworks", "mult":0.1},
+        {"id":"fuelprod", "mult":0.1},
+        {"id":"lightindustry", "mult":0.1},
+    ],
+    
+    "bonusSeeds":[
+        {"id":"population_upsize", "count":1},
+        {"id":"nanoforge_pristine", "count":1},
+        {"id":"synchrotron", "count":1},
+    ],
+}
