@@ -103,18 +103,19 @@ public class ba_gen implements SectorGeneratorPlugin {
 
         //vanilla factions
         mil.setRelationship(Factions.LUDDIC_CHURCH, -0.1f);
-        mil.setRelationship(Factions.LUDDIC_PATH, -0.5f);
-        mil.setRelationship(Factions.TRITACHYON, -1f);
-        mil.setRelationship(Factions.PERSEAN, -0.2f);
+        mil.setRelationship(Factions.LUDDIC_PATH, -0.7f);
+        mil.setRelationship(Factions.TRITACHYON, -0.3f);
+        mil.setRelationship(Factions.PERSEAN, 0.2f);
         mil.setRelationship(Factions.PIRATES, -0.5f);
         mil.setRelationship(Factions.INDEPENDENT, 0.5f);
         mil.setRelationship(Factions.DIKTAT, -0.1f);
         mil.setRelationship(Factions.LIONS_GUARD, -0.1f);
-        mil.setRelationship(Factions.HEGEMONY, 0.1f);
+        mil.setRelationship(Factions.HEGEMONY, -0.4f);
         mil.setRelationship(Factions.REMNANTS, -0.5f);
         mil.setRelationship("millenium", 1f);
         mil.setRelationship("trinity", 0.1f);
         mil.setRelationship("gehenna", 0.1f);
+        tri.setRelationship("arius", -0.9f);
 
         tri.setRelationship(Factions.LUDDIC_CHURCH, -0.2f);
         tri.setRelationship(Factions.LUDDIC_PATH, -0.7f);
@@ -128,6 +129,7 @@ public class ba_gen implements SectorGeneratorPlugin {
         tri.setRelationship("millenium", 0.1f);
         tri.setRelationship("trinity", 1f);
         tri.setRelationship("gehenna", -0.9f);
+        tri.setRelationship("arius", -1f);
 
         ari.setRelationship(Factions.LUDDIC_CHURCH, -0.9f);
         ari.setRelationship(Factions.LUDDIC_PATH, 0.4f);

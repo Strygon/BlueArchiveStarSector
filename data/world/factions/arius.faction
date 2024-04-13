@@ -130,9 +130,7 @@
 
    "illegalCommodities":[
 
-       "drugs",
-
-       "organs",
+       "luxury_goods",
 
    ],
 
