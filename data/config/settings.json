@@ -17,7 +17,12 @@
     # This section is where we can define images that can be referenced ingame using Global.getSettings().getSpriteName("category", "name");
 	"graphics":{
 	#	"category":{ "name":"graphics/ui/sector_age_young.png", },
-		"illustrations":{ "millenniumrooftop1": "graphics/marketimages/millenniumrooftop1.png",
+		"illustrations":{
+		"millenniumrooftop1": "graphics/marketimages/millenniumrooftop1.png",
+		"ariuscampus": "graphics/marketimages/ariuscampus.jpg",
+		"spiritusimage": "graphics/marketimages/spiritusimage.png",
+		"trinitycampus": "graphics/marketimages/trinitycampus.png",
+		"vehiclepowerroom": "graphics/marketimages/vehiclepowerroom.png",
 		},
 
 		"characters":{

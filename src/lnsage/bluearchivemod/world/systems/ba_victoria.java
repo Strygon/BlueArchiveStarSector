@@ -24,7 +24,7 @@ public class ba_victoria {
         system.getLocation().set(-7200, -100);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
-        system.setBackgroundTextureFilename("graphics/backgrounds/background1.jpg");
+        system.setBackgroundTextureFilename("graphics/backgrounds/background2.jpg");
 
         PlanetAPI VictoriaStar = system.initStar("ba_star_victoria", // unique id for this star
                 "star_orange", // id in planets.json
@@ -43,7 +43,7 @@ public class ba_victoria {
                 2400f,
                 100f);
         Spiritus.setCustomDescriptionId("ba_spiritus"); //reference descriptions.csv
-        Spiritus.setInteractionImage("illustrations","millenniumrooftop1");
+        Spiritus.setInteractionImage("illustrations","spiritusimage");
 
         MarketAPI Spiritus_market = ba_gen.addMarketplace(
                 "trinity",
@@ -102,6 +102,7 @@ public class ba_victoria {
                 5300f,
                 250f);
         WatchpointBeta.setCustomDescriptionId("ba_watchpointbeta"); //reference descriptions.csv
+        WatchpointBeta.setInteractionImage("illustrations","vehiclepowerroom");
         system.addRingBand(WatchpointBeta, "misc", "rings_dust0", 256f, 1, Color.gray, 600f, 300f, 100);
 
         MarketAPI WatchpointBeta_market = ba_gen.addMarketplace(

@@ -25,7 +25,7 @@ public class ba_camulodunum {
         system.getLocation().set(-3200, -1800);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
-        system.setBackgroundTextureFilename("graphics/backgrounds/background1.jpg");
+        system.setBackgroundTextureFilename("graphics/backgrounds/background6.jpg");
 
         PlanetAPI CamulodunumStar = system.initStar("ba_star_camulodunum", // unique id for this star
                 "star_orange", // id in planets.json
@@ -44,7 +44,7 @@ public class ba_camulodunum {
                 2400f,
                 100f);
         Deus.setCustomDescriptionId("ba_deus"); //reference descriptions.csv
-        Deus.setInteractionImage("illustrations","millenniumrooftop1");
+        Deus.setInteractionImage("illustrations","trinitycampus");
 
         MarketAPI Deus_market = ba_gen.addMarketplace(
                 "trinity",

@@ -23,7 +23,7 @@ public class ba_apollinaris {
         system.getLocation().set(-11200, -9800);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
-        system.setBackgroundTextureFilename("graphics/backgrounds/background1.jpg");
+        system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
 
         PlanetAPI ApollinarisStar = system.initStar("ba_star_apollinaris", // unique id for this star
                 "star_neutron", // id in planets.json
@@ -42,7 +42,7 @@ public class ba_apollinaris {
                 2400f,
                 100f);
         Laodicea.setCustomDescriptionId("ba_laodicea"); //reference descriptions.csv
-        Laodicea.setInteractionImage("illustrations","millenniumrooftop1");
+        Laodicea.setInteractionImage("illustrations","ariuscampus");
 
         MarketAPI Laodicea_market = ba_gen.addMarketplace(
                 "arius",
