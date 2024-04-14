@@ -41,7 +41,7 @@ public class ba_landon {
                 "terran",
                 40f,
                 180f,
-                2000f,
+                3000f,
                 100f);
         Poincare.setCustomDescriptionId("ba_poincare"); //reference descriptions.csv
         Poincare.setInteractionImage("illustrations","millenniumrooftop1");
@@ -104,7 +104,7 @@ public class ba_landon {
                 "desert",
                 80f,
                 100f,
-                3000f,
+                44000f,
                 150f);
         Riemann.setCustomDescriptionId("ba_riemann"); //reference descriptions.csv
 
@@ -161,7 +161,7 @@ public class ba_landon {
                 "barren",
                 250f,
                 120f,
-                5300f,
+                7300f,
                 250f);
         YangMills.setCustomDescriptionId("ba_yangmills"); //reference descriptions.csv
         system.addRingBand(YangMills, "misc", "rings_dust0", 256f, 1, Color.gray, 600f, 300f, 100);
@@ -183,7 +183,6 @@ public class ba_landon {
 
                 new ArrayList<>(
                         Arrays.asList(
-                                Submarkets.GENERIC_MILITARY,
                                 Submarkets.SUBMARKET_OPEN,
                                 Submarkets.SUBMARKET_STORAGE,
                                 Submarkets.SUBMARKET_BLACK

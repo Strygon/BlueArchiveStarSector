@@ -20,7 +20,7 @@ public class ba_apollinaris {
     public void generate(SectorAPI sector) {
 
         StarSystemAPI system = sector.createStarSystem("Apollinaris");
-        system.getLocation().set(-11200, -9800);
+        system.getLocation().set(71200, -9800);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
         system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
@@ -39,7 +39,7 @@ public class ba_apollinaris {
                 "barren-bombarded",
                 40f,
                 180f,
-                2400f,
+                9400f,
                 100f);
         Laodicea.setCustomDescriptionId("ba_laodicea"); //reference descriptions.csv
         Laodicea.setInteractionImage("illustrations","ariuscampus");
@@ -102,23 +102,23 @@ public class ba_apollinaris {
 
         //add Comm relay
         SectorEntityToken MakeshiftRelay = system.addCustomEntity("ba_comm_relay_makeshift", // unique id
-                "Trinity Comm Relay", // name - if null, defaultName from custom_entities.json will be used
+                "Arius Comm Relay", // name - if null, defaultName from custom_entities.json will be used
                 "comm_relay", // type of object, defined in custom_entities.json
-                "trinity"); // faction
+                "arius"); // faction
         MakeshiftRelay.setCircularOrbitPointingDown(ApollinarisStar, 180f, 8700f, 265);
 
         // Nav beacon
         SectorEntityToken NavBeacon = system.addCustomEntity("ba_nav_buoy_makeshift", // unique id
-                "Trinity Lighthouse Beacon", // name - if null, defaultName from custom_entities.json will be used
+                "Arius Nav Beacon", // name - if null, defaultName from custom_entities.json will be used
                 "nav_buoy_makeshift", // type of object, defined in custom_entities.json
-                "trinity"); // faction
+                "arius"); // faction
         NavBeacon.setCircularOrbitPointingDown(ApollinarisStar, -90f, 6000f, 105);
 
         // Sensor relay
         SectorEntityToken SensorRelay = system.addCustomEntity("ba_sensor_array", // unique id
-                "Trinity Sensor Relay", // name - if null, defaultName from custom_entities.json will be used
+                "Arius Sensor Relay", // name - if null, defaultName from custom_entities.json will be used
                 "sensor_array", // type of object, defined in custom_entities.json
-                "trinity"); // faction
+                "arius"); // faction
         SensorRelay.setCircularOrbitPointingDown(ApollinarisStar, 100f, 9000f, 450f);
 
         //Jump point
@@ -126,14 +126,14 @@ public class ba_apollinaris {
                 "ba_center_jump",
                 "Center System Jump");
 
-        jumpPoint1.setCircularOrbit(system.getEntityById("ba_star_Apollinaris"), 280, 2400, 100f);
+        jumpPoint1.setCircularOrbit(system.getEntityById("ba_star_Apollinaris"), 20, 2400, 100f);
         jumpPoint1.setStandardWormholeToHyperspaceVisual();
 
         JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint(
                 "ba_fringe_jump",
                 "Fringe System Jump");
 
-        jumpPoint2.setCircularOrbit(system.getEntityById("ba_star_Apollinaris"), 100, 10000, 400f);
+        jumpPoint2.setCircularOrbit(system.getEntityById("ba_star_Apollinaris"), 300, 10000, 400f);
         jumpPoint2.setStandardWormholeToHyperspaceVisual();
 
         //

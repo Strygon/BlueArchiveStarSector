@@ -1,0 +1,71 @@
+{
+  "variantId": "ba_tri_incontrovertible_anticapital",
+  "hullId": "ba_tri_incontrovertible",
+  "displayName": "Anti-Capital",
+  "goalVariant": true,
+  "fluxCapacitors": 41,
+  "fluxVents": 41,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedshieldemitter",
+    "ballistic_rangefinder",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "hellbore",
+        "WS0002": "hellbore",
+        "WS0003": "hellbore",
+        "WS0004": "hellbore",
+        "WS0005": "hellbore",
+        "WS0006": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "heavyac",
+        "WS0008": "heavyac",
+        "WS0009": "heavymauler",
+        "WS0010": "heavymauler",
+        "WS0011": "heavyac",
+        "WS0012": "heavyac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "dragon",
+        "WS0014": "dragon",
+        "WS0015": "dragon",
+        "WS0016": "dragon"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "lightdualmg",
+        "WS0018": "lightdualmg",
+        "WS0019": "lightdualmg",
+        "WS0020": "lightdualmg",
+        "WS0021": "lightdualmg",
+        "WS0022": "lightdualmg",
+        "WS0023": "lightdualmg",
+        "WS0024": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "perdition_wing",
+    "piranha_wing",
+    "perdition_wing"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "hullName": "Courageous",
+  "hullId": "ba_tri_courageous",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/courageous.png",
+  "style": "MIDLINE",
+  "height": 374,
+  "width": 171,
+  "center": [85.5, 187],
+  "collisionRadius": 202,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 193,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": -90,
+      "locations": [24.5, -45.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 211,
+      "angle": 90,
+      "locations": [24.5, 45.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 45,
+      "angle": 0,
+      "locations": [173, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 47,
+      "angle": 0,
+      "locations": [55.5, -54.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 47,
+      "angle": -0,
+      "locations": [55.5, 54.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 232,
+      "angle": -90,
+      "locations": [-101, -15]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 232,
+      "angle": 90,
+      "locations": [-101, 15]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 232,
+      "angle": -90,
+      "locations": [120, -22]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 232,
+      "angle": 90,
+      "locations": [120, 22]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 308,
+      "angle": 180,
+      "locations": [-183, -0.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-9, 65],
+      "length": 66.5,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-9, -65],
+      "length": 66.5,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-112.5, -23],
+      "length": 84,
+      "width": 20,
+      "angle": -180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-112.5, 23],
+      "length": 84,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    187.5, 21.5,
+    113.5, 79,
+    51, 89,
+    -189.5, 14,
+    -189.5, -14,
+    51, -89,
+    113.5, -79,
+    187.5, -21.5
+  ]
+}

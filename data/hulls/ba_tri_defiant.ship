@@ -1,0 +1,196 @@
+{
+  "hullName": "Defiant",
+  "hullId": "ba_tri_defiant",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/defiant.png",
+  "style": "MIDLINE",
+  "height": 313,
+  "width": 100,
+  "center": [50, 156.5],
+  "collisionRadius": 165.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 158.5,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 296,
+      "angle": -90.5,
+      "locations": [47, -28]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 296,
+      "angle": 90.5,
+      "locations": [47, 28]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [25.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 180,
+      "locations": [-128, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 31,
+      "angle": 0,
+      "locations": [133.5, 16]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 31,
+      "angle": -0,
+      "locations": [133.5, -16]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": -90,
+      "locations": [-50.5, -36]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": 90,
+      "locations": [-50.5, 36]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": 90,
+      "locations": [-112, 31]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": -90,
+      "locations": [-112, -31]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": 90,
+      "locations": [91.5, 19]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 275,
+      "angle": -90,
+      "locations": [91.5, -19]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -40.5, -1,
+        -32.5, -1
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-144, -19],
+      "length": 48.5,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-144, 19],
+      "length": 48.5,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-143.5, -31],
+      "length": 48.5,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-143.5, 31],
+      "length": 48.5,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [37, -33],
+      "length": 36.781223,
+      "width": 8.863766,
+      "angle": -165.5,
+      "contrailSize": 8.863766,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [37, 33],
+      "length": 36.781223,
+      "width": 8.863766,
+      "angle": 165.5,
+      "contrailSize": 8.863766,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    157.5, 8,
+    140, 22.5,
+    -67.5, 52,
+    -144, 37,
+    -144, -37,
+    -67.5, -52,
+    140, -22.5,
+    157.5, -8
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "variantId": "ba_tri_incontrovertible_bulwark",
+  "hullId": "ba_tri_incontrovertible",
+  "displayName": "Bulwark",
+  "goalVariant": true,
+  "fluxCapacitors": 48,
+  "fluxVents": 48,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "advancedshieldemitter",
+    "ballistic_rangefinder",
+    "auxiliarythrusters"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "devastator",
+        "WS0002": "devastator",
+        "WS0003": "devastator",
+        "WS0004": "devastator",
+        "WS0005": "devastator",
+        "WS0006": "devastator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "heavyac",
+        "WS0008": "heavyac",
+        "WS0009": "heavyac",
+        "WS0010": "heavyac",
+        "WS0011": "heavyac",
+        "WS0012": "heavyac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "gorgonpod",
+        "WS0014": "gorgonpod",
+        "WS0015": "gorgonpod",
+        "WS0016": "gorgonpod"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "lightdualmg",
+        "WS0018": "lightdualmg",
+        "WS0019": "lightdualmg",
+        "WS0020": "lightdualmg",
+        "WS0021": "lightdualmg",
+        "WS0022": "lightdualmg",
+        "WS0023": "lightdualmg",
+        "WS0024": "lightdualmg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "ba_mil_apalis_fighter_wing",
+    "ba_mil_apalis_fighter_wing",
+    "broadsword_wing"
+  ]
+}

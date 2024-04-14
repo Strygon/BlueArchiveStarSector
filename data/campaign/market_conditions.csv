@@ -1,0 +1,3 @@
+name,id,planetary,decivRemove,script,desc,icon,order
+# event-related market conditions,,,,,,,
+Arius Cells,arius_cells,,TRUE,lnsage.bluearchivemod.campaign.AriusCells,,graphics/icons/markets/pather_cells.png,1400

@@ -22,7 +22,7 @@ public class ba_camulodunum {
     public void generate(SectorAPI sector) {
 
         StarSystemAPI system = sector.createStarSystem("Camulodunum");
-        system.getLocation().set(-3200, -1800);
+        system.getLocation().set(-3200, 1800);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
         system.setBackgroundTextureFilename("graphics/backgrounds/background6.jpg");

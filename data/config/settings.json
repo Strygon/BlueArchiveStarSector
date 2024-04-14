@@ -25,6 +25,12 @@
 		"vehiclepowerroom": "graphics/marketimages/vehiclepowerroom.png",
 		},
 
+		"intel":{
+		"arius_cells_active": "graphics/icons/markets/arius_cells_active.png",
+		"arius_cells_inactive": "graphics/icons/markets/arius_cells_inactive.png"
+
+},
+
 		"characters":{
 				"hayase_yuuka": "graphics/portraits/portrait_yuuka.png",
 				"ushio_noa": "graphics/portraits/portrait_noa.png",

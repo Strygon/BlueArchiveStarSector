@@ -31,6 +31,8 @@ public class Factions {
 	public static final String MILLENNIUM = "millenium";
 
 	public static final String TRINITY = "trinity";
+
+	public static final String ARIUS = "arius";
 	
 	
 	

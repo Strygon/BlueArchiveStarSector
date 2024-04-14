@@ -21,7 +21,7 @@ public class ba_victoria {
     public void generate(SectorAPI sector) {
 
         StarSystemAPI system = sector.createStarSystem("Victoria");
-        system.getLocation().set(-7200, -100);
+        system.getLocation().set(-7200, 3100);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
         system.setBackgroundTextureFilename("graphics/backgrounds/background2.jpg");
