@@ -76,6 +76,12 @@
    			"onslaught",
    			"onslaught_xiv",
    			"ba_mil_constellation",
+			"ba_tri_courageous",
+			"ba_tri_defiant",
+			"ba_tri_incontrovertible",
+			"ba_mil_goliath",
+			"ba_mil_alkahest",
+			"ba_mil_northhampton",
    		],
    	},
 
@@ -243,17 +249,15 @@
 
    },    
 
-   "shipRoles":{
+      "shipRoles":{
 
        "fastAttack":{
+		   
+		   "ba_mil_northhampton_strike":10,
 
-           "lasher_Standard":5,
-
-           "lasher_Strike":5,
-
-           "hound_hegemony_Standard":10,
-
-           "ba_mil_astra_standard":2,
+           "ba_mil_astra_standard":12,
+		   
+		   "ba_mil_fregata_intercept":4,
 
            "fallback":{"combatSmall":1},
 
@@ -262,16 +266,14 @@
    
 
        "escortSmall":{
-
-           "lasher_CS":3,
-
-           "lasher_PD":10,
+		   
+		   "ba_mil_northhampton_strike":20,
 
            "ba_mil_astra_standard":20,
 
            "monitor_Escort":2,
 
-           "vigilance_FS":10,
+           "ba_tri_defiant_standard":4,
 
            "fallback":{"combatSmall":1},
 
@@ -279,19 +281,9 @@
 
        "escortMedium":{
 
-           "enforcer_Escort":10,
-
-           "enforcer_Balanced":10,
-
-           "enforcer_Outdated":10,
-
            "enforcer_CS":10,
 
-           "hammerhead_Balanced":10,
-
-           "enforcer_Elite":10,
-
-           "enforcer_XIV_Elite":4,
+           "ba_tri_defiant_standard":45,
 
            "hammerhead_Elite":10,
 
@@ -303,17 +295,9 @@
 
        "combatSmall":{
 
-           "ba_mil_astra_standard":10,
+           "ba_mil_astra_standard":20,
 
-           "lasher_Strike":5,
-
-           "lasher_CS":5,
-
-           "vigilance_Standard":10,
-
-           "vigilance_FS":10,
-
-           "vigilance_Strike":10,
+           "ba_mil_northhampton_strike":25,
 
            "brawler_Assault":10,
 
@@ -327,23 +311,11 @@
 
            "ba_mil_astra_standard":10,
 
-           "enforcer_Balanced":10,
+           "ba_mil_northhampton_strike":25,
 
            "enforcer_Outdated":10,
 
-           "enforcer_CS":10,
-
-           "enforcer_XIV_Elite":8,
-
-           "hammerhead_Balanced":10,
-
-           "sunder_CS":10,
-
-           "hammerhead_Elite":10,
-
-           "enforcer_Elite":10,
-
-           "sunder_Assault":10,
+           "ba_tri_defiant_standard":40,
 
            "fallback":{"combatSmall":2},
 
@@ -351,35 +323,9 @@
 
        "combatLarge":{
 
-           "falcon_Attack":10,
+           "ba_tri_courageous_standard":40,
 
-           "falcon_CS":10,
-
-           "falcon_xiv_Elite":3,
-
-           "falcon_xiv_Escort":4,
-
-           
-
-           "eagle_Assault":10,
-
-           "eagle_Balanced":10,
-
-           "eagle_xiv_Elite":5,
-
-           
-
-           "dominator_Support":6,
-
-           "dominator_Assault":6,
-
-           "dominator_AntiCV":6,
-
-           "dominator_Outdated":6,
-
-           "dominator_XIV_Elite":5,
-
-           
+           "ba_mil_alkahest_assault":20,          
 
            "gryphon_Standard":10,
 
@@ -393,13 +339,13 @@
 
        "combatCapital":{
 
-           "onslaught_Standard":10,
+           "ba_tri_incontrovertible_anticapital":10,
 
-           "onslaught_Outdated":10,
+           "ba_tri_incontrovertible_bulwark":10,
 
            "onslaught_Elite":10,
 
-           "onslaught_xiv_Elite":3,
+           "ba_mil_goliath_assault":10,
 
            "fallback":{"combatLarge":2},
 
