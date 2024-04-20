@@ -85,6 +85,92 @@
    		],
    	},
 
+   	"knownFighters":{
+    		"tags":["tritachyon","hegemony"],
+    		"fighters":[
+    		    "talon_wing",
+    			"broadsword_wing",
+    			"dagger_wing",
+    			"trident_wing",
+    			"wasp_wing",
+    			"xyphos_wing",
+    			"claw_wing",
+    			"trident_wing",
+    			"cobra_wing",
+    			"longbow_wing",
+    			"ba_mil_apalis_fighter_wing",
+    		],
+    	},
+    	"priorityFighters":{
+    		"tags":[],
+    		"fighters":[
+    		],
+    	},
+
+    		"knownWeapons":{
+    		"tags":["tritachyon", "hegemony"],
+    		"weapons":[
+    			"lightmg",
+                			"lightdualmg",
+                			"vulcan",
+                			"lightac",
+                			"lightdualac",
+                			"lightag",
+                			"lightneedler",
+                			"railgun",
+
+                			"heavymortar",
+                			"chaingun",
+                			"heavyac",
+                			"hveldriver",
+                			"heavymauler",
+                			"heavyneedler",
+                			"flak",
+                			"dualflak",
+
+                			"gauss",
+                			"hephag",
+                			"mark9",
+                			"devastator",
+                			"multineedler",
+
+
+                			"reaper",
+                			"atropos",
+                			"atropos_single",
+                			"swarmer",
+                			"annihilator",
+                			"heatseeker",
+                			"harpoon",
+                			"harpoon_single",
+                			"breach",
+                			"sabot",
+                			"sabot_single",
+
+                			"pilum",
+                			"breachpod",
+                			"harpoonpod",
+                			"sabotpod",
+                			"phasecl",
+                			"typhoon",
+
+                			# not mountable on any Hegemony ships (except the Legion XIV, which they don't have immediate access to);
+                			# still available to buy from them
+                			"cyclone",
+                			"hurricane",
+                			"squall",
+                			"locust",
+
+                			"taclaser",
+                			"pdlaser",
+                			"lrpdlaser",
+                			"ioncannon",
+                			"gravitonbeam",
+                			"pulselaser",
+                			"phasebeam",
+    		],
+    	},
+
    "names":{
        "modern":1,
 
