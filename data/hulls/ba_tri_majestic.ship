@@ -1,0 +1,180 @@
+{
+  "hullName": "Majetic",
+  "hullId": "ba_tri_majestic",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/majestic.png",
+  "style": "MIDLINE",
+  "height": 294,
+  "width": 83,
+  "center": [41.5, 147],
+  "collisionRadius": 155.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 151,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -11, 0.5,
+        -3, 0.5
+      ]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 233,
+      "angle": 0,
+      "locations": [115.5, 19]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 233,
+      "angle": -0,
+      "locations": [115.5, -19]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 232,
+      "angle": 0,
+      "locations": [34.5, 19]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 232,
+      "angle": -0,
+      "locations": [34.5, -19]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 56,
+      "angle": -90,
+      "locations": [-3.5, -14]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 56,
+      "angle": 90,
+      "locations": [-3.5, 14]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 252,
+      "angle": -90,
+      "locations": [-83, -8.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 252,
+      "angle": 90,
+      "locations": [-83, 8.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 252,
+      "angle": -90,
+      "locations": [74.5, -33.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 252,
+      "angle": 90,
+      "locations": [74.5, 33.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 252,
+      "angle": -90,
+      "locations": [-45, -34]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 252,
+      "angle": 90,
+      "locations": [-45, 34]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-87, 15],
+      "length": 41.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-87, -15],
+      "length": 41.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-146.5, 4],
+      "length": 43.5,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-146.5, -4],
+      "length": 43.5,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    147, 4.5,
+    124.5, 37,
+    -50, 43,
+    -147.5, 8,
+    -147.5, -8,
+    -50, -43,
+    124.5, -37,
+    147, -4.5
+  ]
+}

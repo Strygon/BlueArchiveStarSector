@@ -79,6 +79,8 @@
 			"ba_tri_courageous",
 			"ba_tri_defiant",
 			"ba_tri_incontrovertible",
+			"ba_tri_majestic",
+			"ba_tri_justice",
 			"ba_mil_goliath",
 			"ba_mil_alkahest",
 			"ba_mil_northhampton",
@@ -303,7 +305,7 @@
 
        "ranks":{
 
-           "spaceCommander":{"name":"President"},
+           "spaceCommander":{"name":"Commander"},
 
        },
 
@@ -341,6 +343,8 @@
 		   
 		   "ba_mil_northhampton_strike":10,
 
+		   "ba_tri_justice_light_assault":10,
+
            "ba_mil_astra_standard":12,
 		   
 		   "ba_mil_fregata_intercept":4,
@@ -357,7 +361,7 @@
 
            "ba_mil_astra_standard":20,
 
-           "monitor_Escort":2,
+           "ba_tri_justice_light_assault":10,
 
            "ba_tri_defiant_standard":4,
 
@@ -385,9 +389,9 @@
 
            "ba_mil_northhampton_strike":25,
 
-           "brawler_Assault":10,
+           "ba_tri_justice_light_assault":10,
 
-           "centurion_Assault":10,
+           "ba_tri_justice_torpedoboat":10,
 
            "fallback":{"escortSmall":1},
 
@@ -399,7 +403,7 @@
 
            "ba_mil_northhampton_strike":25,
 
-           "enforcer_Outdated":10,
+           "ba_tri_justice_torpedoboat":10,
 
            "ba_tri_defiant_standard":40,
 
@@ -413,9 +417,7 @@
 
            "ba_mil_alkahest_assault":20,          
 
-           "gryphon_Standard":10,
-
-           "gryphon_FS":5,
+           "ba_tri_majestic_standard":15,
 
            
 
