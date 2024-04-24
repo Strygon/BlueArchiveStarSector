@@ -207,9 +207,12 @@
 
 
 
-}
+},
 
 
+"sfx_supernova":[
+{"file":"sounds/sounds/sfx_supernova.ogg","pitch":1.00,"volume":0.3}
+]
 
 
 }

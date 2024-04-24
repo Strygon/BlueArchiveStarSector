@@ -4,9 +4,11 @@
 
    "color":[58,127,240,255],
 
-   "displayName":"Millennium Science School",
+   "displayName":"Millennium",
 
-   "displayNameWithArticle":"Millennium",
+   "displayNameWithArticle":"the Millennium",
+
+   "displayNameLong":"Millennium Science School",
    
    "displayNameLongWithArticle":"the Millennium Science School",
 
@@ -76,6 +78,7 @@
    			"onslaught",
    			"onslaught_xiv",
    			"ba_mil_constellation",
+   			"ba_mil_intervention",
 			"ba_mil_alkahest",
 			"ba_mil_fregata",
 			"ba_mil_northhampton",
@@ -273,24 +276,6 @@
        ],
 
        "standard_female":[
-
-           # "graphics/portraits/portrait_noa.png",
-
-           # "graphics/portraits/portrait_yuuka.png",
-
-           "graphics/portraits/portrait_akane.png",
-
-           "graphics/portraits/portrait_chihiro.png",
-
-           "graphics/portraits/portrait_kotama.png",
-		   
-		   "graphics/portraits/portrait_karin.png",
-		   
-		   "graphics/portraits/portrait_maki.png",
-		   
-		   "graphics/portraits/portrait_sumire.png",
-		   
-		   "graphics/portraits/portrait_toki.png",
 
 		   "graphics/portraits/portrait_worker1.png",
 
@@ -525,11 +510,7 @@
 
            "heron_Attack":2,
 
-           "mora_Assault":7,
-
-           "mora_Support":4,
-
-           "mora_Strike":7,
+           "ba_mil_intervention_standard": 14,
 
            "fallback":{"carrierSmall":2},
 

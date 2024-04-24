@@ -209,6 +209,8 @@ relLevelVengefulMil,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == millenium",FireAll RelLevelMoreDescription,"The school's policy of hostility has shifted from a passive to an open one. Your position in Millennium space is broadcast to all military and independent fleets due to Veritas' constant intrusions, a Cleaning&Clearing unit has been dispatched to counter any ground movement you may attempt, and Treasurer Hayase has put aside a fund specifically to reward the club that can capture or destroy you.
 
 Also, you have been made the final boss in the next game by the Game Development Department.",,
+,,,,,,
+# Arius faction relations,,,,,,
 relLevelCooperativeAri,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == arius",FireAll RelLevelMoreDescription,"Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
 You have also been granted access to the largest and most powerful of Millennium's ships and weapons, being seen as a trustworthy and reliable enough partner to entrust with such equipment.",,
@@ -232,6 +234,8 @@ relLevelVengefulAri,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == arius",FireAll RelLevelMoreDescription,"You have become the prime enemy of Arius. The school sees you as the biggest obstacle next to Trinity to their final goal of cleansing the Sector. It is only a matter of time until a sleeper agent in another school or faction makes their move to assassinate you personally, if not sending an entire fleet to wipe yours out.
 
 Vanitas vanitatum, et omnia vanitas.",,
+,,,,,,
+# Trinity faction relations,,,,,,
 relLevelCooperativeTri,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
 $faction.id == trinity",FireAll RelLevelMoreDescription,"You have become a highly esteemed figure among Trinity, with the Justice Task Force sending you a guard detail whenever you enter Trinity territory, the After School Sweets Club offering you some of the finest parfaits in the Sector, and bypassing meetings with the Tea Party entirely, as you are now directly invited to attend Trinity's Tea Parties.
 Moreover, you have access to Trinity's most powerful ship designs and equipment.",,
@@ -252,7 +256,7 @@ $faction.id == trinity",FireAll RelLevelMoreDescription,The Justice Task Force h
 relLevelVengefulTri,RelationshipLevelDesc,"$faction.rel == VENGEFUL
 $faction.id == trinity",FireAll RelLevelMoreDescription,The Tea Party has issued an official termination order on you and your fleet. The Justice Task Force has begun scrambling an attack fleet to hunt you down and you get the impression the Sisterhood is also seeking to get their hands on you. Students meet up at the Trinity Campus to call for your capture or destruction.,,
 ,,,,,,
-# Millennium fleet greeting lines,,,,,,
+# Millennium faction relations,,,,,,
 greetingMilleniumFriendly,OpenCommLink,"$faction.id == millenium
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Oh hey, it's you! Welcome back to Millennium, Captain! Brought any interesting new machines or ships?""
@@ -287,34 +291,39 @@ The Millennium $personRank looks uncertain of your intentions. ""Is there a reas
 # Trinity fleet greeting lines,,,,,,
 greetingTrinityFriendly,OpenCommLink,"$faction.id == trinity
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Oh hey, it's you! Welcome back to Millennium, Captain! Brought any interesting new machines or ships?""
-You exchange some pleasantries with the other captain before cutting the comm line.
+FireAll PopulateOptions","""Greetings, Captain. I hear the weather is quite lovely at Deus today. Now I don't know about you but once I finish my shift I shall be heading there for some relaxation. I suggest you do the same.""
 OR
-""Reading you loud and clear, Captain. By the way, would you like to join our club? We've just recently founded it and need new members, and we could use someone like you-""
-You politely decline the request, noting you have other things to do. After exchanging a couple more words, you cut the line.
+""Say, Captain, have you ever considered having your future told by Seia? I know, I know, most fortune tellers are a sham, but she's the real deal! But the problem is that she's a busy Tea Party member... Still! Might be worth a shot?""
 OR
-""Scanned and identified. Looking good out there, Captain. Mind telling me your weapons setup some time? I could use some pointers from an experienced captain like yourself.""",,
+""Good travels, Captain. How do they say it again? ""Burn bright?"" was it? I'm afraid I'm not so familiar with the phrases used in this world...""",,
 greetingTrinityHostileWeaker,OpenCommLink,"$faction.id == trinity
 $entity.isHostile
-$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Oh crap! Uh... hey, look, we're not that important in the grand scheme of things, surely your ammunition is better spent elsewhere, right? We're just a harmless little Millennium School fleet.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Trinity? Oh, uh, no, you must be mistaken! This is actually a Gehenna fleet, we were just... passing through, yes. Pay no mind to us! We're just mere tourists with a malfunctioning transpoder!""
 OR
-""I've already sent a distress ping to Seminar! They'll get C&C on your tail and then you'll really get it!"" The person screams at you with an air of fearful anger. ",cutCommLink:Cut the comm link,
+""E-even if you outclass us, I've already notified the Justice Task Force! You'd best surrender while you still can!""",cutCommLink:Cut the comm link,
 greetingTrinityHostileWeakerDefiant,OpenCommLink,"$faction.id == trinity
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The student looks at you with an air of grim defiance. ""Not how I wanted to go out, but if I can make you bleed for it, then all the better.""
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The Trinity Captain maintains a stiff upper lip, though some of $hisOrHer bridge officers are running around in a wild panic in the background.
+
+""Go on then, do your worst. We shall not back down even in the face of overwhelming odds.""
 OR
-""I-I'm not scared of you! Try anything funny and I'll show you why our tech is renowned for its strength!""",cutCommLink:Cut the comm link,
+Despite the almost absurd numerical advantage you enjoy over the Trinity fleet, their captain gives an aggressive shout through the screen as their fleet practically barrels straight for yours.
+
+""Death before Dishonor! May our valor and courage be remembered in the afterlife!""",cutCommLink:Cut the comm link,
 greetingTrinityHostileStronger,OpenCommLink,"$faction.id == trinity
 $entity.isHostile
-$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""We've received an order directly from Seminar to take you out. Now, we're quite confident in our firepower and weaponry, so I suggest you make this easier on both of us and just surrender.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""By decree of the Tea Party, you are hereby ordered to power down and surrender, lest we see ourselves required to use lethal force.""
 OR
-""There you are! I've been looking all over for you! Now if I just shoot you to pieces our club will finally get a funding boost!""",cutCommLink:Cut the comm link,
+The Trinity Captain looks at you with an almost domineering glare.
+
+""Running afoul of the Tea Party's wishes shall be your last mistake, Captain. I urge you to reconsider your allegiances in your next life.""",cutCommLink:Cut the comm link,
 greetingTrinityNeutral,OpenCommLink,"$faction.id == trinity
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","""Acknowledging receipt of your IDENT Code. Your ship has been scanned and identified. Anything the matter or just here for chitchat?""
+FireAll PopulateOptions","""IDENT Code received. No further comment, I suggest you keep your distance for both of our sakes.""
 OR
-The Millennium $personRank looks uncertain of your intentions. ""Is there a reason for you to be contacting us right now?""",,
+The Trinity Captain tilts $hisOrHer head as $heOrShe looks at you through the holo-screen.
+""Surely you contacted us for some kind of reason, yes?""",,
 ,,,,,,
 # Arius fleet greeting lines,,,,,,
 greetingAriusFriendly,OpenCommLink,"$faction.id == arius
@@ -336,3 +345,13 @@ OR
 greetingAriusNeutral,OpenCommLink,"$faction.id == arius
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""We are the Arius Branch School. Your position in this world is uncertain. While you are still filth, we will make no moves to cleanse you just yet.""",,
+,,,,,,
+flavorTextMarketMillennium,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == millenium","AddText ""Millennium Patrol Drones zip between the docked hulls of the station, occasionally shining lights down the less illuminated parts of the port concourse. Upon disembarking, ship captains are met with a fully automated customs inspection booth that rapidly verifies the respective documents needed for open commerce on this station, before releasing the captain into a crowd of curious students who have taken time off their classes to come watch the usual business take place at the station's port."" marketFlavorTextColor
+AddText ""Several bulletin boards across the station advertise various school-related activities, such as the Millennium Hazard Decathlon, the tri-monthly mathematics tournament, and various clubs for the students to join."" marketFlavorTextColor",,,
+flavorTextMarketMillenniumUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$stability == 1
+$faction.id == millenium","AddText ""The much more sparse looking port concourse is still populated with security drones rolling about along the walkways, but their cameras have been replaced with autocannons of unusually high calibre. Due to mandatory curfews and heightened security, the usual crowd of onlookers has been reduced to a small group of students that run from cover to cover, hiding from the security patrols. The news bulletins now display a flashing logo of the Millennium School, with a repeating announcement of 'Due to recent incidents, we mandate that all students stay in their classes and dormitories. Exit from the premises is only allowed on limited permit from Seminar. Thank you for your cooperation.' "" marketFlavorTextColor",,,
+flavorTextMarketMillenniumVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$stability == 0
+$faction.id == millenium","AddText ""Much of the sparsely populated port concourse is now taken up by warships, with the crews working quickly to on- and offload cargo as rapidly as possible while an armed guard detail keeps watch. The station itself has fallen into rather severe disrepair but most of the maintenance robots have been repurposed into additional security units. While the occasional student still tries to catch a glimpse at the activity going on here, they're quickly caught and ferried back to the station campus. You're pretty sure you saw some heavily armed maids taking patrol routes alongside the security robots too."" marketFlavorTextColor",,,
