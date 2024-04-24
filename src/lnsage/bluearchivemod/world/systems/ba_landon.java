@@ -104,7 +104,7 @@ public class ba_landon {
                 "desert",
                 80f,
                 100f,
-                44000f,
+                5100f,
                 150f);
         Riemann.setCustomDescriptionId("ba_riemann"); //reference descriptions.csv
 
