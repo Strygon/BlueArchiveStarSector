@@ -1,22 +1,24 @@
 { 
 
-   id:"trinity",
+   id:"abydos",
 
-   "color":[230,171,53,255],
+   "color":[52,186,235,255],
 
-   "displayName":"Trinity",
+   "displayName":"Abydos",
 
-   "displayNameWithArticle":"the Trinity",
+   "displayNameWithArticle":"Abydos",
 
-   "displayNameLong":"Trinity General School",
+   "displayNameLong":"Abydos High School",
    
-   "displayNameLongWithArticle":"the Trinity General School",
+   "displayNameLongWithArticle":"Abydos High School",
+   
+   "showInIntelTab":false,
 
-   "logo":"graphics/factions/trinity.png",
+   "logo":"graphics/factions/abydos.png",
 
-   "crest":"graphics/factions/crest_trinity.png",
+   "crest":"graphics/factions/crest_abydos.png",
 
-   "shipNamePrefix":"TCN",
+   "shipNamePrefix":"FTF-AN",
 
    "shipNameSources":{
 
@@ -31,7 +33,7 @@
    },
 
    	"knownShips":{
-   		"tags":["heg_aux_bp", "XIV_bp", "hegemony"],
+   		"tags":["heg_aux_bp", "millenium", "hegemony", "tritachyon"],
    		"hulls":[
    			"cerberus",
    			"crig",
@@ -78,107 +80,100 @@
    			"onslaught",
    			"onslaught_xiv",
    			"ba_mil_constellation",
-			"ba_tri_courageous",
-			"ba_tri_defiant",
-			"ba_tri_incontrovertible",
-			"ba_tri_majestic",
-			"ba_tri_justice",
-			"ba_mil_goliath",
+   			"ba_mil_intervention",
 			"ba_mil_alkahest",
+			"ba_mil_fregata",
 			"ba_mil_northhampton",
+			"ba_mil_goliath",
+			"ba_mil_lightspeed",
    		],
    	},
+	
+		"knownFighters":{
+		"tags":["tritachyon"],
+		"fighters":[
+			"broadsword_wing",
+			"dagger_wing",
+			"trident_wing",
+			"wasp_wing",
+			"xyphos_wing",
+			"claw_wing",
+			"trident_wing",
+			"cobra_wing",
+			"longbow_wing",
+			"ba_mil_apalis_fighter_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	
+		"knownWeapons":{
+		"tags":["tritachyon"],
+		"weapons":[
+			"pdlaser",
+			"taclaser",
+			"ioncannon",
+			"irpulse",
+			"lrpdlaser",
+			"pdburst",
+			"amblaster",
+			
+			"phasebeam",
+			"gravitonbeam",
+			"pulselaser",
+			"heavyblaster",
+			"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			
+			"plasma",
+			"hil",
+			"autopulse",
+			"guardian",
+			"tachyonlance",
+			
+			
+			"reaper",
+			"atropos",
+			"atropos_single",
+			"swarmer",
+			"annihilator",
+			"heatseeker",
+			"harpoon",
+			"harpoon_single",
+			"breach",
+			"sabot",
+			"sabot_single",
+			
+			"harpoonpod",
+			"breachpod",
+			"sabotpod",
+			"salamanderpod",
+			"phasecl",
+			"typhoon",
+			
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			
+			"railgun",
+			"lightneedler",
+			"hveldriver",
+			"heavyneedler",
+			"mjolnir",
+			"multineedler",
+		],
+	},
 
-   	"knownFighters":{
-    		"tags":["tritachyon","hegemony"],
-    		"fighters":[
-    		    "talon_wing",
-    			"broadsword_wing",
-    			"dagger_wing",
-    			"trident_wing",
-    			"wasp_wing",
-    			"xyphos_wing",
-    			"claw_wing",
-    			"trident_wing",
-    			"cobra_wing",
-    			"longbow_wing",
-    			"ba_mil_apalis_fighter_wing",
-    		],
-    	},
-    	"priorityFighters":{
-    		"tags":[],
-    		"fighters":[
-    		],
-    	},
-
-    		"knownWeapons":{
-    		"tags":["tritachyon", "hegemony"],
-    		"weapons":[
-    			"lightmg",
-                			"lightdualmg",
-                			"vulcan",
-                			"lightac",
-                			"lightdualac",
-                			"lightag",
-                			"lightneedler",
-                			"railgun",
-
-                			"heavymortar",
-                			"chaingun",
-                			"heavyac",
-                			"hveldriver",
-                			"heavymauler",
-                			"heavyneedler",
-                			"flak",
-                			"dualflak",
-
-                			"gauss",
-                			"hephag",
-                			"mark9",
-                			"devastator",
-                			"multineedler",
-
-
-                			"reaper",
-                			"atropos",
-                			"atropos_single",
-                			"swarmer",
-                			"annihilator",
-                			"heatseeker",
-                			"harpoon",
-                			"harpoon_single",
-                			"breach",
-                			"sabot",
-                			"sabot_single",
-
-                			"pilum",
-                			"breachpod",
-                			"harpoonpod",
-                			"sabotpod",
-                			"phasecl",
-                			"typhoon",
-
-                			# not mountable on any Hegemony ships (except the Legion XIV, which they don't have immediate access to);
-                			# still available to buy from them
-                			"cyclone",
-                			"hurricane",
-                			"squall",
-                			"locust",
-
-                			"taclaser",
-                			"pdlaser",
-                			"lrpdlaser",
-                			"ioncannon",
-                			"gravitonbeam",
-                			"pulselaser",
-                			"phasebeam",
-    		],
-    	},
 
    "names":{
        "modern":1,
 
-       "world":1,
+       "japanese":8,
 
        "future":1,
 
@@ -229,36 +224,34 @@
        "drugs",
 
        "organs",
-	   
-	   "ai_cores",	
 
    ],
 
    "music":{
 
-       "theme":"music_trinity_market_neutral",
+       "theme":"music_millenium_market_neutral",
 
-       "market_neutral":"music_trinity_market_neutral",
+       "market_neutral":"music_millenium_market_neutral",
 
-       "market_hostile":"music_trinity_market_hostile",
+       "market_hostile":"music_millenium_market_hostile",
 
-       "market_friendly":"music_trinity_market_friendly",
+       "market_friendly":"music_millenium_market_friendly",
 
-       "encounter_neutral":"music_trinity_encounter_neutral",
+       "encounter_neutral":"music_millenium_encounter_neutral",
 
-       "encounter_hostile":"music_trinity_encounter_hostile",
+       "encounter_hostile":"music_millenium_encounter_hostile",
 
-       "encounter_friendly":"music_trinity_encounter_friendly",
+       "encounter_friendly":"music_millenium_encounter_friendly",
 
    },    
 
    "internalComms":"hegemony_internal",
 
-   "tariffFraction":0.4,
+   "tariffFraction":0.6,
 
-   "tollFraction":0.1,
+   "tollFraction":0.25,
 
-   "fineFraction":0.25,
+   "fineFraction":0.45,
 
    "portraits":{
 
@@ -290,15 +283,10 @@
 
 		   "graphics/portraits/portrait_helmetgang1.png",
 
-		   "graphics/portraits/portrait_trinitymob.png",
+		   "graphics/portraits/portrait_millenniummob1.png",
 
-		   "graphics/portraits/portrait_trinitynun.png",
+		   "graphics/portraits/portrait_millenniummob2.png",
 
-		   "graphics/portraits/portrait_teaparty1.png",
-
-		   "graphics/portraits/portrait_teaparty2.png",
-
-		   "graphics/portraits/portrait_jtfmobchan.png",
        ],
 
    },
@@ -307,17 +295,17 @@
 
        "ranks":{
 
-           "spaceCommander":{"name":"Commander"},
+           "spaceCommander":{"name":"President"},
 
        },
 
        "posts":{
 
-           "patrolCommander":{"name":"Patrol Commander"},
+           "patrolCommander":{"name":"Patrol President"},
 
-           "fleetCommander":{"name":"Fleet Admiral"},
+           "fleetCommander":{"name":"Fleet President"},
 
-           "baseCommander":{"name":"Base Commander"},
+           "baseCommander":{"name":"Base President"},
 
        },
 
@@ -325,27 +313,25 @@
 
    "custom":{
 
-       "offersCommissions":true,
+       "offersCommissions":false,
 
        "engagesInHostilities":true,
 
        "buysAICores":true,
 
-       "AICoreValueMult":1,
+       "AICoreValueMult":2,
 
-       "AICoreRepMult":2,
+       "AICoreRepMult":3,
 
        "buysSurveyData":true,
 
    },    
 
-      "shipRoles":{
+   "shipRoles":{
 
        "fastAttack":{
 		   
 		   "ba_mil_northhampton_strike":10,
-
-		   "ba_tri_justice_light_assault":10,
 
            "ba_mil_astra_standard":12,
 		   
@@ -363,9 +349,9 @@
 
            "ba_mil_astra_standard":20,
 
-           "ba_tri_justice_light_assault":10,
+           "monitor_Escort":2,
 
-           "ba_tri_defiant_standard":4,
+           "ba_mil_fregata_intercept":4,
 
            "fallback":{"combatSmall":1},
 
@@ -373,11 +359,13 @@
 
        "escortMedium":{
 
-           "enforcer_CS":10,
+           "ba_mil_lightspeed_intercept":20,
 
-           "ba_tri_defiant_standard":45,
-
-           "hammerhead_Elite":10,
+           "ba_mil_fregata_intercept":30,
+		   
+		   "ba_mil_alkahest_assault":5,
+		   
+		   "ba_mil_intervention_standard":5,
 
            "fallback":{"combatMedium":1},
 
@@ -387,27 +375,29 @@
 
        "combatSmall":{
 
+		   "ba_mil_northhampton_strike":20,
+
            "ba_mil_astra_standard":20,
 
-           "ba_mil_northhampton_strike":25,
+           "monitor_Escort":6,
 
-           "ba_tri_justice_light_assault":10,
-
-           "ba_tri_justice_torpedoboat":10,
+           "ba_mil_fregata_intercept":4,
 
            "fallback":{"escortSmall":1},
 
        },
 
        "combatMedium":{
+	   
+			"ba_mil_astra_standard":30,
 
-           "ba_mil_astra_standard":10,
+           "ba_mil_lightspeed_intercept":20,
 
-           "ba_mil_northhampton_strike":25,
-
-           "ba_tri_justice_torpedoboat":10,
-
-           "ba_tri_defiant_standard":40,
+           "ba_mil_fregata_intercept":10,
+		   
+		   "ba_mil_alkahest_assault":5,
+		   
+		   "ba_mil_intervention_standard":5,
 
            "fallback":{"combatSmall":2},
 
@@ -415,11 +405,11 @@
 
        "combatLarge":{
 
-           "ba_tri_courageous_standard":40,
-
-           "ba_mil_alkahest_assault":20,          
-
-           "ba_tri_majestic_standard":15,
+           "ba_mil_alkahest_assault":20,
+		   
+		   "ba_mil_intervention_standard":20,
+		   
+		   "ba_mil_fregata_intercept":4,
 
            
 
@@ -428,16 +418,10 @@
        },
 
        "combatCapital":{
-
-           "ba_tri_incontrovertible_anticapital":10,
-
-           "ba_tri_incontrovertible_bulwark":10,
-
-           "onslaught_Elite":10,
-
-           "ba_mil_goliath_assault":10,
-
-           "fallback":{"combatLarge":2},
+	   
+	   "ba_mil_constellation_standard":10,
+	   
+	   "ba_mil_goliath_assault":10,
 
        },
 
@@ -528,11 +512,7 @@
 
            "heron_Attack":2,
 
-           "mora_Assault":7,
-
-           "mora_Support":4,
-
-           "mora_Strike":7,
+           "ba_mil_intervention_standard": 14,
 
            "fallback":{"carrierSmall":2},
 
@@ -541,10 +521,8 @@
        "carrierLarge":{
 
            "ba_mil_constellation_standard":4,
-
-           "legion_Strike":2,
-
-           "legion_FS":2,
+		   
+		   "ba_mil_intervention_standard":4,
 
            "fallback":{"carrierMedium":1},
 
@@ -689,7 +667,7 @@
 
        "large":8,
 
-       "capital":4,
+       "capital":6,
 
        
 

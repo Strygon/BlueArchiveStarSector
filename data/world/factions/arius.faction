@@ -78,6 +78,70 @@
    			"ba_mil_constellation",
    		],
    	},
+	
+	"knownWeapons":{
+    		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "pirates"],
+    		"weapons":[
+    			"lightmg",
+                			"lightdualmg",
+                			"vulcan",
+                			"lightac",
+                			"lightdualac",
+                			"lightag",
+                			"lightneedler",
+                			"railgun",
+
+                			"heavymortar",
+                			"chaingun",
+                			"heavyac",
+                			"hveldriver",
+                			"heavymauler",
+                			"heavyneedler",
+                			"flak",
+                			"dualflak",
+
+                			"gauss",
+                			"hephag",
+                			"mark9",
+                			"devastator",
+                			"multineedler",
+
+
+                			"reaper",
+                			"atropos",
+                			"atropos_single",
+                			"swarmer",
+                			"annihilator",
+                			"heatseeker",
+                			"harpoon",
+                			"harpoon_single",
+                			"breach",
+                			"sabot",
+                			"sabot_single",
+
+                			"pilum",
+                			"breachpod",
+                			"harpoonpod",
+                			"sabotpod",
+                			"phasecl",
+                			"typhoon",
+
+                			# not mountable on any Hegemony ships (except the Legion XIV, which they don't have immediate access to);
+                			# still available to buy from them
+                			"cyclone",
+                			"hurricane",
+                			"squall",
+                			"locust",
+
+                			"taclaser",
+                			"pdlaser",
+                			"lrpdlaser",
+                			"ioncannon",
+                			"gravitonbeam",
+                			"pulselaser",
+                			"phasebeam",
+    		],
+    	},
 
    "names":{
        "modern":1,
@@ -223,21 +287,46 @@
 
    },
 
-   "custom":{
+	"custom":{
+		"decentralized":true,
+		"engageWhenEvenStrength":true,
+		"exemptFromFoodShortages":true,
+		"willTradeWhenHostile":true,
+		#"noPatrols":true, # no longer supported; if has patrol HQ/military base/etc, will have patrols
+		"ignoreTradeWithEnemiesForReputation":true,
+		"postsNoBounties":true,
+		"offerMissionsWhenHostile":true,
+		"allowsTransponderOffTrade":true,
+		"patrolsHaveNoPatrolMemoryKey":true,
+		"pirateBehavior":true, # for fleet behavior
+		"makesPirateBases":true,
+		"fightToTheLast":true, # order a full assault instead of retreating, in most cases
+		"pirateBaseStationTypes":{
+			"orbitalstation":10,
+			"orbitalstation_mid":6,
+			"orbitalstation_high":2,
+		},
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":true,
+			"territorial":true,
+		},
+	},  
 
-       "offersCommissions":true,
-
-       "engagesInHostilities":true,
-
-       "buysAICores":true,
-
-       "AICoreValueMult":2,
-
-       "AICoreRepMult":3,
-
-       "buysSurveyData":true,
-
-   },    
+	"fleetTypeNames":{
+		"smallTrader":"Trade Convoy",
+		"trade":"Trade Convoy",
+		"tradeLiner":"Passenger Convoy",
+		"patrolMedium":"Raiders",
+		"patrolLarge":"Armada",
+		"mercScout":"Scout",
+		"mercBountyHunter":"Raiders",
+		"mercPrivateer":"Raiders",
+		"mercPatrol":"Purge Fleet",
+		"mercArmada":"Armada",
+		"taskForce":"Purge Fleet",
+	},	
 
    "shipRoles":{
 
