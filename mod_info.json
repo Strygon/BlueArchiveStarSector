@@ -3,7 +3,7 @@
 	"name":"Blue Archive Mod", # Displayed to the player
 	"author":"Lunar Sage",
     "utility":"false",
-	"version":"0.2.0-alpha",
+	"version":"0.3.0-alpha",
 	"description":"A mod to add the schools of Blue Archive to the game, with some new ships to go along with them.",
     "gameVersion": "0.97a-RC11",
   	"jars":["jars/bluearchive.jar"],
