@@ -204,6 +204,71 @@
 			},
 		],
 
+		#Gehenna
+		
+		"music_gehenna_market_neutral":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_gehenna_market_neutral.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_gehenna_market_hostile":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_gehenna_market_hostile.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_gehenna_market_friendly":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_gehenna_market_friendly.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+
+		"music_gehenna_encounter_neutral":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_gehenna_encounter_neutral.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_gehenna_encounter_hostile":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_gehenna_encounter_friendly.ogg",
+				],
+				"randomStart":true, 
+			},
+		],
+		"music_gehenna_encounter_friendly":[
+			{
+				"source":"sounds/music/",
+				"volume":0.3,
+				"files":[
+					"music_gehenna_encounter_friendly.ogg",
+				],
+				"randomStart":true,
+			},
+		],
+				
+
 
 
 

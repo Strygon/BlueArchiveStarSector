@@ -89,7 +89,7 @@ public class ba_landon {
                 //tariffs
                 0.3f,
                 //freeport
-                true,
+                false,
                 //junk and chatter
                 true);
 
@@ -149,7 +149,7 @@ public class ba_landon {
                 //tariffs
                 0.3f,
                 //freeport
-                true,
+                false,
                 //junk and chatter
                 true);
         Riemann_market.getIndustry(Industries.ORBITALWORKS).setSpecialItem(new SpecialItemData(Items.CORRUPTED_NANOFORGE, null));

@@ -83,12 +83,15 @@ public class ba_gen implements SectorGeneratorPlugin {
         FactionAPI tri = sector.getFaction("trinity");
         FactionAPI geh = sector.getFaction("gehenna");
         FactionAPI ari = sector.getFaction("arius");
+        FactionAPI aby = sector.getFaction("abydos");
 
         //Generate your system
         new ba_landon().generate(sector);
         new ba_camulodunum().generate(sector);
         new ba_victoria().generate(sector);
         new ba_apollinaris().generate(sector);
+        new ba_sahid().generate(sector);
+        new ba_kokytos().generate(sector);
 
         addYuuka();
         addNoa();
@@ -96,10 +99,12 @@ public class ba_gen implements SectorGeneratorPlugin {
         addNagisa();
         addMari();
         addSakurako();
+        addIori();
 
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("millenium");
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("trinity");
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("arius");
+        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("gehenna");
 
         //vanilla factions
         mil.setRelationship(Factions.LUDDIC_CHURCH, -0.1f);

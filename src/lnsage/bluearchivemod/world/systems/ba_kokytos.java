@@ -7,26 +7,24 @@ import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
-import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
-import org.lazywizard.lazylib.MathUtils;
 import lnsage.bluearchivemod.ba_gen;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-public class ba_victoria {
 
+public class ba_kokytos {
     public void generate(SectorAPI sector) {
 
-        StarSystemAPI system = sector.createStarSystem("Victoria");
-        system.getLocation().set(-7200, 3100);
+        StarSystemAPI system = sector.createStarSystem("Kokytos");
+        system.getLocation().set(7200, -3100);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
         system.setBackgroundTextureFilename("graphics/backgrounds/background2.jpg");
 
-        PlanetAPI VictoriaStar = system.initStar("ba_star_victoria", // unique id for this star
+        PlanetAPI KokytosStar = system.initStar("ba_star_kokytos", // unique id for this star
                 "star_orange", // id in planets.json
                 600f,        // radius (in pixels at default zoom)
                 400, // corona radius, from star edge
@@ -34,32 +32,30 @@ public class ba_victoria {
                 0.6f, // flare probability
                 5f); // cr loss mult
 
-        PlanetAPI Spiritus = system.addPlanet("ba_planet_spiritus",
-                VictoriaStar,
-                "Spiritus",
-                "jungle",
+        PlanetAPI Perfidia = system.addPlanet("ba_planet_perfidia",
+                KokytosStar,
+                "Perfidia",
+                "tundra",
                 40f,
                 180f,
                 2400f,
                 100f);
-        Spiritus.setCustomDescriptionId("ba_spiritus"); //reference descriptions.csv
-        Spiritus.setInteractionImage("illustrations","spiritusimage");
+        Perfidia.setCustomDescriptionId("ba_perfidia"); //reference descriptions.csv
+        Perfidia.setInteractionImage("illustrations","spiritusimage");
 
-        MarketAPI Spiritus_market = ba_gen.addMarketplace(
-                "trinity",
-                Spiritus,
+        MarketAPI Perfidia_market = ba_gen.addMarketplace(
+                "gehenna",
+                Perfidia,
                 null,
-                "Spiritus",
+                "Perfidia",
                 6,
 
                 new ArrayList<>(
                         Arrays.asList(
                                 Conditions.POPULATION_5,
-                                Conditions.ORGANICS_COMMON,
-                                Conditions.FARMLAND_BOUNTIFUL,
-                                Conditions.HABITABLE,
-                                Conditions.MILD_CLIMATE,
-                                Conditions.RUINS_WIDESPREAD
+                                Conditions.RARE_ORE_ULTRARICH,
+                                Conditions.ORE_RICH,
+                                Conditions.THIN_ATMOSPHERE
                         )
                 ),
 
@@ -78,45 +74,44 @@ public class ba_victoria {
                                 Industries.MINING,
                                 Industries.STARFORTRESS_HIGH,
                                 Industries.CRYOSANCTUM,
-                                Industries.MEGAPORT,
-                                Industries.TECHMINING
+                                Industries.MEGAPORT
                         )
                 ),
                 //tariffs
                 0.3f,
                 //freeport
-                false,
+                true,
                 //junk and chatter
                 true);
 
-        Spiritus_market.getIndustry(Industries.STARFORTRESS_HIGH).setAICoreId(Commodities.ALPHA_CORE);
-        Spiritus_market.getIndustry(Industries.HEAVYBATTERIES).setSpecialItem(new SpecialItemData(Items.DRONE_REPLICATOR, null));
+        Perfidia_market.getIndustry(Industries.STARFORTRESS_HIGH).setAICoreId(Commodities.ALPHA_CORE);
+        Perfidia_market.getIndustry(Industries.HEAVYBATTERIES).setSpecialItem(new SpecialItemData(Items.DRONE_REPLICATOR, null));
 
 
-        PlanetAPI WatchpointBeta = system.addPlanet("ba_planet_watchpointbeta",
-                VictoriaStar,
-                "Watchpoint Beta",
-                "barren",
+        PlanetAPI Malebolge = system.addPlanet("ba_planet_malebolge",
+                KokytosStar,
+                "Malebolge",
+                "arid",
                 250f,
                 120f,
                 5300f,
                 250f);
-        WatchpointBeta.setCustomDescriptionId("ba_watchpointbeta"); //reference descriptions.csv
-        WatchpointBeta.setInteractionImage("illustrations","vehiclepowerroom");
-        system.addRingBand(WatchpointBeta, "misc", "rings_dust0", 256f, 1, Color.gray, 600f, 300f, 100);
+        Malebolge.setCustomDescriptionId("ba_malebolge"); //reference descriptions.csv
+        Malebolge.setInteractionImage("illustrations","vehiclepowerroom");
 
-        MarketAPI WatchpointBeta_market = ba_gen.addMarketplace(
-                "trinity",
-                WatchpointBeta,
+        MarketAPI Malebolge_market = ba_gen.addMarketplace(
+                "gehenna",
+                Malebolge,
                 null,
-                "Watchpoint Beta",
+                "Malebolge",
                 4,
 
                 new ArrayList<>(
                         Arrays.asList(
                                 Conditions.POPULATION_4,
-                                Conditions.THIN_ATMOSPHERE,
-                                Conditions.ORE_RICH
+                                Conditions.HABITABLE,
+                                Conditions.ORE_RICH,
+                                Conditions.HOT
                         )
                 ),
 
@@ -141,56 +136,56 @@ public class ba_victoria {
                 //tariffs
                 0.3f,
                 //freeport
-                false,
+                true,
                 //junk and chatter
                 false);
 
         //Asteroid belt
-        system.addAsteroidBelt(VictoriaStar, 400, 6000, 200, 250, 300, Terrain.ASTEROID_BELT, "Inner Band");
-        system.addRingBand(VictoriaStar, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 6000, 300f);
+        system.addAsteroidBelt(KokytosStar, 400, 6000, 200, 250, 300, Terrain.ASTEROID_BELT, "Inner Band");
+        system.addRingBand(KokytosStar, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 6000, 300f);
 
         //Ring
-        system.addRingBand(VictoriaStar, "misc", "rings_dust0", 256f, 0, Color.gray, 600f, 4000, 220, Terrain.RING, "Outer ring");
-        system.addRingBand(VictoriaStar, "misc", "rings_dust0", 256f, 0, Color.gray, 600f, 4500, 220, Terrain.RING, "Outer ring");
+        system.addRingBand(KokytosStar, "misc", "rings_dust0", 256f, 0, Color.gray, 600f, 4000, 220, Terrain.RING, "Outer ring");
+        system.addRingBand(KokytosStar, "misc", "rings_dust0", 256f, 0, Color.gray, 600f, 4500, 220, Terrain.RING, "Outer ring");
 
         //add Comm relay
         SectorEntityToken MakeshiftRelay = system.addCustomEntity("ba_comm_relay_makeshift", // unique id
-                "Trinity Comm Relay", // name - if null, defaultName from custom_entities.json will be used
+                "Gehenna Comm Relay", // name - if null, defaultName from custom_entities.json will be used
                 "comm_relay", // type of object, defined in custom_entities.json
-                "trinity"); // faction
-        MakeshiftRelay.setCircularOrbitPointingDown(VictoriaStar, 180f, 8700f, 265);
+                "gehenna"); // faction
+        MakeshiftRelay.setCircularOrbitPointingDown(KokytosStar, 180f, 8700f, 265);
 
         // Nav beacon
         SectorEntityToken NavBeacon = system.addCustomEntity("ba_nav_buoy_makeshift", // unique id
-                "Trinity Lighthouse Beacon", // name - if null, defaultName from custom_entities.json will be used
+                "Gehenna Navigation Beacon", // name - if null, defaultName from custom_entities.json will be used
                 "nav_buoy_makeshift", // type of object, defined in custom_entities.json
-                "trinity"); // faction
-        NavBeacon.setCircularOrbitPointingDown(VictoriaStar, -90f, 6000f, 105);
+                "gehenna"); // faction
+        NavBeacon.setCircularOrbitPointingDown(KokytosStar, -90f, 6000f, 105);
 
         // Sensor relay
         SectorEntityToken SensorRelay = system.addCustomEntity("ba_sensor_array", // unique id
-                "Trinity Sensor Relay", // name - if null, defaultName from custom_entities.json will be used
+                "Gehenna Sensor Relay", // name - if null, defaultName from custom_entities.json will be used
                 "sensor_array", // type of object, defined in custom_entities.json
-                "trinity"); // faction
-        SensorRelay.setCircularOrbitPointingDown(VictoriaStar, 100f, 9000f, 450f);
+                "gehenna"); // faction
+        SensorRelay.setCircularOrbitPointingDown(KokytosStar, 100f, 9000f, 450f);
 
         //Jump point
         JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint(
                 "ba_center_jump",
                 "Center System Jump");
 
-        jumpPoint1.setCircularOrbit(system.getEntityById("ba_star_Victoria"), 280, 2400, 100f);
+        jumpPoint1.setCircularOrbit(system.getEntityById("ba_star_kokytos"), 280, 2400, 100f);
         jumpPoint1.setStandardWormholeToHyperspaceVisual();
 
         JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint(
                 "ba_fringe_jump",
                 "Fringe System Jump");
 
-        jumpPoint2.setCircularOrbit(system.getEntityById("ba_star_Victoria"), 100, 10000, 400f);
+        jumpPoint2.setCircularOrbit(system.getEntityById("ba_star_kokytos"), 100, 10000, 400f);
         jumpPoint2.setStandardWormholeToHyperspaceVisual();
 
         //
-        float radiusAfter2 = StarSystemGenerator.addOrbitingEntities(system, VictoriaStar, StarAge.YOUNG,
+        float radiusAfter2 = StarSystemGenerator.addOrbitingEntities(system, KokytosStar, StarAge.YOUNG,
                 3, 5, // min/max entities to add
                 8000, // radius to start adding at
                 3, // name offset - next planet will be <system name> <roman numeral of this parameter + 1>
@@ -212,6 +207,4 @@ public class ba_victoria {
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius * 0.5f, 0, 360f);
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius, 0, 360f, 0.25f);
     }
-
-
 }

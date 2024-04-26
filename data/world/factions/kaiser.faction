@@ -5,7 +5,7 @@
 	"displayNameWithArticle":"Kaiser Corporation",
 	"displayNameLong":"Kaiser Corporation",
 	"displayNameLongWithArticle":"the Kaiser Corporation",
-	"showInIntelTab":false,
+	"showInIntelTab":true,
 	"logo":"graphics/factions/kaiser.png",
 	"crest":"graphics/factions/crest_kaiser.png",
 	"shipNamePrefix":"KCS",

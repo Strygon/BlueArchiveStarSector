@@ -2,10 +2,6 @@
 	"portraits":{
 		"standard_male":[
 		
-           "graphics/portraits/portrait_hegemony01.png",
-
-           "graphics/portraits/portrait_hegemony02.png",
-
            "graphics/portraits/portrait_robot1.png",
 
            "graphics/portraits/portrait_robot2.png",
@@ -31,6 +27,26 @@
 		   "graphics/portraits/portrait_millenniummob1.png",
 
 		   "graphics/portraits/portrait_millenniummob2.png",
+
+		   "graphics/portraits/portrait_gehennamob.png",
+
+		   "graphics/portraits/portrait_emcmob.png",
+
+		   "graphics/portraits/portrait_prefectmob.png",
+
+		   "graphics/portraits/portrait_pandemoniummob.png",
+
+		   "graphics/portraits/portrait_hotspringmob.png",
+
+		   "graphics/portraits/portrait_trinitymob.png",
+
+		   "graphics/portraits/portrait_trinitynun.png",
+
+		   "graphics/portraits/portrait_teaparty1.png",
+
+		   "graphics/portraits/portrait_teaparty2.png",
+
+		   "graphics/portraits/portrait_jtfmobchan.png",
 
 		],
 	},

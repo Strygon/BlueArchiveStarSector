@@ -355,3 +355,34 @@ $faction.id == millenium","AddText ""The much more sparse looking port concourse
 flavorTextMarketMillenniumVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $stability == 0
 $faction.id == millenium","AddText ""Much of the sparsely populated port concourse is now taken up by warships, with the crews working quickly to on- and offload cargo as rapidly as possible while an armed guard detail keeps watch. The station itself has fallen into rather severe disrepair but most of the maintenance robots have been repurposed into additional security units. While the occasional student still tries to catch a glimpse at the activity going on here, they're quickly caught and ferried back to the station campus. You're pretty sure you saw some heavily armed maids taking patrol routes alongside the security robots too."" marketFlavorTextColor",,,
+,,,,,,
+# Iori Shenanigans,,,,,,
+BADefaultIoriGreeting,PickGreeting,$id == iori,ShowPersonVisual,"""Hello, yes? What do you want? Don't waste my time with idle talk, the Prefect Team is always busy.""
+OR
+""Great, another random captain looking to bother us. Spit it out already, what do you want?""
+OR
+""Ugh, is now really the time? What do you want?""","0:cutCommLinkPolite:Cut the comm link
+1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",
+BADefaultIoriGreetingFriendly,PickGreeting,"$id == iori
+$faction.rel == WELCOMING
+$faction.id == gehenna","ShowPersonVisual
+FireAll PopulateOptions
+SetShortcut cutCommLinkPolite ""ESCAPE""","""Oh, hello Captain. Need something?""",0:cutCommLinkPolite:Cut the comm link,
+BAIoriMeetWithHina1,DialogOptionSelected,$option == BAIoriRequestHinaMeeting,,"After the standard affair of moving to the station via shuttle, you make your way to the Head Prefect's office, only to get stopped by a rather fierce looking student waving her rifle around. She moves to stop you from approaching the Head Prefect's office.
+""You, state your intentions! We don't take trespassers lightly!""
+You respond with a simple ""I'd like to meet with the Head Prefect of Gehenna.""
+""You want a meeting with the Head Prefect?""
+Iori gasps with irritation as if you had asked her what color underwear she wore.
+""You think you can just waltz in and chat with the Head Prefect?""","1:BAIoriRequestHinaMeetingCont1:""Why not?""",
+BAIoriMeetWithHina2,DialogOptionSelected,$option == BAIoriRequestHinaMeetingCont1,,"""Why not? Tch, well I'll be!""
+After scoffing at your request, she turns to look at you with a domineering look.
+""I'll tell you what, maybe if you got on all fours and kissed my shoes-""",2:LickIoriFeet:Lick Iori's Feet,
+IoriCanonEvent,DialogOptionSelected,"$option == LickIoriFeet
+AdjustRepActivePerson SUSPICIOUS -4",,"""AAAAH! S-Seriously? I didn't even finish my sentence!""
+Any sense of professional and controlled force has completely flown out the airlock as Iori's face enters a deep red blush.
+""Do you not even have the slightest trace of human dignity?""","1:NoDignity:""I don't know what that word means.""
+2:NoDignity2:""I used to but not anymore.""",
+BAIoriMeetWithHina3,DialogOptionSelected,$option == NoDignity,,"""And you call yourself a Captain! You're demented!""","0:cutCommLinkPolite:Cut the comm link
+1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",
+BAIoriMeetWithHina3alt,DialogOptionSelected,$option == NoDignity2,,"""What's that even supposed to mean? This isn't the first time you've done this to someone? Are you some kind of gross pervert?""","0:cutCommLinkPolite:Cut the comm link
+1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",

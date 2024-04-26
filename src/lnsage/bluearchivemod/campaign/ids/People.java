@@ -21,6 +21,7 @@ public class People {
 	public static String NAGISA = "nagisa";
 	public static String MARI = "mari";
 	public static String SAKURAKO = "sakurako";
+	public static String IORI = "iori";
 	public static PersonAPI getPerson(String id) {
 		return Global.getSector().getImportantPeople().getPerson(id);
 	}
@@ -151,6 +152,29 @@ public class People {
 		//person.addTag(Tags.CONTACT_TRADE);
 		//person.addTag(Tags.CONTACT_MILITARY);
 		person.setPortraitSprite("graphics/portraits/portrait_sakurako.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+
+	public static void addIori() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_perfidia_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(IORI);
+		person.setFaction(Factions.GEHENNA);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.IORI_VOICE);
+		person.setRankId(Ranks.PFT_CAPTAIN);
+		person.setPostId(Ranks.PFT_CAPTAIN);
+		//person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Iori");
+		person.getName().setLast("Shiromi");
+		//person.addTag(Tags.CONTACT_TRADE);
+		//person.addTag(Tags.CONTACT_MILITARY);
+		person.setPortraitSprite("graphics/portraits/portrait_iori.png");
 		//market.setAdmin(person);
 		market.addPerson(person);
 		market.getCommDirectory().addPerson(person);

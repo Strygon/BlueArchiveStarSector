@@ -6,6 +6,7 @@
 		"tea_party_leader":{"name":"Tea Party President"},
 		"sisterhood_member":{"name":"Sister"},
 		"sisterhood_leader":{"name":"Head Sister"},
+		"pft_captain":{"name":"Prefect Team Captain"},
 
 	},
 	
@@ -16,7 +17,8 @@
 		"tea_party_leader":{"name":"Tea Party President"},
 		"sisterhood_member":{"name":"Sister"},
 		"sisterhood_leader":{"name":"Head Sister"},
-		}
+		"pft_captain":{"name":"Prefect Team Captain"},
+	}
 
 }
 
