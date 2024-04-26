@@ -7,17 +7,15 @@ import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
-import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
-import org.lazywizard.lazylib.MathUtils;
 import lnsage.bluearchivemod.ba_gen;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ba_landon {
+public class ba_mil_landon {
 
     public void generate(SectorAPI sector) {
 

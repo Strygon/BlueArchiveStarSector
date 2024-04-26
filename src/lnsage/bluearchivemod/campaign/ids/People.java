@@ -1,27 +1,20 @@
 package lnsage.bluearchivemod.campaign.ids;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
-import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import lnsage.bluearchivemod.campaign.ids.Voices;
-import com.fs.starfarer.api.impl.campaign.missions.RecoverAPlanetkiller;
-import com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 
 public class People {
 
 	// Hegemony
-	public static String YUUKA = "yuuka";
-	public static String NOA = "noa";
-	public static String HIMARI = "himari";
-	public static String NAGISA = "nagisa";
-	public static String MARI = "mari";
-	public static String SAKURAKO = "sakurako";
-	public static String IORI = "iori";
+	public static String BA_YUUKA = "yuuka";
+	public static String BA_NOA = "noa";
+	public static String BA_HIMARI = "himari";
+	public static String BA_NAGISA = "nagisa";
+	public static String BA_MARI = "mari";
+	public static String BA_SAKURAKO = "sakurako";
+	public static String BA_IORI = "iori";
 	public static PersonAPI getPerson(String id) {
 		return Global.getSector().getImportantPeople().getPerson(id);
 	}
@@ -31,7 +24,7 @@ public class People {
 
 			PersonAPI person = Global.getFactory().createPerson();
 
-			person.setId(YUUKA);
+			person.setId(BA_YUUKA);
 			person.setFaction(Factions.MILLENNIUM);
 			person.setGender(Gender.FEMALE);
 			person.setVoice(Voices.YUUKA_VOICE);
@@ -53,7 +46,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(NOA);
+		person.setId(BA_NOA);
 		person.setFaction(Factions.MILLENNIUM);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NOA_VOICE);
@@ -75,7 +68,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(HIMARI);
+		person.setId(BA_HIMARI);
 		person.setFaction(Factions.MILLENNIUM);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.HIMARI_VOICE);
@@ -97,7 +90,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(NAGISA);
+		person.setId(BA_NAGISA);
 		person.setFaction(Factions.TRINITY);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NAGISA_VOICE);
@@ -118,7 +111,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(MARI);
+		person.setId(BA_MARI);
 		person.setFaction(Factions.TRINITY);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NAGISA_VOICE);
@@ -140,7 +133,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(SAKURAKO);
+		person.setId(BA_SAKURAKO);
 		person.setFaction(Factions.TRINITY);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NAGISA_VOICE);
@@ -163,7 +156,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(IORI);
+		person.setId(BA_IORI);
 		person.setFaction(Factions.GEHENNA);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.IORI_VOICE);

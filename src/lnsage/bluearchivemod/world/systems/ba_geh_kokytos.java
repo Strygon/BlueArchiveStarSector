@@ -15,7 +15,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ba_kokytos {
+public class ba_geh_kokytos {
     public void generate(SectorAPI sector) {
 
         StarSystemAPI system = sector.createStarSystem("Kokytos");

@@ -15,58 +15,55 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ba_apollinaris {
+public class ba_aby_sahid {
 
     public void generate(SectorAPI sector) {
 
-        StarSystemAPI system = sector.createStarSystem("Apollinaris");
-        system.getLocation().set(71200, -9800);
+        StarSystemAPI system = sector.createStarSystem("Sahid");
+        system.getLocation().set(4200, -12800);
         system.setEnteredByPlayer(true);
         Misc.setAllPlanetsSurveyed(system, true);
         system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
 
-        PlanetAPI ApollinarisStar = system.initStar("ba_star_apollinaris", // unique id for this star
-                "star_neutron", // id in planets.json
+        PlanetAPI SahidStar = system.initStar("ba_star_sahid", // unique id for this star
+                "star_red_giant", // id in planets.json
                 600f,        // radius (in pixels at default zoom)
                 400, // corona radius, from star edge
                 8f, // solar wind burn level
                 0.6f, // flare probability
                 5f); // cr loss mult
 
-        PlanetAPI Laodicea = system.addPlanet("ba_planet_laodicea",
-                ApollinarisStar,
-                "Laodicea",
+        PlanetAPI Dendera = system.addPlanet("ba_planet_dendera",
+                SahidStar,
+                "Dendera",
                 "barren-bombarded",
                 40f,
                 180f,
                 9400f,
                 100f);
-        Laodicea.setCustomDescriptionId("ba_laodicea"); //reference descriptions.csv
-        Laodicea.setInteractionImage("illustrations","ariuscampus");
+        Dendera.setCustomDescriptionId("ba_laodicea"); //reference descriptions.csv
+        Dendera.setInteractionImage("illustrations","ariuscampus");
 
-        MarketAPI Laodicea_market = ba_gen.addMarketplace(
-                "arius",
-                Laodicea,
+        MarketAPI Dendera_market = ba_gen.addMarketplace(
+                "abydos",
+                Dendera,
                 null,
-                "Laodicea",
-                5,
+                "Dendera",
+                1,
 
                 new ArrayList<>(
                         Arrays.asList(
-                                Conditions.POPULATION_5,
-                                Conditions.ORGANICS_COMMON,
+                                Conditions.POPULATION_1,
+                                Conditions.ORGANICS_TRACE,
                                 Conditions.FARMLAND_POOR,
-                                Conditions.POLLUTION,
+                                Conditions.EXTREME_WEATHER,
                                 Conditions.IRRADIATED,
-                                Conditions.REGIONAL_CAPITAL,
-                                Conditions.LOW_GRAVITY,
-                                Conditions.RUINS_VAST
+                                Conditions.RUINS_SCATTERED
                         )
                 ),
 
                 new ArrayList<>(
                         Arrays.asList(
-                                Submarkets.GENERIC_MILITARY,
                                 Submarkets.SUBMARKET_OPEN,
                                 Submarkets.SUBMARKET_STORAGE,
                                 Submarkets.SUBMARKET_BLACK
@@ -75,69 +72,49 @@ public class ba_apollinaris {
                 new ArrayList<>(
                         Arrays.asList(
                                 Industries.POPULATION,
-                                Industries.HEAVYBATTERIES,
-                                Industries.FARMING,
-                                Industries.STARFORTRESS_HIGH,
-                                Industries.MEGAPORT
+                                Industries.ORBITALSTATION,
+                                Industries.SPACEPORT
                         )
                 ),
                 //tariffs
-                0.3f,
+                0.5f,
                 //freeport
-                true,
+                false,
                 //junk and chatter
                 true);
 
-        Laodicea_market.getIndustry(Industries.STARFORTRESS_HIGH).setAICoreId(Commodities.ALPHA_CORE);
-        Laodicea_market.getIndustry(Industries.HEAVYBATTERIES).setSpecialItem(new SpecialItemData(Items.DRONE_REPLICATOR, null));
+        Dendera_market.getIndustry(Industries.ORBITALSTATION).setAICoreId(Commodities.ALPHA_CORE);
 
 
         //Asteroid belt
-        system.addAsteroidBelt(ApollinarisStar, 400, 6000, 200, 250, 300, Terrain.ASTEROID_BELT, "Inner Band");
-        system.addRingBand(ApollinarisStar, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 6000, 300f);
-
-        //Ring
-        system.addRingBand(ApollinarisStar, "misc", "rings_dust0", 256f, 0, Color.gray, 600f, 4000, 220, Terrain.RING, "Outer ring");
-        system.addRingBand(ApollinarisStar, "misc", "rings_dust0", 256f, 0, Color.gray, 600f, 4500, 220, Terrain.RING, "Outer ring");
+        system.addAsteroidBelt(SahidStar, 400, 6600, 200, 250, 300, Terrain.ASTEROID_BELT, "Abydos Asteroid Belt");
+        system.addRingBand(SahidStar, "misc", "rings_asteroids0", 256f, 3, Color.gray, 256f, 6000, 300f);
 
         //add Comm relay
         SectorEntityToken MakeshiftRelay = system.addCustomEntity("ba_comm_relay_makeshift", // unique id
-                "Arius Comm Relay", // name - if null, defaultName from custom_entities.json will be used
+                "Abydos Comm Relay", // name - if null, defaultName from custom_entities.json will be used
                 "comm_relay", // type of object, defined in custom_entities.json
-                "arius"); // faction
-        MakeshiftRelay.setCircularOrbitPointingDown(ApollinarisStar, 180f, 8700f, 265);
+                "abydos"); // faction
+        MakeshiftRelay.setCircularOrbitPointingDown(SahidStar, 180f, 8700f, 265);
 
-        // Nav beacon
-        SectorEntityToken NavBeacon = system.addCustomEntity("ba_nav_buoy_makeshift", // unique id
-                "Arius Nav Beacon", // name - if null, defaultName from custom_entities.json will be used
-                "nav_buoy_makeshift", // type of object, defined in custom_entities.json
-                "arius"); // faction
-        NavBeacon.setCircularOrbitPointingDown(ApollinarisStar, -90f, 6000f, 105);
-
-        // Sensor relay
-        SectorEntityToken SensorRelay = system.addCustomEntity("ba_sensor_array", // unique id
-                "Arius Sensor Relay", // name - if null, defaultName from custom_entities.json will be used
-                "sensor_array", // type of object, defined in custom_entities.json
-                "arius"); // faction
-        SensorRelay.setCircularOrbitPointingDown(ApollinarisStar, 100f, 9000f, 450f);
 
         //Jump point
         JumpPointAPI jumpPoint1 = Global.getFactory().createJumpPoint(
                 "ba_center_jump",
                 "Center System Jump");
 
-        jumpPoint1.setCircularOrbit(system.getEntityById("ba_star_Apollinaris"), 20, 2400, 100f);
+        jumpPoint1.setCircularOrbit(system.getEntityById("ba_star_sahid"), 20, 2400, 100f);
         jumpPoint1.setStandardWormholeToHyperspaceVisual();
 
         JumpPointAPI jumpPoint2 = Global.getFactory().createJumpPoint(
                 "ba_fringe_jump",
                 "Fringe System Jump");
 
-        jumpPoint2.setCircularOrbit(system.getEntityById("ba_star_Apollinaris"), 300, 10000, 400f);
+        jumpPoint2.setCircularOrbit(system.getEntityById("ba_star_sahid"), 300, 10000, 400f);
         jumpPoint2.setStandardWormholeToHyperspaceVisual();
 
         //
-        float radiusAfter2 = StarSystemGenerator.addOrbitingEntities(system, ApollinarisStar, StarAge.YOUNG,
+        float radiusAfter2 = StarSystemGenerator.addOrbitingEntities(system, SahidStar, StarAge.YOUNG,
                 5, 7, // min/max entities to add
                 8000, // radius to start adding at
                 3, // name offset - next planet will be <system name> <roman numeral of this parameter + 1>
@@ -159,4 +136,5 @@ public class ba_apollinaris {
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius * 0.5f, 0, 360f);
         editor.clearArc(system.getLocation().x, system.getLocation().y, 0, radius + minRadius, 0, 360f, 0.25f);
     }
+
 }
