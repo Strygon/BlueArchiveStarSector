@@ -1,6 +1,7 @@
 package lnsage.bluearchivemod.campaign.ids;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -15,6 +16,7 @@ public class People {
 	public static String BA_MARI = "mari";
 	public static String BA_SAKURAKO = "sakurako";
 	public static String BA_IORI = "iori";
+	public static String BA_HINA = "hina";
 	public static PersonAPI getPerson(String id) {
 		return Global.getSector().getImportantPeople().getPerson(id);
 	}
@@ -168,6 +170,28 @@ public class People {
 		//person.addTag(Tags.CONTACT_TRADE);
 		//person.addTag(Tags.CONTACT_MILITARY);
 		person.setPortraitSprite("graphics/portraits/portrait_iori.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addHina() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_perfidia_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_HINA);
+		person.setFaction(Factions.GEHENNA);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.PFT_LEADER);
+		person.setPostId(Ranks.PFT_LEADER);
+		person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Hina");
+		person.getName().setLast("Sorasaki");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_MILITARY);
+		person.setPortraitSprite("graphics/portraits/portrait_hina.png");
 		//market.setAdmin(person);
 		market.addPerson(person);
 		market.getCommDirectory().addPerson(person);

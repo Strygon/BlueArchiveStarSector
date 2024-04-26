@@ -130,6 +130,7 @@ public class Ranks {
 	public static String SISTERHOOD_MEMBER = "sisterhood_member";
 	public static String SISTERHOOD_LEADER = "sisterhood_leader";
 	public static String PFT_CAPTAIN = "pft_captain";
+	public static String PFT_LEADER = "pft_leader";
 
 	
 	//public static String POST_ = "";

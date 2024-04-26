@@ -7,7 +7,7 @@
 		"sisterhood_member":{"name":"Sister"},
 		"sisterhood_leader":{"name":"Head Sister"},
 		"pft_captain":{"name":"Prefect Team Captain"},
-
+		"pft_leader":{"name":"Prefect Team Head"}
 	},
 	
 	"posts":{
@@ -18,6 +18,7 @@
 		"sisterhood_member":{"name":"Sister"},
 		"sisterhood_leader":{"name":"Head Sister"},
 		"pft_captain":{"name":"Prefect Team Captain"},
+		"pft_leader":{"name":"Prefect Team Head"},
 	}
 
 }

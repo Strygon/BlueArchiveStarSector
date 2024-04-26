@@ -357,12 +357,21 @@ $stability == 0
 $faction.id == millenium","AddText ""Much of the sparsely populated port concourse is now taken up by warships, with the crews working quickly to on- and offload cargo as rapidly as possible while an armed guard detail keeps watch. The station itself has fallen into rather severe disrepair but most of the maintenance robots have been repurposed into additional security units. While the occasional student still tries to catch a glimpse at the activity going on here, they're quickly caught and ferried back to the station campus. You're pretty sure you saw some heavily armed maids taking patrol routes alongside the security robots too."" marketFlavorTextColor",,,
 ,,,,,,
 # Iori Shenanigans,,,,,,
-BADefaultIoriGreeting,PickGreeting,$id == iori,ShowPersonVisual,"""Hello, yes? What do you want? Don't waste my time with idle talk, the Prefect Team is always busy.""
+BADefaultIoriGreetingNotMetHina,PickGreeting,"$id == iori
+!$hasMetHina","ShowPersonVisual
+!$hasMetHina","""Hello, yes? What do you want? Don't waste my time with idle talk, the Prefect Team is always busy.""
 OR
 ""Great, another random captain looking to bother us. Spit it out already, what do you want?""
 OR
 ""Ugh, is now really the time? What do you want?""","0:cutCommLinkPolite:Cut the comm link
 1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",
+BADefaultIoriGreeting,PickGreeting,$id == iori,"ShowPersonVisual
+!$hasMetHina","""Hello, yes? What do you want? Don't waste my time with idle talk, the Prefect Team is always busy.""
+OR
+""Great, another random captain looking to bother us. Spit it out already, what do you want?""
+OR
+""Ugh, is now really the time? What do you want?""","0:cutCommLinkPolite:Cut the comm link
+",
 BADefaultIoriGreetingFriendly,PickGreeting,"$id == iori
 $faction.rel == WELCOMING
 $faction.id == gehenna","ShowPersonVisual
@@ -380,9 +389,55 @@ After scoffing at your request, she turns to look at you with a domineering look
 IoriCanonEvent,DialogOptionSelected,"$option == LickIoriFeet
 AdjustRepActivePerson SUSPICIOUS -4",,"""AAAAH! S-Seriously? I didn't even finish my sentence!""
 Any sense of professional and controlled force has completely flown out the airlock as Iori's face enters a deep red blush.
-""Do you not even have the slightest trace of human dignity?""","1:NoDignity:""I don't know what that word means.""
+""Do you not have even the slightest trace of human dignity?""","1:NoDignity:""I don't know what that word means.""
 2:NoDignity2:""I used to but not anymore.""",
-BAIoriMeetWithHina3,DialogOptionSelected,$option == NoDignity,,"""And you call yourself a Captain! You're demented!""","0:cutCommLinkPolite:Cut the comm link
-1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",
-BAIoriMeetWithHina3alt,DialogOptionSelected,$option == NoDignity2,,"""What's that even supposed to mean? This isn't the first time you've done this to someone? Are you some kind of gross pervert?""","0:cutCommLinkPolite:Cut the comm link
-1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",
+BAIoriMeetWithHina3,DialogOptionSelected,$option == NoDignity,,"""And you call yourself a Captain! You're demented!""",0:HinaMeetCont:Continue,
+BAIoriMeetWithHina3alt,DialogOptionSelected,$option == NoDignity2,,"""What's that even supposed to mean? This isn't the first time you've done this to someone? Are you some kind of gross pervert?""",0:HinaMeetCont:Continue,
+BAIoriMeetWithHina4,DialogOptionSelected,$option == HinaMeetCont,"BeginConversation hina
+$hasMetHina = true","However, before she can continue her perturbed anger, you hear the sound of footsteps approaching, accompanied by a small white haired figure approaching you.
+""Why are you all being so noisy? Doesn't the station have recreational decks where you can partake in your activities?""
+You notice that the door to the Head Prefect's office is wide open now. This short woman appears to, indeed, be the Head Prefect of all of Gehenna.",0:HinaMeetCont2:Continue,
+BAIoriMeetWithHina5,DialogOptionSelected,$option == HinaMeetCont2,,"Iori stammers in shock.
+""P-president...?""
+Hina doesn't react, instead opting to continue.
+""I've seen plenty of people grovel on their knees for their lives. I've never seen a starship captain do it to meet with a regular official... especially when you could have just submitted a meeting form.""","0:HinaMeetCont3:""Just doing as I was ordered, ma'am.""",
+BAIoriMeetWithHina6,DialogOptionSelected,$option == HinaMeetCont3,,"She raises an eyebrow upon hearing this and shoots a confused look at Iori, who stands there, not sure whether to defend her dignity or play it cool in front of her boss.
+""Raise your head, Captain. I've heard of certain fleet captains such as yourself being... let's say, reliable operators when the usual channels are unable, or unwilling, to carry certain deeds out in a timely manner.""
+Hina reaches into her coat pocket and hands you a Tri-OS contact ID.
+""Contact me if you are willing to assist in some matters the Prefect Team requires doing. In the mean time... Iori, I suggest next time you don't force captains to lick your shoes before hearing them out. We're not the Pandemonium Society, so act like it.""
+She turns around and walks back to her office.",0:HinaMeetCont4:Continue,
+BAIoriMeetWithHina7,DialogOptionSelected,$option == HinaMeetCont4,"BeginConversation iori
+","Iori stands there, still blushing furiously.
+""Wait- what do you mean by that? He licked my feet, how come I am the weird one?""",0:cutCommLinkPolite:Leave quickly while Iori is distracted.,
+,,,,,,
+# Meeting with Hiniature,,,,,,
+BADefaultHinaNotMet,PickGreeting,"$id == hina
+!$hasMetHina",ShowPersonVisual,"After a short wait, your connection request is rejected, with a short voice notification stating that ""Thank you for your request but unfortunately the Head Prefect is not taking calls from strangers at the moment."" The voice does not seem to be generated by an AI, and you have a strong suspicion it may have been personally intercepted by the Head Prefect's secretary. Perhaps you will need to meet with someone else first to get to her.",0:cutCommLinkPolite:Cut the comm link,
+BAHinaFirstMeeting1,PickGreeting,"$id == hina
+$hasMetHina
+!$HinaContactAdded",ShowPersonVisual,"You take the contact ID and input it into your comms terminal. After a short while, the request is accepted and you are met with a video feed of the Head Prefect, sipping a cup of coffee. She puts it aside once she notices the connection has gone through.
+""Ah. Greetings, Captain. It is good to see that you have decided to take my request seriously. The Prefect Team can take any help it can get nowadays.""
+Hina grabs a stack of papers that was partially blocking the view of her and moves them aside.
+""Now, we are both very busy people, so I shall get right down to business. I'm not sure how familiar you are with the culture of the Gehenna Academy, but it is by nature a very... chaotic school. As a result, we, the Prefect Team, typically have all our hands full just keeping the school together, which leaves very little in the way of resources for resolving any other, more external issues.""",0:HinaFirstContact1:Continue,
+BAHinaFirstMeeting2,DialogOptionSelected,$option == HinaFirstContact1,,"Hina gives a tired sigh. You see a blue haired woman hurry into the room and grab the empty coffee cup, replacing it with a freshly filled one.
+""Thank you, Ako. In any case, this is where independent actors like yourself come into play. We need captains who will get work done quickly and efficiently. Now we have plenty of work here in Gehenna so you can pick and choose your contracts, there is no need to do all of them, though that would obviously be greatly appreciated.""
+She pauses to take another sip of coffee. Despite the natural reduction in visual quality via the holo-call, you can still make out pretty noticeable bags under her eyes.
+""And before you ask, yes, all of this work will be duly compensated. As the Head Prefect, I will handle the administrative duties of these contracts along with the payment, there is no need to get the Pandemonium Society involved.""
+Hina folds her hands together, looking at you expectantly.
+""So, Captain. Are you onboard with this deal? I believe there is a lot to be gained for both of us.""","0:HinaAcceptContact:""Sure, I'm always up for paid contracts. (accept)""
+1:HinaDenyContact:""Hm, I'm not sure this is in the books for me at the moment (decline)""",
+BAHinaContactAccepted,DialogOptionSelected,$option == HinaAcceptContact,"AddPotentialContact hina
+$HinaContactAdded = true","You notice a faint smile undernetath her professional expression. Her halo also seems to glow a bit brighter.
+""That is excellent to hear. Thank you.""
+She moves to grab her mobile phone and types something on it.
+""In order to facilitate future communications I will need your Momotalk crede-""
+In the middle of her sentence she remembers that few people in the Persean Sector know about Momotalk.
+""...I mean, your Tri-Talk Credentials, sorry.""
+Hina blushes a little bit at her blunder, but quickly gets over it. After you have been connected, she looks back to her holo-screen.
+""That is all for now, captain. It has been a pleasure doing business with you.""
+She bows and cuts the comms link.",0:cutCommLinkPolite:Cut the comm link,
+BAHinaContactDenied,DialogOptionSelected,$option == HinaDenyContact,,"Her expression doesn't seem to change much... aside from her halo dimming a bit.
+""That... is quite disappointing to hear, but I understand. This new world is a rather complicated one and I don't claim to fully understand it myself.""
+Hina moves a piece of paper away, seemingly some kind of form she was intending to fill out had you accepted.
+""Well, the offer is always open if you choose to come back. Thank you for your time though, captain.""
+Before you can say anything else, the comms link is cut.",0:cutCommLinkPolite:Cut the comm link,
