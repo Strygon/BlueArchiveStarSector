@@ -99,6 +99,11 @@ public class ba_gen implements SectorGeneratorPlugin {
         addSakurako();
         addIori();
         addHina();
+        addHoshino();
+        addShiroko();
+        addSerika();
+        addAyane();
+        addNonomi();
 
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("millenium");
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("trinity");

@@ -387,7 +387,7 @@ BAIoriMeetWithHina2,DialogOptionSelected,$option == BAIoriRequestHinaMeetingCont
 After scoffing at your request, she turns to look at you with a domineering look.
 ""I'll tell you what, maybe if you got on all fours and kissed my shoes-""",2:LickIoriFeet:Lick Iori's Feet,
 IoriCanonEvent,DialogOptionSelected,"$option == LickIoriFeet
-AdjustRepActivePerson SUSPICIOUS -4",,"""AAAAH! S-Seriously? I didn't even finish my sentence!""
+",,"""AAAAH! S-Seriously? I didn't even finish my sentence!""
 Any sense of professional and controlled force has completely flown out the airlock as Iori's face enters a deep red blush.
 ""Do you not have even the slightest trace of human dignity?""","1:NoDignity:""I don't know what that word means.""
 2:NoDignity2:""I used to but not anymore.""",
@@ -406,8 +406,7 @@ BAIoriMeetWithHina6,DialogOptionSelected,$option == HinaMeetCont3,,"She raises a
 Hina reaches into her coat pocket and hands you a Tri-OS contact ID.
 ""Contact me if you are willing to assist in some matters the Prefect Team requires doing. In the mean time... Iori, I suggest next time you don't force captains to lick your shoes before hearing them out. We're not the Pandemonium Society, so act like it.""
 She turns around and walks back to her office.",0:HinaMeetCont4:Continue,
-BAIoriMeetWithHina7,DialogOptionSelected,$option == HinaMeetCont4,"BeginConversation iori
-","Iori stands there, still blushing furiously.
+BAIoriMeetWithHina7,DialogOptionSelected,$option == HinaMeetCont4,BeginConversation iori,"Iori stands there, still blushing furiously.
 ""Wait- what do you mean by that? He licked my feet, how come I am the weird one?""",0:cutCommLinkPolite:Leave quickly while Iori is distracted.,
 ,,,,,,
 # Meeting with Hiniature,,,,,,
@@ -441,3 +440,53 @@ BAHinaContactDenied,DialogOptionSelected,$option == HinaDenyContact,,"Her expres
 Hina moves a piece of paper away, seemingly some kind of form she was intending to fill out had you accepted.
 ""Well, the offer is always open if you choose to come back. Thank you for your time though, captain.""
 Before you can say anything else, the comms link is cut.",0:cutCommLinkPolite:Cut the comm link,
+,,,,,,
+# Start of Abydos Basic Quest,,,,,,
+BAAyaneFirstMeeting,PickGreeting,"$id == ayane
+!$hasMetAyane",ShowPersonVisual,"While you are pondering the comms directory, you receive a hail from the student council at Abydos- or what's left of it, rather. The connection is quite weak however, perhaps due to a makeshift transmitter.
+Once the static mostly clears you see a young student with pointy ears and red glasses talking to someone off-screen before turning her attention to you.
+
+""-is the signal coming through? Ah, hello Captain! Pardon the sudden message but there is a bit of a serious problem that needs solving at Abydos.""
+
+In the background you can see the room the council is in. It's certainly seen better days, with deck panelling flaking off, exposed wires hanging from the ceiling and a couple lights flickering. You can only guess how long this station was abandoned before they moved in.","0:BAbydosQuestBrief1:""What's the problem?""",
+BAAyaneFirstMeeting2,DialogOptionSelected,$option == BAbydosQuestBrief1,,"Ayane fidgets a bit nervously, clearly not used to talking to many starship captains.
+
+""Um, well, our station has up until recently been run by a Beta Core Artificial Intelligence.""
+
+Before you can say anything, she immediately raises her hand.
+""N-not for any dangerous purposes, mind you! It was simply taking care of maintenance tasks, resource allocation and reactor operation. We're... not exactly swimming in resources so any ounce of efficiency we can get out of this place is worth taking. Especially since the core was found here in the first place.""
+
+You look at her expectantly, waiting for her to get to the point.
+
+""Um, but last week, Serika was contacted by someone who claimed to be a Tri-Tachyon Security Consultant who promised to take the core and give it a firmware update to further improve the efficiency of our station. That person however... has not arrived yet, and we've been unable to reach them via comms.""
+","0:BAbydosQuestBrief2:""Sounds like this Serika got scammed.""",
+BAAyaneFirstMeeting3,DialogOptionSelected,$option == BAbydosQuestBrief2,BeginConversation serika,"Before either of you can say anything, you hear shouting from across the room on the Abydos side.
+
+""H-hey! Don't put this on me! He had totally legit credentials and a fancy uniform and everything! How was I supposed to know it was a fake?""
+
+A girl with black hair and cat ears stumbles into view, most likely the Serika in question.
+
+""And why do we need the help of a random stranger anyway? Don't we have ships that can go to... wherever that guy went and demand the core back?""
+
+Ayane sighs and points to a hastily drawn map on a whiteboard.
+
+""No, Serika, we do have ships but we can't just send out a fleet to go hunt that man down, we'd be leaving Abydos Station practically undefended! That's why we need the help of independents like that Captain who can take care of this.""","0:BAbydosQuestBrief3:""So I should go hunt that scammer down, got it. But what kind of pay are we talking here?""",
+BAAyaneFirstMeeting4,DialogOptionSelected,$option == BAbydosQuestBrief3,BeginConversation ayane,"Ayane sighs, clearly having dreaded this question.
+
+""We at Abydos... aren't... really... how do I put it? Our financial resources are stretched thin enough as it is, and I'm afraid we can't offer much in the way of compensation. But... hm... we can offer 20,000 credits as our pay. I know it's not much but it's all we can reasonably offer at this moment.""","0:BAbydosQuestAccept:""Hm. We can discuss further payment once I'm back with the core. (accept)""
+1:BAbydosQuestDeny:""Sorry, but that kind of contract isn't something I can embark on right now. (decline)""",
+BAAyaneContractDenied,DialogOptionSelected,$option == BAbydosQuestDeny,,"She sighs again, more with disappointment this time.
+
+""I understand. Hopefully we can scrounge up enough money in the mean time to cover the extra costs and maybe make the contract more lucrative...""",0:cutCommLinkPolite:Cut the comm link,
+BAAyaneContactAccepted,DialogOptionSelected,$option == BAbydosQuestAccept,"BeginConversation serika
+$hasMetAyane = true
+AbydosBetaCore addIntel
+CallEvent $abycore_eventRef planetfound","Both of the girls perk up and smile.
+
+""Really? That's excellent news! We'll come up with alternative payment methods while you're away, Captain!""
+
+Serika taps some buttons on her tablet and you receive a set of coordinates.
+
+""Those were the last sets of coordinates that guy went to. Kick his butt for me, Captain!""
+
+You say your goodbyes and the comms feed cuts to a solid logo of the Abydos emblem.",0:cutCommLinkPolite:Cut the comm link,

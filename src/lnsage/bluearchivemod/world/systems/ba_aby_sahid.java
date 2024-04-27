@@ -42,7 +42,7 @@ public class ba_aby_sahid {
                 9400f,
                 100f);
         Dendera.setCustomDescriptionId("ba_laodicea"); //reference descriptions.csv
-        Dendera.setInteractionImage("illustrations","ariuscampus");
+        Dendera.setInteractionImage("illustrations","abydos_main");
 
         MarketAPI Dendera_market = ba_gen.addMarketplace(
                 "abydos",
