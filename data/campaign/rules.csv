@@ -480,8 +480,7 @@ BAAyaneContractDenied,DialogOptionSelected,$option == BAbydosQuestDeny,,"She sig
 ""I understand. Hopefully we can scrounge up enough money in the mean time to cover the extra costs and maybe make the contract more lucrative...""",0:cutCommLinkPolite:Cut the comm link,
 BAAyaneContactAccepted,DialogOptionSelected,$option == BAbydosQuestAccept,"BeginConversation serika
 $hasMetAyane = true
-AbydosBetaCore addIntel
-CallEvent $abycore_eventRef planetfound","Both of the girls perk up and smile.
+AbydosBetaCore addIntel","Both of the girls perk up and smile.
 
 ""Really? That's excellent news! We'll come up with alternative payment methods while you're away, Captain!""
 

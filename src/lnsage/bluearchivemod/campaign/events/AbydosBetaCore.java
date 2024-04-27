@@ -1,25 +1,18 @@
 package lnsage.bluearchivemod.campaign.events;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.CargoAPI;
-import com.fs.starfarer.api.campaign.CoreInteractionListener;
-import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.campaign.OptionPanelAPI;
-import com.fs.starfarer.api.campaign.PlanetAPI;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.SpecialItemData;
-import com.fs.starfarer.api.campaign.TextPanelAPI;
+import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.PSIStage;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
@@ -29,137 +22,53 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
+import org.lazywizard.lazylib.MathUtils;
+// import org.magiclib;
 
 public class AbydosBetaCore extends BaseCommandPlugin {
-
-    protected CampaignFleetAPI playerFleet;
-    protected SectorEntityToken entity;
-    protected PlanetAPI planet;
-    protected FactionAPI playerFaction;
-    protected FactionAPI entityFaction;
-    protected TextPanelAPI text;
-    protected OptionPanelAPI options;
-    protected CargoAPI playerCargo;
-    protected MemoryAPI memory;
-    protected MarketAPI market;
-    protected InteractionDialogAPI dialog;
-    protected Map<String, MemoryAPI> memoryMap;
-    protected FactionAPI faction;
-
-
-    public AbydosBetaCore() {
-    }
-
-    public AbydosBetaCore(SectorEntityToken entity) {
-        init(entity);
-    }
-
-    protected void init(SectorEntityToken entity) {
-        memory = entity.getMemoryWithoutUpdate();
-        this.entity = entity;
-        planet = (PlanetAPI) entity;
-        playerFleet = Global.getSector().getPlayerFleet();
-        playerCargo = playerFleet.getCargo();
-
-        playerFaction = Global.getSector().getPlayerFaction();
-        entityFaction = entity.getFaction();
-
-        faction = entity.getFaction();
-
-        market = entity.getMarket();
-
-
-    }
+    @Override
+    public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
+        CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 
 
 
+        TextPanelAPI text = dialog.getTextPanel();
 
-    public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
-        this.dialog = dialog;
-        this.memoryMap = memoryMap;
-        Global.getSector().getIntelManager().addIntel(new AbydosBetaCoreIntel(planet));
-        Global.getSector().getIntelManager().addIntelToTextPanel(new AbydosBetaCoreIntel(planet), dialog.getTextPanel());
+        PlanetAPI planet = getTargetPlanet();
 
-        String command = params.get(0).getString(memoryMap);
-        if (command == null) return false;
-
-        entity = dialog.getInteractionTarget();
-        init(entity);
-
-        memory = getEntityMemory(memoryMap);
-
-        text = dialog.getTextPanel();
-        options = dialog.getOptionPanel();
-
-        if (command.equals("genLoot")) {
-            genLoot();
+        if (planet != null) {
+            Misc.makeImportant(planet, "uoh");
+            AbydosBetaCoreIntel intel = new AbydosBetaCoreIntel(planet);
+            if (!intel.isDone()) {
+                Global.getSector().getIntelManager().addIntel(intel, false, text);
+            }
         }
 
         return true;
     }
+    public static PlanetAPI getTargetPlanet(){
+        ArrayList<String> blacklist =  new ArrayList<String>();
+        ArrayList<String> systemblacklist =  new ArrayList<String>();
 
-    protected void genLoot() {
+        blacklist.add(Tags.THEME_HIDDEN);
+        blacklist.add(Tags.THEME_REMNANT);
+        blacklist.add(Tags.THEME_UNSAFE);
+        blacklist.add(Tags.SYSTEM_ABYSSAL);
 
-        OptionPanelAPI options = dialog.getOptionPanel();
-        TextPanelAPI text = dialog.getTextPanel();
+        StarSystemAPI system = ta_Utils.getRandomSystemWithBlacklist(systemblacklist, blacklist, Global.getSector());
 
-        MemoryAPI memory = planet.getMemoryWithoutUpdate();
-        long seed = memory.getLong(MemFlags.SALVAGE_SEED);
-        Random random = Misc.getRandom(seed, 100);
-
-        DropData d = new DropData();
-        d.chances = 5;
-        d.group = "blueprints";
-        planet.addDropRandom(d);
-
-        d = new DropData();
-        d.chances = 1;
-        d.group = "rare_tech";
-        planet.addDropRandom(d);
-
-        CargoAPI salvage = SalvageEntity.generateSalvage(random, 1f, 1f, 1f, 1f, planet.getDropValue(), planet.getDropRandom());
-        CargoAPI extra = BaseSalvageSpecial.getCombinedExtraSalvage(memoryMap);
-        salvage.addAll(extra);
-        BaseSalvageSpecial.clearExtraSalvage(memoryMap);
-        if (!extra.isEmpty()) {
-            ListenerUtil.reportExtraSalvageShown(planet);
+        while (system == null || system.getPlanets().isEmpty()) system = ta_Utils.getRandomSystemWithBlacklist(systemblacklist, blacklist, Global.getSector());
+        PlanetAPI planet = system.getPlanets().get(MathUtils.getRandomNumberInRange(1, system.getPlanets().size()-1));
+        while (planet == null || planet.isStar()){
+            planet = system.getPlanets().get(MathUtils.getRandomNumberInRange(0, system.getPlanets().size()-1));
         }
-        salvage.addSpecial(new SpecialItemData("industry_bp", "planetaryshield"), 1);
-        salvage.sort();
 
-        dialog.getVisualPanel().showLoot("Salvaged", salvage, false, true, true, new CoreInteractionListener() {
-            public void coreUIDismissed() {
-                dialog.dismiss();
-                dialog.hideTextPanel();
-                dialog.hideVisualPanel();
-
-                PlanetaryShieldIntel intel = (PlanetaryShieldIntel) Global.getSector().getIntelManager().getFirstIntel(PlanetaryShieldIntel.class);
-                if (intel != null) {
-                    Global.getSector().addScript(intel);
-                    intel.endAfterDelay();
-                    //intel.sendUpdate(PSIStage.DONE, textPanel);
-                    intel.sendUpdateIfPlayerHasIntel(PSIStage.DONE, false);
-                }
-                long xp = PlanetaryShieldIntel.FINISHED_XP;
-                Global.getSector().getPlayerPerson().getStats().addXP(xp);
-            }
-        });
-        options.clearOptions();
-        dialog.setPromptText("");
+        //fleet = MagicCampaign.createFleetBuilder()
 
 
-        planet.getMemoryWithoutUpdate().unset(MiscellaneousThemeGenerator.PLANETARY_SHIELD_PLANET);
-        Global.getSector().getMemoryWithoutUpdate().unset(MiscellaneousThemeGenerator.PLANETARY_SHIELD_PLANET_KEY);
-        PlanetaryShield.unapplyVisuals(planet);
+        return planet;
 
-//		if (keptPromise) {
-//			if (random.nextFloat() > 0.5f) {
-//				SectorEntityToken loc = planet.getContainingLocation().createToken(planet.getLocation());
-//				spawnPiratesToInvestigate(loc, 50f + random.nextFloat() * 50f);
-//				if (random.nextFloat() > 0.5f) {
-//					spawnPiratesToInvestigate(loc, 50f + random.nextFloat() * 50f);
-//				}
-//			}
-//		}
+
+
     }
 }
