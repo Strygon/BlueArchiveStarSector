@@ -10,7 +10,7 @@ import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import com.fs.starfarer.campaign.Faction;
+//import com.fs.starfarer.campaign.Faction;
 import exerelin.campaign.SectorManager;
 import org.apache.log4j.Logger;
 import lnsage.bluearchivemod.ba_gen;
