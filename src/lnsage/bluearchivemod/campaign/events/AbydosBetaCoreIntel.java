@@ -3,12 +3,14 @@ package lnsage.bluearchivemod.campaign.events;
 import java.awt.Color;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.AutoDespawnScript;
@@ -19,7 +21,10 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage;
+import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -33,12 +38,17 @@ import static lnsage.bluearchivemod.campaign.events.AbydosBetaCoreBarEvent.getTa
 
 public class AbydosBetaCoreIntel extends BaseIntelPlugin {
 
+
+    public static int FINISHED_XP = 20000;
+
     protected PlanetAPI planet;
     public AbydosBetaCoreIntel(PlanetAPI planet){
         this.planet = planet;
+        planet.getMemoryWithoutUpdate().set("$abycore_eventRef", true);
+
+
 
     }
-
     @Override
     public boolean isDone() {
         return false;
@@ -90,6 +100,9 @@ public class AbydosBetaCoreIntel extends BaseIntelPlugin {
     public SectorEntityToken getMapLocation(SectorMapAPI map) {
         return planet;
     }
+
+
+
 
     public static void spawnPiratesToInvestigate(SectorEntityToken locToken, float fp) {
 
