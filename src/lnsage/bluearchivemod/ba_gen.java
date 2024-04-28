@@ -9,11 +9,9 @@ import com.fs.starfarer.api.campaign.econ.EconomyAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import exerelin.campaign.AllianceManager;
-import static lnsage.bluearchivemod.BlueArchivePlugin.*;
+
 import static lnsage.bluearchivemod.campaign.ids.People.*;
 
-import exerelin.campaign.alliances.Alliance;
 import lnsage.bluearchivemod.world.systems.*;
 
 import java.util.ArrayList;
@@ -83,12 +81,15 @@ public class ba_gen implements SectorGeneratorPlugin {
         FactionAPI tri = sector.getFaction("trinity");
         FactionAPI geh = sector.getFaction("gehenna");
         FactionAPI ari = sector.getFaction("arius");
+        FactionAPI aby = sector.getFaction("abydos");
 
         //Generate your system
-        new ba_landon().generate(sector);
-        new ba_camulodunum().generate(sector);
-        new ba_victoria().generate(sector);
-        new ba_apollinaris().generate(sector);
+        new ba_mil_landon().generate(sector);
+        new ba_tri_camulodunum().generate(sector);
+        new ba_tri_victoria().generate(sector);
+        new ba_ari_apollinaris().generate(sector);
+        new ba_aby_sahid().generate(sector);
+        new ba_geh_kokytos().generate(sector);
 
         addYuuka();
         addNoa();
@@ -96,10 +97,18 @@ public class ba_gen implements SectorGeneratorPlugin {
         addNagisa();
         addMari();
         addSakurako();
+        addIori();
+        addHina();
+        addHoshino();
+        addShiroko();
+        addSerika();
+        addAyane();
+        addNonomi();
 
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("millenium");
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("trinity");
         SharedData.getData().getPersonBountyEventData().addParticipatingFaction("arius");
+        SharedData.getData().getPersonBountyEventData().addParticipatingFaction("gehenna");
 
         //vanilla factions
         mil.setRelationship(Factions.LUDDIC_CHURCH, -0.1f);

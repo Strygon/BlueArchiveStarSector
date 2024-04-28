@@ -33,6 +33,10 @@ public class Factions {
 	public static final String TRINITY = "trinity";
 
 	public static final String ARIUS = "arius";
+
+	public static final String ABYDOS = "abydos";
+
+	public static final String GEHENNA = "gehenna";
 	
 	
 	

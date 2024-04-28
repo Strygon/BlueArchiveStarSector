@@ -4,23 +4,24 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
-import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import lnsage.bluearchivemod.campaign.ids.Voices;
-import com.fs.starfarer.api.impl.campaign.missions.RecoverAPlanetkiller;
-import com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 
 public class People {
 
 	// Hegemony
-	public static String YUUKA = "yuuka";
-	public static String NOA = "noa";
-	public static String HIMARI = "himari";
-	public static String NAGISA = "nagisa";
-	public static String MARI = "mari";
-	public static String SAKURAKO = "sakurako";
+	public static String BA_YUUKA = "yuuka";
+	public static String BA_NOA = "noa";
+	public static String BA_HIMARI = "himari";
+	public static String BA_NAGISA = "nagisa";
+	public static String BA_MARI = "mari";
+	public static String BA_SAKURAKO = "sakurako";
+	public static String BA_IORI = "iori";
+	public static String BA_HINA = "hina";
+	public static String BA_SHIROKO = "shiroko";
+	public static String BA_NONOMI = "nonomi";
+	public static String BA_AYANE = "ayane";
+	public static String BA_HOSHINO = "hoshino";
+	public static String BA_SERIKA = "serika";
 	public static PersonAPI getPerson(String id) {
 		return Global.getSector().getImportantPeople().getPerson(id);
 	}
@@ -30,7 +31,7 @@ public class People {
 
 			PersonAPI person = Global.getFactory().createPerson();
 
-			person.setId(YUUKA);
+			person.setId(BA_YUUKA);
 			person.setFaction(Factions.MILLENNIUM);
 			person.setGender(Gender.FEMALE);
 			person.setVoice(Voices.YUUKA_VOICE);
@@ -52,7 +53,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(NOA);
+		person.setId(BA_NOA);
 		person.setFaction(Factions.MILLENNIUM);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NOA_VOICE);
@@ -74,7 +75,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(HIMARI);
+		person.setId(BA_HIMARI);
 		person.setFaction(Factions.MILLENNIUM);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.HIMARI_VOICE);
@@ -96,7 +97,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(NAGISA);
+		person.setId(BA_NAGISA);
 		person.setFaction(Factions.TRINITY);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NAGISA_VOICE);
@@ -117,7 +118,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(MARI);
+		person.setId(BA_MARI);
 		person.setFaction(Factions.TRINITY);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NAGISA_VOICE);
@@ -139,7 +140,7 @@ public class People {
 
 		PersonAPI person = Global.getFactory().createPerson();
 
-		person.setId(SAKURAKO);
+		person.setId(BA_SAKURAKO);
 		person.setFaction(Factions.TRINITY);
 		person.setGender(Gender.FEMALE);
 		person.setVoice(Voices.NAGISA_VOICE);
@@ -151,6 +152,161 @@ public class People {
 		//person.addTag(Tags.CONTACT_TRADE);
 		//person.addTag(Tags.CONTACT_MILITARY);
 		person.setPortraitSprite("graphics/portraits/portrait_sakurako.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+
+	public static void addIori() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_perfidia_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_IORI);
+		person.setFaction(Factions.GEHENNA);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.IORI_VOICE);
+		person.setRankId(Ranks.PFT_CAPTAIN);
+		person.setPostId(Ranks.PFT_CAPTAIN);
+		//person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Iori");
+		person.getName().setLast("Shiromi");
+		//person.addTag(Tags.CONTACT_TRADE);
+		//person.addTag(Tags.CONTACT_MILITARY);
+		person.setPortraitSprite("graphics/portraits/portrait_iori.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addHina() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_perfidia_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_HINA);
+		person.setFaction(Factions.GEHENNA);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.PFT_LEADER);
+		person.setPostId(Ranks.PFT_LEADER);
+		person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Hina");
+		person.getName().setLast("Sorasaki");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_MILITARY);
+		person.setPortraitSprite("graphics/portraits/portrait_hina.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addHoshino() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_dendera_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_HOSHINO);
+		person.setFaction(Factions.ABYDOS);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.FTF_CHAIRWOMAN);
+		person.setPostId(Ranks.FTF_CHAIRWOMAN);
+		person.setImportance(PersonImportance.VERY_HIGH);
+		person.getName().setFirst("Hoshino");
+		person.getName().setLast("Takanashi");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_MILITARY);
+		person.setPortraitSprite("graphics/portraits/portrait_hoshino.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addShiroko() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_dendera_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_SHIROKO);
+		person.setFaction(Factions.ABYDOS);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.FTF_CAPTAIN);
+		person.setPostId(Ranks.FTF_CAPTAIN);
+		person.setImportance(PersonImportance.HIGH);
+		person.getName().setFirst("Shiroko");
+		person.getName().setLast("Sunookami");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_UNDERWORLD);
+		person.setPortraitSprite("graphics/portraits/portrait_shiroko.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addSerika() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_dendera_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_SERIKA);
+		person.setFaction(Factions.ABYDOS);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.FTF_SECRETARY);
+		person.setPostId(Ranks.FTF_SECRETARY);
+		person.setImportance(PersonImportance.HIGH);
+		person.getName().setFirst("Serika");
+		person.getName().setLast("Kuromi");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_TRADE);
+		person.setPortraitSprite("graphics/portraits/portrait_serika.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addAyane() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_dendera_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_AYANE);
+		person.setFaction(Factions.ABYDOS);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.FTF_TREASURER);
+		person.setPostId(Ranks.FTF_TREASURER);
+		person.setImportance(PersonImportance.HIGH);
+		person.getName().setFirst("Ayane");
+		person.getName().setLast("Okusora");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_SCIENCE);
+		person.setPortraitSprite("graphics/portraits/portrait_ayane.png");
+		//market.setAdmin(person);
+		market.addPerson(person);
+		market.getCommDirectory().addPerson(person);
+	}
+
+	public static void addNonomi() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("ba_planet_dendera_market");
+
+		PersonAPI person = Global.getFactory().createPerson();
+
+		person.setId(BA_NONOMI);
+		person.setFaction(Factions.ABYDOS);
+		person.setGender(Gender.FEMALE);
+		person.setVoice(Voices.HINA_VOICE);
+		person.setRankId(Ranks.FTF_MEMBER);
+		person.setPostId(Ranks.FTF_MEMBER);
+		person.setImportance(PersonImportance.HIGH);
+		person.getName().setFirst("Nonomi");
+		person.getName().setLast("Izayoi");
+		//person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_TRADE);
+		person.setPortraitSprite("graphics/portraits/portrait_nonomi.png");
 		//market.setAdmin(person);
 		market.addPerson(person);
 		market.getCommDirectory().addPerson(person);

@@ -129,6 +129,14 @@ public class Ranks {
 	public static String TEA_PARTY_LEADER = "tea_party_leader";
 	public static String SISTERHOOD_MEMBER = "sisterhood_member";
 	public static String SISTERHOOD_LEADER = "sisterhood_leader";
+	public static String PFT_CAPTAIN = "pft_captain";
+	public static String PFT_LEADER = "pft_leader";
+	public static String FTF_CHAIRWOMAN = "ftf_chairwoman";
+	public static String FTF_SECRETARY = "ftf_secretary";
+	public static String FTF_CAPTAIN = "ftf_captain";
+	public static String FTF_TREASURER = "ftf_treasurer";
+	public static String FTF_MEMBER = "ftf_member";
+
 	
 	//public static String POST_ = "";
 	

@@ -6,7 +6,13 @@
 		"tea_party_leader":{"name":"Tea Party President"},
 		"sisterhood_member":{"name":"Sister"},
 		"sisterhood_leader":{"name":"Head Sister"},
-
+		"pft_captain":{"name":"Prefect Team Captain"},
+		"pft_leader":{"name":"Prefect Team Head"},
+		"ftf_chairwoman":{"name":"Chairwoman"},
+		"ftf_secretary":{"name":"FTC Secretary"},
+		"ftf_captain":{"name":"FTC Captain"},
+		"ftf_treasurer":{"name":"FTC Treasurer"},
+		"ftf_member":{"name":"FTC Member"}
 	},
 	
 	"posts":{
@@ -16,7 +22,14 @@
 		"tea_party_leader":{"name":"Tea Party President"},
 		"sisterhood_member":{"name":"Sister"},
 		"sisterhood_leader":{"name":"Head Sister"},
-		}
+		"pft_captain":{"name":"Prefect Team Captain"},
+		"pft_leader":{"name":"Prefect Team Head"},
+		"ftf_chairwoman":{"name":"FTC Chairwoman"},
+		"ftf_secretary":{"name":"FTC Secretary"},
+		"ftf_captain":{"name":"FTC Captain"},
+		"ftf_treasurer":{"name":"FTC Treasurer"},
+		"ftf_member":{"name":"FTC Member"},
+	}
 
 }
 

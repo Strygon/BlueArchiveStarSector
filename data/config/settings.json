@@ -13,6 +13,9 @@
 	#"ruleCommandPackages":[
 	#	 "com.fs.starfarer.api.impl.campaign.rulecmd",
 	#],
+	"ruleCommandPackages":[
+        "lnsage.bluearchivemod.campaign.events",
+    ],
 	
     # This section is where we can define images that can be referenced ingame using Global.getSettings().getSpriteName("category", "name");
 	"graphics":{
@@ -23,7 +26,9 @@
 		"spiritusimage": "graphics/marketimages/spiritusimage.png",
 		"trinitycampus": "graphics/marketimages/trinitycampus.png",
 		"vehiclepowerroom": "graphics/marketimages/vehiclepowerroom.png",
-		},
+		"abydos_main": "graphics/marketimages/abydos_main.png",
+		"wrecked_classroom": "graphics/marketimages/wrecked_classroom.png",
+},
 
 		"intel":{
 		"arius_cells_active": "graphics/icons/markets/arius_cells_active.png",
@@ -37,7 +42,14 @@
 				"akeboshi_himari": "graphics/portraits/portrait_himari.png",
 				"kirifuji_nagisa": "graphics/portraits/portrait_nagisa.png",
 				"iochi_mari": "graphics/portraits/portrait_mari.png",
-				"utazumi_sakurako": "graphics/portraits/portrait_sakurako.png"
+				"utazumi_sakurako": "graphics/portraits/portrait_sakurako.png",
+				"shiromi_iori": "graphics/portraits/portrait_iori.png",
+				"sorasaki_hina": "graphics/portraits/portrait_hina.png",
+				"takanashi_hoshino": "graphics/portraits/portrait_hoshino.png",
+				"kuromi_serika": "graphics/portraits/portrait_serika.png",
+				"sunookami_shiroko": "graphics/portraits/portrait_shiroko.png",
+				"okusora_ayane": "graphics/portraits/portrait_ayane.png",
+				"izayoi_nonomi": "graphics/portraits/portrait_nonomi.png",
 },
 }
 	
