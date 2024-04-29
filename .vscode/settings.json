@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\mods\\Nexerelin\\jars\\ExerelinCore.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\starsector-core\\starfarer.api.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\starsector-core\\lwjgl_util.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\starsector-core\\log4j-1.2.9.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\starsector-core\\xstream-1.4.10.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\mods\\MagicLib\\jars\\MagicLib.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\mods\\LazyLib\\jars\\LazyLib.jar",
+        "c:\\Program Files (x86)\\Fractal Softworks\\Starsector\\starsector-core\\json.jar"
+    ]
+}
