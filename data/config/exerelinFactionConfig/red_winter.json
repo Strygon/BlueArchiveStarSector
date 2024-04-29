@@ -16,10 +16,10 @@
     
     "alignments":{
         "technocratic":0.9,
-        "hierarchical":0.4,
-        "militarist":0.8,
+        "hierarchical":0.7,
+        "militarist":0.9,
         "diplomatic":0.1,
-        "ideological":-0.8
+        "ideological":0.9
     },
     "diplomacyTraits":["technocratic", "militarist", "ideological"],
     "colonyExpeditionChance":1,	
