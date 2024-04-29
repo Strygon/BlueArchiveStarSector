@@ -1,5 +1,5 @@
 id,trigger,conditions,script,text,options,notes
-"#RULESET_NAME",,,,,,
+#RULESET_NAME,,,,,,
 ,,,,,,
 # default entity interaction,,,,,,
 ,,,,,,
@@ -9,13 +9,13 @@ id,trigger,conditions,script,text,options,notes
 # entity memory is accessible
 # by using the entity. prefix"
 convDefault,OpenCDE,,"AddText ""Establishing connection..."" buttonText
-FireBest PickGreeting","You transmit the comms ID and wait for the system to establish a connection.",,
-convDefaultGreeting,PickGreeting,"!$contact_printedFirstReturnGreeting","$contact_printedFirstReturnGreeting = true 0
+FireBest PickGreeting",You transmit the comms ID and wait for the system to establish a connection.,,
+convDefaultGreeting,PickGreeting,!$contact_printedFirstReturnGreeting,"$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
 FireAll PopulateOptions","After a short wait, your connection request is accepted.
 
 ""Hello. What do you want?""",,
-defaultGreetingIgnore,PickGreeting,"$temporarilyIgnoreYou score:10",,"After a short wait, your connection request is denied.","0:cutCommLink:Cut the comm link",
+defaultGreetingIgnore,PickGreeting,$temporarilyIgnoreYou score:10,,"After a short wait, your connection request is denied.",0:cutCommLink:Cut the comm link,
 convDefaultGreetingSoldier,PickGreeting,"!$contact_printedFirstReturnGreeting
 $voice == soldier","$contact_printedFirstReturnGreeting = true 0
 ShowPersonVisual
@@ -104,7 +104,7 @@ ShowPersonVisual
 FireAll PopulateOptions","After a short wait, your connection request is accepted.
 
 ""Why, what a delicious little $shipOrFleet you have there captain. What brings you to my humble orbit?""",,
-convDefaultGreeting2,PickGreeting,"$contact_printedFirstReturnGreeting","ShowPersonVisual
+convDefaultGreeting2,PickGreeting,$contact_printedFirstReturnGreeting,"ShowPersonVisual
 FireAll PopulateOptions","""Anything else I can do for you?""",,"# this will fire when talking to same person again without leaving the station, but that seems fine"
 convDefaultGreeting2aristo,PickGreeting,"$contact_printedFirstReturnGreeting
 $voice == aristo","ShowPersonVisual
@@ -190,76 +190,76 @@ After a while, another line pops up with a timer.
 
 Deciding that you have better things to do than to wait to speak to politicians, you cut the connection instead.",,
 relLevelCooperativeMil,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == millenium","FireAll RelLevelMoreDescription","Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
 You have also been granted access to the largest and most powerful of Millennium's ships and weapons, being seen as a trustworthy and reliable enough partner to entrust with such equipment.",,
 relLevelFriendlyMil,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == millenium","FireAll RelLevelMoreDescription","You have become a household name within Millennium's military and exploration circles. Whenever you dock at a station, many of the younger students crowd around your crew wondering what it is you have discovered or experimented with this time.
+$faction.id == millenium",FireAll RelLevelMoreDescription,"You have become a household name within Millennium's military and exploration circles. Whenever you dock at a station, many of the younger students crowd around your crew wondering what it is you have discovered or experimented with this time.
 Millennium officials also see you as an important figure and generally look past some minor indiscretions for the sake of your continued cooperation.",,
 relLevelWelcomingMil,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == millenium","FireAll RelLevelMoreDescription","Thanks to your contributions to Millennium, you're seen as a good captain to have around when a problem needs solving. As such, you are often also the first choice for more high priority expeditions and correspondingly, are granted access to more high tech equipment built directly by the Engineering Department.",,
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Thanks to your contributions to Millennium, you're seen as a good captain to have around when a problem needs solving. As such, you are often also the first choice for more high priority expeditions and correspondingly, are granted access to more high tech equipment built directly by the Engineering Department.",,
 relLevelFavorableMil,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == millenium","FireAll RelLevelMoreDescription","You have proven yourself to be a reliable entity to Millennium and generally notice your wait times for new machines or docking requests are a bit shorter than usual. You have also received an invitation to one of Kotori's academic lectures, but unless you are keenly interested in the exact workings of how a hyperspace drive operates, you're better off declining it.",,
+$faction.id == millenium",FireAll RelLevelMoreDescription,"You have proven yourself to be a reliable entity to Millennium and generally notice your wait times for new machines or docking requests are a bit shorter than usual. You have also received an invitation to one of Kotori's academic lectures, but unless you are keenly interested in the exact workings of how a hyperspace drive operates, you're better off declining it.",,
 relLevelNeutralMil,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == millenium","FireAll RelLevelMoreDescription","As one of the thousands of captains Seminar deals with on a daily basis, you generally do not stand out to Millennium for better or for worse. Although you do not benefit from any extra privileges, you are also not subject to additional scans, searches or harrassment. Do watch out for Kotama's listening devices though.",,
+$faction.id == millenium",FireAll RelLevelMoreDescription,"As one of the thousands of captains Seminar deals with on a daily basis, you generally do not stand out to Millennium for better or for worse. Although you do not benefit from any extra privileges, you are also not subject to additional scans, searches or harrassment. Do watch out for Kotama's listening devices though.",,
 relLevelSuspiciousMil,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == millenium","FireAll RelLevelMoreDescription","Although it doesn't seem like much has changed, you're pretty sure someone is always keeping watch on you, and some files on your ships' computers have mysteriously shifted around. While Millennium denies having anything to do with this, you can't help but shake the feeling that your suspiciousness has drawn the watchful eyes of Veritas.",,
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Although it doesn't seem like much has changed, you're pretty sure someone is always keeping watch on you, and some files on your ships' computers have mysteriously shifted around. While Millennium denies having anything to do with this, you can't help but shake the feeling that your suspiciousness has drawn the watchful eyes of Veritas.",,
 relLevelInhospitableMil,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == millenium","FireAll RelLevelMoreDescription","Your actions in Millennium territory have reflected quite poorly on you and as a result, Millennium officials only begrudgingly grant you port access. Many of the students seem to draw a wide berth around you within the stations and your fleet is subjected to rather pointlessly long and drawn out inspections. Furthermore, a security drone seems to always be shadowing you wherever you go within Millennium premises.",,
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Your actions in Millennium territory have reflected quite poorly on you and as a result, Millennium officials only begrudgingly grant you port access. Many of the students seem to draw a wide berth around you within the stations and your fleet is subjected to rather pointlessly long and drawn out inspections. Furthermore, a security drone seems to always be shadowing you wherever you go within Millennium premises.",,
 relLevelHostileMil,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == millenium","FireAll RelLevelMoreDescription","Millennium has withdrawn your port access privileges and instead replaced them with ""test target for our newest line of overpowered starship weapons"" privileges. Your fleet along with a photo of your face (which someone seems to keep tampering with to make you look less and less attractive) are on public bulletins and security advisories. Some of the rowdier elements of Millennium have formed hunting parties to collect the bounty that has been put on your head by various other captains in the school.",,
+$faction.id == millenium",FireAll RelLevelMoreDescription,"Millennium has withdrawn your port access privileges and instead replaced them with ""test target for our newest line of overpowered starship weapons"" privileges. Your fleet along with a photo of your face (which someone seems to keep tampering with to make you look less and less attractive) are on public bulletins and security advisories. Some of the rowdier elements of Millennium have formed hunting parties to collect the bounty that has been put on your head by various other captains in the school.",,
 relLevelVengefulMil,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == millenium","FireAll RelLevelMoreDescription","The school's policy of hostility has shifted from a passive to an open one. Your position in Millennium space is broadcast to all military and independent fleets due to Veritas' constant intrusions, a Cleaning&Clearing unit has been dispatched to counter any ground movement you may attempt, and Treasurer Hayase has put aside a fund specifically to reward the club that can capture or destroy you.
+$faction.id == millenium",FireAll RelLevelMoreDescription,"The school's policy of hostility has shifted from a passive to an open one. Your position in Millennium space is broadcast to all military and independent fleets due to Veritas' constant intrusions, a Cleaning&Clearing unit has been dispatched to counter any ground movement you may attempt, and Treasurer Hayase has put aside a fund specifically to reward the club that can capture or destroy you.
 
 Also, you have been made the final boss in the next game by the Game Development Department.",,
-"#END CONVERSATIONS",,,,,,
+#END CONVERSATIONS,,,,,,
 ,,,,,,
 # Arius faction relations,,,,,,
 relLevelCooperativeAri,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == arius","FireAll RelLevelMoreDescription","Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
+$faction.id == arius",FireAll RelLevelMoreDescription,"Seminar has marked you as a person of major importance to Millennium and you've correspondingly received numerous Momotalk requests. Utaha and Hibiki often ask for your opinion on starship weapons design and the Game Development Department has requested your approval on a new game being developed based on your adventures in the Persean Sector.
 You have also been granted access to the largest and most powerful of Millennium's ships and weapons, being seen as a trustworthy and reliable enough partner to entrust with such equipment.",,
 relLevelFriendlyAri,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == arius","FireAll RelLevelMoreDescription","You have become a household name within Millennium's military and exploration circles. Whenever you dock at a station, many of the younger students crowd around your crew wondering what it is you have discovered or experimented with this time.
+$faction.id == arius",FireAll RelLevelMoreDescription,"You have become a household name within Millennium's military and exploration circles. Whenever you dock at a station, many of the younger students crowd around your crew wondering what it is you have discovered or experimented with this time.
 Millennium officials also see you as an important figure and generally look past some minor indiscretions for the sake of your continued cooperation.",,
 relLevelWelcomingAri,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == arius","FireAll RelLevelMoreDescription","Thanks to your contributions to Millennium, you're seen as a good captain to have around when a problem needs solving. As such, you are often also the first choice for more high priority expeditions and correspondingly, are granted access to more high tech equipment built directly by the Engineering Department.",,
+$faction.id == arius",FireAll RelLevelMoreDescription,"Thanks to your contributions to Millennium, you're seen as a good captain to have around when a problem needs solving. As such, you are often also the first choice for more high priority expeditions and correspondingly, are granted access to more high tech equipment built directly by the Engineering Department.",,
 relLevelFavorableAri,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == arius","FireAll RelLevelMoreDescription","Whether through trying to work to get Arius to see a different path, or by assisting them with their mission of cleansing the Sector, they not only don't see you as a target, they regard you with a degree of friendliness. However, this has little in the way of actual implications at the moment.",,
+$faction.id == arius",FireAll RelLevelMoreDescription,"Whether through trying to work to get Arius to see a different path, or by assisting them with their mission of cleansing the Sector, they not only don't see you as a target, they regard you with a degree of friendliness. However, this has little in the way of actual implications at the moment.",,
 relLevelNeutralAri,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == arius","FireAll RelLevelMoreDescription","Arius isn't really sure what to make of you at this point. The attacks have all but stopped, but they still refuse that the world is anything but something to be burnt down. Perhaps continued attempts at improving relations could yield some kind of way to end their madness?",,
+$faction.id == arius",FireAll RelLevelMoreDescription,"Arius isn't really sure what to make of you at this point. The attacks have all but stopped, but they still refuse that the world is anything but something to be burnt down. Perhaps continued attempts at improving relations could yield some kind of way to end their madness?",,
 relLevelSuspiciousAri,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == arius","FireAll RelLevelMoreDescription","It seems that the Arius fleets at this point would rather avoid you than try to kill you. Though you are still nothing but another enemy to be cleansed, perhaps their proclaimed hatred of the world isn't as unbreakable and infinite as they may claim?
+$faction.id == arius",FireAll RelLevelMoreDescription,"It seems that the Arius fleets at this point would rather avoid you than try to kill you. Though you are still nothing but another enemy to be cleansed, perhaps their proclaimed hatred of the world isn't as unbreakable and infinite as they may claim?
 Of course, you are still not seen as an ally, and a particularly fanatic member may still try to go for your head when your guard is down.",,
 relLevelInhospitableAri,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == arius","FireAll RelLevelMoreDescription","Although you are still an active target for the Arius school, there is noticeable hesitation behind every attack and pursuit. You are seen as less of a target than some others in the sector, but that doesn't mean you're not a target at all.",,
+$faction.id == arius",FireAll RelLevelMoreDescription,"Although you are still an active target for the Arius school, there is noticeable hesitation behind every attack and pursuit. You are seen as less of a target than some others in the sector, but that doesn't mean you're not a target at all.",,
 relLevelHostileAri,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == arius","FireAll RelLevelMoreDescription","You are seen as just another target for Arius that needs to be destroyed and cleansed. Arius Hunter-Killer Squads will hunt you down as they encounter you but will otherwise make no additional effort to see to your destruction.",,
+$faction.id == arius",FireAll RelLevelMoreDescription,You are seen as just another target for Arius that needs to be destroyed and cleansed. Arius Hunter-Killer Squads will hunt you down as they encounter you but will otherwise make no additional effort to see to your destruction.,,
 relLevelVengefulAri,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == arius","FireAll RelLevelMoreDescription","You have become the prime enemy of Arius. The school sees you as the biggest obstacle next to Trinity to their final goal of cleansing the Sector. It is only a matter of time until a sleeper agent in another school or faction makes their move to assassinate you personally, if not sending an entire fleet to wipe yours out.
+$faction.id == arius",FireAll RelLevelMoreDescription,"You have become the prime enemy of Arius. The school sees you as the biggest obstacle next to Trinity to their final goal of cleansing the Sector. It is only a matter of time until a sleeper agent in another school or faction makes their move to assassinate you personally, if not sending an entire fleet to wipe yours out.
 
 Vanitas vanitatum, et omnia vanitas.",,
-"#END Arius faction relations",,,,,,
+#END Arius faction relations,,,,,,
 ,,,,,,
 # Trinity faction relations,,,,,,
 relLevelCooperativeTri,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == trinity","FireAll RelLevelMoreDescription","You have become a highly esteemed figure among Trinity, with the Justice Task Force sending you a guard detail whenever you enter Trinity territory, the After School Sweets Club offering you some of the finest parfaits in the Sector, and bypassing meetings with the Tea Party entirely, as you are now directly invited to attend Trinity's Tea Parties.
+$faction.id == trinity",FireAll RelLevelMoreDescription,"You have become a highly esteemed figure among Trinity, with the Justice Task Force sending you a guard detail whenever you enter Trinity territory, the After School Sweets Club offering you some of the finest parfaits in the Sector, and bypassing meetings with the Tea Party entirely, as you are now directly invited to attend Trinity's Tea Parties.
 Moreover, you have access to Trinity's most powerful ship designs and equipment.",,
 relLevelFriendlyTri,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == trinity","FireAll RelLevelMoreDescription","Your actions have begun attracting the attention of the Tea Party itself. You generally have an easier time with getting the meetings you need, and your connections allow you to cut through a lot of the otherwise tedious bureaucratic red tape. Additionally you gain access to Trinity's more valuable military stores, and more importantly, get to sample some of the locally grown black tea.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,"Your actions have begun attracting the attention of the Tea Party itself. You generally have an easier time with getting the meetings you need, and your connections allow you to cut through a lot of the otherwise tedious bureaucratic red tape. Additionally you gain access to Trinity's more valuable military stores, and more importantly, get to sample some of the locally grown black tea.",,
 relLevelWelcomingTri,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == trinity","FireAll RelLevelMoreDescription","Students around Trinity have started taking notice of you, remarking your good conduct and contributions to the school. Sisterhood members are giving you prayers for future fortunes and good health, and you get access to some of the lesser known archives at the Old Library.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,"Students around Trinity have started taking notice of you, remarking your good conduct and contributions to the school. Sisterhood members are giving you prayers for future fortunes and good health, and you get access to some of the lesser known archives at the Old Library.",,
 relLevelFavorableTri,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == trinity","FireAll RelLevelMoreDescription","You have earned a degree of trust by Trinity officials. Although this won't earn you any spots with the Tea Party, you can at least enjoy some surplus equipment and a couple fewer inspections at port customs. You're still not getting any of the high grade tea, however.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,"You have earned a degree of trust by Trinity officials. Although this won't earn you any spots with the Tea Party, you can at least enjoy some surplus equipment and a couple fewer inspections at port customs. You're still not getting any of the high grade tea, however.",,
 relLevelNeutralTri,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == trinity","FireAll RelLevelMoreDescription","You are beneath notice to the Trinity Tea Party and are generally unremarkable to the school as a whole. There are no additional benefits for you but conversely you aren't given any more inspections and suspicion than usual. You practice proper etiquette when in the presence of Trinity students and make an effort to adhere to their traditions when needed.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,You are beneath notice to the Trinity Tea Party and are generally unremarkable to the school as a whole. There are no additional benefits for you but conversely you aren't given any more inspections and suspicion than usual. You practice proper etiquette when in the presence of Trinity students and make an effort to adhere to their traditions when needed.,,
 relLevelSuspiciousTri,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == trinity","FireAll RelLevelMoreDescription","Some of your recent actions have, regrettably, not gone unnoticed with Trinity. Though no particular restrictions are in effect just yet, you do notice that the students tend to treat you as an unwashed barbarian. Officials try to make their business with you quick and concise to avoid speaking to you as much as possible, and cargo inspections take much longer than usual.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,"Some of your recent actions have, regrettably, not gone unnoticed with Trinity. Though no particular restrictions are in effect just yet, you do notice that the students tend to treat you as an unwashed barbarian. Officials try to make their business with you quick and concise to avoid speaking to you as much as possible, and cargo inspections take much longer than usual.",,
 relLevelInhospitableTri,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == trinity","FireAll RelLevelMoreDescription","Your reputation has begun to take its toll on most interactions with Trinity students. You are subjected to numerous backhanded compliments, fake smiles, snide remarks hidden behind pleasantries and other minor attacks. It is quite obvious the average Trinity student thinks very little of you, and crowds hang around your ships at the ports demanding you leave as soon as possible.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,"Your reputation has begun to take its toll on most interactions with Trinity students. You are subjected to numerous backhanded compliments, fake smiles, snide remarks hidden behind pleasantries and other minor attacks. It is quite obvious the average Trinity student thinks very little of you, and crowds hang around your ships at the ports demanding you leave as soon as possible.",,
 relLevelHostileTri,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == trinity","FireAll RelLevelMoreDescription","The Justice Task Force has flagged your fleet as an enemy to Trinity and issued a decree to bar any Trinity-owned stations and ports from trading with you. The Vigilante Crew has assembled a strike force to harrass you whenever you enter their territory.",,
+$faction.id == trinity",FireAll RelLevelMoreDescription,The Justice Task Force has flagged your fleet as an enemy to Trinity and issued a decree to bar any Trinity-owned stations and ports from trading with you. The Vigilante Crew has assembled a strike force to harrass you whenever you enter their territory.,,
 relLevelVengefulTri,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == trinity","FireAll RelLevelMoreDescription","The Tea Party has issued an official termination order on you and your fleet. The Justice Task Force has begun scrambling an attack fleet to hunt you down and you get the impression the Sisterhood is also seeking to get their hands on you. Students meet up at the Trinity Campus to call for your capture or destruction.",,
-"#END Trinity faction relations",,,,,,
+$faction.id == trinity",FireAll RelLevelMoreDescription,The Tea Party has issued an official termination order on you and your fleet. The Justice Task Force has begun scrambling an attack fleet to hunt you down and you get the impression the Sisterhood is also seeking to get their hands on you. Students meet up at the Trinity Campus to call for your capture or destruction.,,
+#END Trinity faction relations,,,,,,
 ,,,,,,
 # Millennium faction relations,,,,,,
 greetingMilleniumFriendly,OpenCommLink,"$faction.id == millenium
@@ -273,26 +273,26 @@ OR
 ""Scanned and identified. Looking good out there, Captain. Mind telling me your weapons setup some time? I could use some pointers from an experienced captain like yourself.""",,
 greetingMilleniumHostileWeaker,OpenCommLink,"$faction.id == millenium
 $entity.isHostile
-$entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 1","""Oh crap! Uh... hey, look, we're not that important in the grand scheme of things, surely your ammunition is better spent elsewhere, right? We're just a harmless little Millennium School fleet.""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Oh crap! Uh... hey, look, we're not that important in the grand scheme of things, surely your ammunition is better spent elsewhere, right? We're just a harmless little Millennium School fleet.""
 OR
-""I've already sent a distress ping to Seminar! They'll get C&C on your tail and then you'll really get it!"" The person screams at you with an air of fearful anger. ","cutCommLink:Cut the comm link",
+""I've already sent a distress ping to Seminar! They'll get C&C on your tail and then you'll really get it!"" The person screams at you with an air of fearful anger. ",cutCommLink:Cut the comm link,
 greetingMilleniumHostileWeakerDefiant,OpenCommLink,"$faction.id == millenium
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding","$entity.ignorePlayerCommRequests = true 1","The student looks at you with an air of grim defiance. ""Not how I wanted to go out, but if I can make you bleed for it, then all the better.""
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The student looks at you with an air of grim defiance. ""Not how I wanted to go out, but if I can make you bleed for it, then all the better.""
 OR
-""I-I'm not scared of you! Try anything funny and I'll show you why our tech is renowned for its strength!""","cutCommLink:Cut the comm link",
+""I-I'm not scared of you! Try anything funny and I'll show you why our tech is renowned for its strength!""",cutCommLink:Cut the comm link,
 greetingMilleniumHostileStronger,OpenCommLink,"$faction.id == millenium
 $entity.isHostile
-$entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1","""We've received an order directly from Seminar to take you out. Now, we're quite confident in our firepower and weaponry, so I suggest you make this easier on both of us and just surrender.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""We've received an order directly from Seminar to take you out. Now, we're quite confident in our firepower and weaponry, so I suggest you make this easier on both of us and just surrender.""
 OR
-""There you are! I've been looking all over for you! Now if I just shoot you to pieces our club will finally get a funding boost!""","cutCommLink:Cut the comm link",
+""There you are! I've been looking all over for you! Now if I just shoot you to pieces our club will finally get a funding boost!""",cutCommLink:Cut the comm link,
 greetingMilleniumNeutral,OpenCommLink,"$faction.id == millenium
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""Acknowledging receipt of your IDENT Code. Your ship has been scanned and identified. Anything the matter or just here for chitchat?""
 OR
 The Millennium $personRank looks uncertain of your intentions. ""Is there a reason for you to be contacting us right now?""",,
-"#END Millennium faction relations",,,,,,
+#END Millennium faction relations,,,,,,
 ,,,,,,
 # Trinity fleet greeting lines,,,,,,
 greetingTrinityFriendly,OpenCommLink,"$faction.id == trinity
@@ -304,33 +304,33 @@ OR
 ""Good travels, Captain. How do they say it again? ""Burn bright?"" was it? I'm afraid I'm not so familiar with the phrases used in this world...""",,
 greetingTrinityHostileWeaker,OpenCommLink,"$faction.id == trinity
 $entity.isHostile
-$entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 1","""Trinity? Oh, uh, no, you must be mistaken! This is actually a Gehenna fleet, we were just... passing through, yes. Pay no mind to us! We're just mere tourists with a malfunctioning transpoder!""
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Trinity? Oh, uh, no, you must be mistaken! This is actually a Gehenna fleet, we were just... passing through, yes. Pay no mind to us! We're just mere tourists with a malfunctioning transpoder!""
 OR
-""E-even if you outclass us, I've already notified the Justice Task Force! You'd best surrender while you still can!""","cutCommLink:Cut the comm link",
+""E-even if you outclass us, I've already notified the Justice Task Force! You'd best surrender while you still can!""",cutCommLink:Cut the comm link,
 greetingTrinityHostileWeakerDefiant,OpenCommLink,"$faction.id == trinity
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding","$entity.ignorePlayerCommRequests = true 1","The Trinity Captain maintains a stiff upper lip, though some of $hisOrHer bridge officers are running around in a wild panic in the background.
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"The Trinity Captain maintains a stiff upper lip, though some of $hisOrHer bridge officers are running around in a wild panic in the background.
 
 ""Go on then, do your worst. We shall not back down even in the face of overwhelming odds.""
 OR
 Despite the almost absurd numerical advantage you enjoy over the Trinity fleet, their captain gives an aggressive shout through the screen as their fleet practically barrels straight for yours.
 
-""Death before Dishonor! May our valor and courage be remembered in the afterlife!""","cutCommLink:Cut the comm link",
+""Death before Dishonor! May our valor and courage be remembered in the afterlife!""",cutCommLink:Cut the comm link,
 greetingTrinityHostileStronger,OpenCommLink,"$faction.id == trinity
 $entity.isHostile
-$entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1","""By decree of the Tea Party, you are hereby ordered to power down and surrender, lest we see ourselves required to use lethal force.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""By decree of the Tea Party, you are hereby ordered to power down and surrender, lest we see ourselves required to use lethal force.""
 OR
 The Trinity Captain looks at you with an almost domineering glare.
 
-""Running afoul of the Tea Party's wishes shall be your last mistake, Captain. I urge you to reconsider your allegiances in your next life.""","cutCommLink:Cut the comm link",
+""Running afoul of the Tea Party's wishes shall be your last mistake, Captain. I urge you to reconsider your allegiances in your next life.""",cutCommLink:Cut the comm link,
 greetingTrinityNeutral,OpenCommLink,"$faction.id == trinity
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""IDENT Code received. No further comment, I suggest you keep your distance for both of our sakes.""
 OR
 The Trinity Captain tilts $hisOrHer head as $heOrShe looks at you through the holo-screen.
 ""Surely you contacted us for some kind of reason, yes?""",,
-"#END Trinity fleet greeting lines",,,,,,
+#END Trinity fleet greeting lines,,,,,,
 ,,,,,,
 # Arius fleet greeting lines,,,,,,
 greetingAriusFriendly,OpenCommLink,"$faction.id == arius
@@ -338,17 +338,17 @@ $faction.friendlyToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""It's you, Captain. We're... not sure how to act around you, with all honesty. You act outside of our paradigm of filth and cleanse. Perhaps you can assist us with our efforts?""",,
 greetingAriusHostileWeaker,OpenCommLink,"$faction.id == arius
 $entity.isHostile
-$entity.relativeStrength < 0","$entity.ignorePlayerCommRequests = true 1","""Vanitas vanitatum, et omnia vanitas. Vanitas vanitatum, et omnia vanitas. Vanitas vanitatum, et omnia vanitas. Vanitas vanitatum, et omnia vanitas.""
-The person seems to not be focusing on you, instead endlessly reciting their chant in the face of your larger fleet.","cutCommLink:Cut the comm link",
+$entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 1,"""Vanitas vanitatum, et omnia vanitas. Vanitas vanitatum, et omnia vanitas. Vanitas vanitatum, et omnia vanitas. Vanitas vanitatum, et omnia vanitas.""
+The person seems to not be focusing on you, instead endlessly reciting their chant in the face of your larger fleet.",cutCommLink:Cut the comm link,
 greetingAriusHostileWeakerDefiant,OpenCommLink,"$faction.id == arius
 $entity.isHostile
 $entity.relativeStrength < 0
-$entity.weakerThanPlayerButHolding","$entity.ignorePlayerCommRequests = true 1","""You are no longer filth. You are a threat. Threats deserve greater attention than filth. We will not stand down in the face of your firepower, for all in life is Vanity. If we are to give our lives to destroy you, then so be it.""","cutCommLink:Cut the comm link",
+$entity.weakerThanPlayerButHolding",$entity.ignorePlayerCommRequests = true 1,"""You are no longer filth. You are a threat. Threats deserve greater attention than filth. We will not stand down in the face of your firepower, for all in life is Vanity. If we are to give our lives to destroy you, then so be it.""",cutCommLink:Cut the comm link,
 greetingAriusHostileStronger,OpenCommLink,"$faction.id == arius
 $entity.isHostile
-$entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1","""We are the Arius Branch School. You will be cleansed. Make whatever rituals are necessary for your people. There is no surrender, only death and rebirth.""
+$entity.relativeStrength >= 0",$entity.ignorePlayerCommRequests = true 1,"""We are the Arius Branch School. You will be cleansed. Make whatever rituals are necessary for your people. There is no surrender, only death and rebirth.""
 OR
-""You have been found. And now you will be cleansed. That is simply the natural order of the world. Vanitas vanitatum, et omnia vanitas.""","cutCommLink:Cut the comm link",
+""You have been found. And now you will be cleansed. That is simply the natural order of the world. Vanitas vanitatum, et omnia vanitas.""",cutCommLink:Cut the comm link,
 greetingAriusNeutral,OpenCommLink,"$faction.id == arius
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
 FireAll PopulateOptions","""We are the Arius Branch School. Your position in this world is uncertain. While you are still filth, we will make no moves to cleanse you just yet.""",,
@@ -362,6 +362,185 @@ $faction.id == millenium","AddText ""The much more sparse looking port concourse
 flavorTextMarketMillenniumVeryUnstable,TradePanelFlavorText,"$global.tradePanelMode == MARKET
 $stability == 0
 $faction.id == millenium","AddText ""Much of the sparsely populated port concourse is now taken up by warships, with the crews working quickly to on- and offload cargo as rapidly as possible while an armed guard detail keeps watch. The station itself has fallen into rather severe disrepair but most of the maintenance robots have been repurposed into additional security units. While the occasional student still tries to catch a glimpse at the activity going on here, they're quickly caught and ferried back to the station campus. You're pretty sure you saw some heavily armed maids taking patrol routes alongside the security robots too."" marketFlavorTextColor",,,
-"#END Arius fleet greeting lines",,,,,,
-"#END default entity interaction",,,,,,
+#END Arius fleet greeting lines,,,,,,
+#END default entity interaction,,,,,,
+,,,,,,
+# Iori Shenanigans,,,,,,
+BADefaultIoriGreetingNotMetHina,PickGreeting,"$id == iori
+!$hasMetHina","ShowPersonVisual
+!$hasMetHina","""Hello, yes? What do you want? Don't waste my time with idle talk, the Prefect Team is always busy.""
+OR
+""Great, another random captain looking to bother us. Spit it out already, what do you want?""
+OR
+""Ugh, is now really the time? What do you want?""","0:cutCommLinkPolite:Cut the comm link
+1:BAIoriRequestHinaMeeting:Request a meeting with the Prefect Team Leader",
+BADefaultIoriGreeting,PickGreeting,$id == iori,"ShowPersonVisual
+!$hasMetHina","""Hello, yes? What do you want? Don't waste my time with idle talk, the Prefect Team is always busy.""
+OR
+""Great, another random captain looking to bother us. Spit it out already, what do you want?""
+OR
+""Ugh, is now really the time? What do you want?""","0:cutCommLinkPolite:Cut the comm link
+",
+BADefaultIoriGreetingFriendly,PickGreeting,"$id == iori
+$faction.rel == WELCOMING
+$faction.id == gehenna","ShowPersonVisual
+FireAll PopulateOptions
+SetShortcut cutCommLinkPolite ""ESCAPE""","""Oh, hello Captain. Need something?""",0:cutCommLinkPolite:Cut the comm link,
+BAIoriMeetWithHina1,DialogOptionSelected,$option == BAIoriRequestHinaMeeting,,"After the standard affair of moving to the station via shuttle, you make your way to the Head Prefect's office, only to get stopped by a rather fierce looking student waving her rifle around. She moves to stop you from approaching the Head Prefect's office.
 
+""You, state your intentions! We don't take trespassers lightly!""
+
+You respond with a simple ""I'd like to meet with the Head Prefect of Gehenna.""
+
+""You want a meeting with the Head Prefect?""
+
+Iori gasps with irritation as if you had asked her what color underwear she wore.
+
+""You think you can just waltz in and chat with the Head Prefect?""","1:BAIoriRequestHinaMeetingCont1:""Why not?""",
+BAIoriMeetWithHina2,DialogOptionSelected,$option == BAIoriRequestHinaMeetingCont1,,"""Why not? Tch, well I'll be!""
+
+After scoffing at your request, she turns to look at you with a domineering look.
+
+""I'll tell you what, maybe if you got on all fours and kissed my shoes-""",2:LickIoriFeet:Lick Iori's Feet,
+IoriCanonEvent,DialogOptionSelected,"$option == LickIoriFeet
+",,"""AAAAH! S-Seriously? I didn't even finish my sentence!""
+
+Any sense of professional and controlled force has completely flown out the airlock as Iori's face enters a deep red blush.
+
+""Do you not have even the slightest trace of human dignity?""","1:NoDignity:""I don't know what that word means.""
+2:NoDignity2:""I used to but not anymore.""",
+BAIoriMeetWithHina3,DialogOptionSelected,$option == NoDignity,,"""And you call yourself a Captain! You're demented!""",0:HinaMeetCont:Continue,
+BAIoriMeetWithHina3alt,DialogOptionSelected,$option == NoDignity2,,"""What's that even supposed to mean? This isn't the first time you've done this to someone? Are you some kind of gross pervert?""",0:HinaMeetCont:Continue,
+BAIoriMeetWithHina4,DialogOptionSelected,$option == HinaMeetCont,"BeginConversation hina
+$hasMetHina = true","However, before she can continue her perturbed anger, you hear the sound of footsteps approaching, accompanied by a small white haired figure approaching you.
+
+""Why are you all being so noisy? Doesn't the station have recreational decks where you can partake in your activities?""
+
+You notice that the door to the Head Prefect's office is wide open now. This short woman appears to, indeed, be the Head Prefect of all of Gehenna.",0:HinaMeetCont2:Continue,
+BAIoriMeetWithHina5,DialogOptionSelected,$option == HinaMeetCont2,,"Iori stammers in shock.
+
+""P-president...?""
+
+Hina doesn't react, instead opting to continue.
+
+""I've seen plenty of people grovel on their knees for their lives. I've never seen a starship captain do it to meet with a regular official... especially when you could have just submitted a meeting form.""","0:HinaMeetCont3:""Just doing as I was ordered, ma'am.""",
+BAIoriMeetWithHina6,DialogOptionSelected,$option == HinaMeetCont3,,"She raises an eyebrow upon hearing this and shoots a confused look at Iori, who stands there, not sure whether to defend her dignity or play it cool in front of her boss.
+
+""Raise your head, Captain. I've heard of certain fleet captains such as yourself being... let's say, reliable operators when the usual channels are unable, or unwilling, to carry certain deeds out in a timely manner.""
+
+Hina reaches into her coat pocket and hands you a Tri-OS contact ID.
+
+""Contact me if you are willing to assist in some matters the Prefect Team requires doing. In the mean time... Iori, I suggest next time you don't force captains to lick your shoes before hearing them out. We're not the Pandemonium Society, so act like it.""
+
+She turns around and walks back to her office.",0:HinaMeetCont4:Continue,
+BAIoriMeetWithHina7,DialogOptionSelected,$option == HinaMeetCont4,BeginConversation iori,"Iori stands there, still blushing furiously.
+
+""Wait- what do you mean by that? He licked my feet, how come I am the weird one?""",0:cutCommLinkPolite:Leave quickly while Iori is distracted.,
+,,,,,,
+# Meeting with Hiniature,,,,,,
+BADefaultHinaNotMet,PickGreeting,"$id == hina
+!$hasMetHina",ShowPersonVisual,"After a short wait, your connection request is rejected, with a short voice notification stating that ""Thank you for your request but unfortunately the Head Prefect is not taking calls from strangers at the moment."" 
+
+The voice does not seem to be generated by an AI, and you have a strong suspicion it may have been personally intercepted by the Head Prefect's secretary. Perhaps you will need to meet with someone else first to get to her.",0:cutCommLinkPolite:Cut the comm link,
+BAHinaFirstMeeting1,PickGreeting,"$id == hina
+$hasMetHina
+!$HinaContactAdded",ShowPersonVisual,"You take the contact ID and input it into your comms terminal. After a short while, the request is accepted and you are met with a video feed of the Head Prefect, sipping a cup of coffee. She puts it aside once she notices the connection has gone through.
+
+""Ah. Greetings, Captain. It is good to see that you have decided to take my request seriously. The Prefect Team can take any help it can get nowadays.""
+
+Hina grabs a stack of papers that was partially blocking the view of her and moves them aside.
+
+""Now, we are both very busy people, so I shall get right down to business. I'm not sure how familiar you are with the culture of the Gehenna Academy, but it is by nature a very... chaotic school. As a result, we, the Prefect Team, typically have all our hands full just keeping the school together, which leaves very little in the way of resources for resolving any other, more external issues.""",0:HinaFirstContact1:Continue,
+BAHinaFirstMeeting2,DialogOptionSelected,$option == HinaFirstContact1,,"Hina gives a tired sigh. You see a blue haired woman hurry into the room and grab the empty coffee cup, replacing it with a freshly filled one.
+
+""Thank you, Ako. In any case, this is where independent actors like yourself come into play. We need captains who will get work done quickly and efficiently. Now we have plenty of work here in Gehenna so you can pick and choose your contracts, there is no need to do all of them, though that would obviously be greatly appreciated.""
+
+She pauses to take another sip of coffee. Despite the natural reduction in visual quality via the holo-call, you can still make out pretty noticeable bags under her eyes.
+
+""And before you ask, yes, all of this work will be duly compensated. As the Head Prefect, I will handle the administrative duties of these contracts along with the payment, there is no need to get the Pandemonium Society involved.""
+
+Hina folds her hands together, looking at you expectantly.
+
+""So, Captain. Are you onboard with this deal? I believe there is a lot to be gained for both of us.""","0:HinaAcceptContact:""Sure, I'm always up for paid contracts. (accept)""
+1:HinaDenyContact:""Hm, I'm not sure this is in the books for me at the moment (decline)""",
+BAHinaContactAccepted,DialogOptionSelected,$option == HinaAcceptContact,"AddPotentialContact hina
+$HinaContactAdded = true","You notice a faint smile undernetath her professional expression. Her halo also seems to glow a bit brighter.
+""That is excellent to hear. Thank you.""
+She moves to grab her mobile phone and types something on it.
+""In order to facilitate future communications I will need your Momotalk crede-""
+In the middle of her sentence she remembers that few people in the Persean Sector know about Momotalk.
+""...I mean, your Tri-Talk Credentials, sorry.""
+Hina blushes a little bit at her blunder, but quickly gets over it. After you have been connected, she looks back to her holo-screen.
+""That is all for now, captain. It has been a pleasure doing business with you.""
+She bows and cuts the comms link.",0:cutCommLinkPolite:Cut the comm link,
+BAHinaContactDenied,DialogOptionSelected,$option == HinaDenyContact,,"Her expression doesn't seem to change much... aside from her halo dimming a bit.
+
+""That... is quite disappointing to hear, but I understand. This new world is a rather complicated one and I don't claim to fully understand it myself.""
+
+Hina moves a piece of paper away, seemingly some kind of form she was intending to fill out had you accepted.
+
+""Well, the offer is always open if you choose to come back. Thank you for your time though, captain.""
+
+Before you can say anything else, the comms link is cut.",0:cutCommLinkPolite:Cut the comm link,
+,,,,,,
+# Start of Abydos Basic Quest,,,,,,
+BAAyaneFirstMeeting,PickGreeting,"$id == ayane
+!$hasMetAyane",ShowPersonVisual,"While you are pondering the comms directory, you receive a hail from the student council at Abydos- or what's left of it, rather. The connection is quite weak however, perhaps due to a makeshift transmitter.
+Once the static mostly clears you see a young student with pointy ears and red glasses talking to someone off-screen before turning her attention to you.
+
+""-is the signal coming through? Ah, hello Captain! Pardon the sudden message but there is a bit of a serious problem that needs solving at Abydos.""
+
+In the background you can see the room the council is in. It's certainly seen better days, with deck panelling flaking off, exposed wires hanging from the ceiling and a couple lights flickering. You can only guess how long this station was abandoned before they moved in.","0:BAbydosQuestBrief1:""What's the problem?""",
+BAAyaneFirstMeeting2,DialogOptionSelected,$option == BAbydosQuestBrief1,,"Ayane fidgets a bit nervously, clearly not used to talking to many starship captains.
+
+""Um, well, our station has up until recently been run by a Beta Core Artificial Intelligence.""
+
+Before you can say anything, she immediately raises her hand.
+""N-not for any dangerous purposes, mind you! It was simply taking care of maintenance tasks, resource allocation and reactor operation. We're... not exactly swimming in resources so any ounce of efficiency we can get out of this place is worth taking. Especially since the core was found here in the first place.""
+
+You look at her expectantly, waiting for her to get to the point.
+
+""Um, but last week, Serika was contacted by someone who claimed to be a Tri-Tachyon Security Consultant who promised to take the core and give it a firmware update to further improve the efficiency of our station. That person however... has not arrived yet, and we've been unable to reach them via comms.""
+","0:BAbydosQuestBrief2:""Sounds like this Serika got scammed.""",
+BAAyaneFirstMeeting3,DialogOptionSelected,$option == BAbydosQuestBrief2,BeginConversation serika,"Before either of you can say anything, you hear shouting from across the room on the Abydos side.
+
+""H-hey! Don't put this on me! He had totally legit credentials and a fancy uniform and everything! How was I supposed to know it was a fake?""
+
+A girl with black hair and cat ears stumbles into view, most likely the Serika in question.
+
+""And why do we need the help of a random stranger anyway? Don't we have ships that can go to... wherever that guy went and demand the core back?""
+
+Ayane sighs and points to a hastily drawn map on a whiteboard.
+
+""No, Serika, we do have ships but we can't just send out a fleet to go hunt that man down, we'd be leaving Abydos Station practically undefended! That's why we need the help of independents like that Captain who can take care of this.""","0:BAbydosQuestBrief3:""So I should go hunt that scammer down, got it. But what kind of pay are we talking here?""",
+BAAyaneFirstMeeting4,DialogOptionSelected,$option == BAbydosQuestBrief3,BeginConversation ayane,"Ayane sighs, clearly having dreaded this question.
+
+""We at Abydos... aren't... really... how do I put it? Our financial resources are stretched thin enough as it is, and I'm afraid we can't offer much in the way of compensation. But... hm... we can offer 20,000 credits as our pay. I know it's not much but it's all we can reasonably offer at this moment.""","0:BAbydosQuestAccept:""Hm. We can discuss further payment once I'm back with the core. (accept)""
+1:BAbydosQuestDeny:""Sorry, but that kind of contract isn't something I can embark on right now. (decline)""",
+BAAyaneContractDenied,DialogOptionSelected,$option == BAbydosQuestDeny,,"She sighs again, more with disappointment this time.
+
+""I understand. Hopefully we can scrounge up enough money in the mean time to cover the extra costs and maybe make the contract more lucrative...""",0:cutCommLinkPolite:Cut the comm link,
+BAAyaneContactAccepted,DialogOptionSelected,$option == BAbydosQuestAccept,"BeginConversation serika
+$hasMetAyane = true
+AbydosBetaCore addIntel","Both of the girls perk up and smile.
+
+""Really? That's excellent news! We'll come up with alternative payment methods while you're away, Captain!""
+
+Serika taps some buttons on her tablet and you receive a set of coordinates.
+
+""Those were the last sets of coordinates that guy went to. Kick his butt for me, Captain!""
+
+You say your goodbyes and the comms feed cuts to a solid logo of the Abydos emblem.",0:cutCommLinkPolite:Cut the comm link,
+,,,,,,
+# Abydos BetaCore Planet Interaction,,,,,,
+abycoreplanetOpenDialog,OpenInteractionDialog,$abycore_eventRef != null,"SalvageGenFromSeed
+ShowDefaultVisual
+FireBest SalvageCheckHostile","Your $shipOrFleet approaches $entityName.
+
+The sensors are having a hard time evaluating the tenuous megastructure enveloping its entire surface. Your sensors officer takes the initiative and applies some exotic parameters to the interferometer feed; inputs go green and a few seconds later the sub-AI tentatively identifies a stable planetary-scale energy field with highly unusual properties.",,
+abycoreplanet_beatDefenders,BeginSalvage,$abycore_eventRef != null,SetShortcut defaultLeave ESCAPE,"Further scans reveal that the energy field is not entirely uniform - perhaps owing to a running-down power source - and your bridge crew is able to pick up a distress beacon transmitting from the surface.
+
+The transmission is set on repeat and garbled in ways that are indicative of aging equipment. You make out enough to gather that part of a research team was stranded here - at a secret Tri-Tachyon research facility - after the fully automated defenses over-weighed certain executive security contingency orders in the wake of one of the AI Wars and decided it was now imperative to shoot down any craft attempting to leave the planet.","0:psi_explore:Send a salvage team down to the facility
+100:defaultLeave:Leave",
+abycoreplanet_exploreFacility,DialogOptionSelected,$option == psi_explore,,"A tiny shuttle with a jury-rigged shield generator darts through a spot failure in the shield. A landing at the primary control center is achieved without incident and the crew is able to deactivate the shield entirely upon breaching the facility. Follow-up shuttles with heavier equipment launch quickly thereafter, and soon the salvage operation is in full swing.",0:psi_salvage:Pick through the salvage,
+abycoreplanet_salvage,DialogOptionSelected,$option == psi_salvage,RedPlanet genLoot,,,
