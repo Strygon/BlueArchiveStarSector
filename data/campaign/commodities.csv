@@ -1,2 +1,4 @@
 name,id,demand class,base price,export value,price variability,utility,origin,tags,stack size,cargo space,icon,sound id,sound id drop,order,economyTier,econUnitOrigUnused,econUnit,baseRaidDanger,eU * base value,iconWidthMult,plugin,desc
 Peroro Merchandise,peroro_merch,luxury_goods,2500,5000,3,1,,"luxury, expensive",1000,1,graphics/icons/cargo/peroro_wheel.png,ui_cargo_luxury,ui_cargo_luxury_drop,1,2.7,200,750,,75000,1,,
+Shittim Chest (Arona),arona_core,ai_cores,,,0,150,,"nonecon, ai_core, no_loss_from_combat",1000,1,graphics/icons/cargo/shittim_arona.png,ai_core_pickup,ui_alpha_core_drop,40,,,,,,1,,
+Shittim Chest (Plana),plana_core,ai_cores,,,0,150,,"nonecon, ai_core, no_loss_from_combat",1000,1,graphics/icons/cargo/shittim_plana.png,ai_core_pickup,ui_alpha_core_drop,40,,,,,,1,,

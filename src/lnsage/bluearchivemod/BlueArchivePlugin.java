@@ -2,18 +2,12 @@ package lnsage.bluearchivemod;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.*;
-import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.combat.MissileAIPlugin;
-import com.fs.starfarer.api.combat.MissileAPI;
-import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 //import com.fs.starfarer.campaign.Faction;
 import exerelin.campaign.SectorManager;
+import lnsage.bluearchivemod.campaign.AroPlaOfficerPlugin;
+import lnsage.bluearchivemod.campaign.plugins.BACampaignPlugin;
 import org.apache.log4j.Logger;
-import lnsage.bluearchivemod.ba_gen;
 
 public class BlueArchivePlugin extends BaseModPlugin {
     static Logger log = Global.getLogger(BlueArchivePlugin.class);
@@ -75,10 +69,21 @@ public class BlueArchivePlugin extends BaseModPlugin {
     @Override
     public void onNewGame() {
         super.onNewGame();
+        SectorAPI sector = Global.getSector();
+        sector.registerPlugin(new BACampaignPlugin());
         if (!nexerelinEnabled || SectorManager.getManager().isCorvusMode()) {
             new ba_gen().generate(Global.getSector());
 //             Add code that creates a new star system (will only run if Nexerelin's Random (corvus) mode is disabled).
         }
+        if (!sector.getGenericPlugins().hasPlugin(AroPlaOfficerPlugin.class))
+            sector.getGenericPlugins().addPlugin(new AroPlaOfficerPlugin(), true);
+    }
+
+    protected void addScriptsIfNeeded() {
+        SectorAPI sector = Global.getSector();
+
+        if (!sector.getGenericPlugins().hasPlugin(AroPlaOfficerPlugin.class))
+            sector.getGenericPlugins().addPlugin(new AroPlaOfficerPlugin(), true);
     }
 
     public void onNewGameAfterEconomyLoad(){
